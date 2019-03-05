@@ -5,12 +5,12 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += network
+QT       += network charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ISS
 TEMPLATE = app
-
+DEPENDPATH += C:/OpenSSL-Win64
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -27,12 +27,18 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    http.cpp
+    http.cpp \
+    lokalizator.cpp \
+    zegar.cpp \
+    wykres.cpp
 
 HEADERS += \
         mainwindow.h \
     http.h \
-    iss_dane.h
+    iss_dane.h \
+    lokalizator.h \
+    zegar.h \
+    wykres.h
 
 FORMS += \
         mainwindow.ui

@@ -5,9 +5,15 @@
 #include <QByteArray>
 #include <QObject>
 #include <QLabel>
+#include <QTimer>
+#include <QDateTime>
 
 #include "http.h"
 #include "iss_dane.h"
+#include "zegar.h"
+#include "lokalizator.h"
+#include "wykres.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -23,8 +29,11 @@ public:
 
     void WypelniDanymi(QString* dane){*dane = DaneStrony;}
 
+signals:
+    void noweDaneISS(ISS_Dane);
+
 private slots:
-    void Dane();
+    void PobierzNoweDaneISS();
 
 
 private:
@@ -32,6 +41,20 @@ private:
     QString DaneStrony;
     Http* Html;
     ISS_Dane DaneStacji;
+    QTimer* CzasDoPobrania;
+    QLabel* TytulISS;
+    Lokalizator* WyswietlaczPolozeniaISS;
+    QPushButton* PrzyciskWspolrzedne;
+    Zegar* CzasPrzelotuISS;
+    QPushButton* PrzyciskCzas;
+    Wykres* WykresPredkosci;
+    QPushButton* PrzyciskPredkosc;
+    Wykres* WykresWysokosci;
+    QPushButton* PrzyciskWysokosc;
+
+    uint ObecnyZakresOsiCzasu;
+    double ObecnyZakresOsiPredkosci;
+    double ObecnyZakresOsiWysokosci;
 };
 
 #endif // MAINWINDOW_H

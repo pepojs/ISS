@@ -21,7 +21,7 @@ class Http : public QObject
     Q_OBJECT
 
 public:
-    Http(QObject *Rodzic = nullptr);
+    Http(QObject* Rodzic = nullptr);
 
     void PobierzStrone(const QUrl &Url);
     QString ZwrocZawartoscStrony();

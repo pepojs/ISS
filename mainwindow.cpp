@@ -1,22 +1,80 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+//QUrl str("http://wsn.spaceflight.esa.int/iss/index_portal.php");
+//QUrl str("https://isstracker.pl/?lang=pl");
+//QUrl str("http://www.satview.org/?sat_id=37820U");
+//QUrl str("https://api.wheretheiss.at/v1/satellites/25544");
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
+    CzasDoPobrania = new QTimer;
+
+
     Html = new Http();
-    //QUrl str("http://wsn.spaceflight.esa.int/iss/index_portal.php");
-    //QUrl str("https://isstracker.pl/?lang=pl");
-    //QUrl str("http://www.satview.org/?sat_id=37820U");
-    //Html->PobierzStrone(str);
-    DaneStacji = Html->PobierzDaneOISS();
+    PrzyciskWspolrzedne = new QPushButton(this);
+    PrzyciskWspolrzedne->setGeometry(50,50, 200,60);
+    WyswietlaczPolozeniaISS = new Lokalizator(PrzyciskWspolrzedne);
+
+    PrzyciskCzas = new QPushButton(this);
+    PrzyciskCzas->setGeometry(50,150,110,80);
+    CzasPrzelotuISS = new Zegar(PrzyciskCzas);
+
+    CzasPrzelotuISS->ZmienStrefeCzasowa(+1);
+
+    QObject::connect(CzasDoPobrania, SIGNAL(timeout()), this, SLOT(PobierzNoweDaneISS()));
+    QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+    QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+    emit noweDaneISS(DaneStacji);
+    CzasDoPobrania->start(2000);
+
     std::cout<<"Szerokosc Geograficzna: "<<DaneStacji.SzerokoscGeo<<std::endl;
     std::cout<<"Dlugosc Geograficzna: "<<DaneStacji.DlugoscGeo<<std::endl;
     std::cout<<"Wysokosc: "<<DaneStacji.Wysokosc<<std::endl;
     std::cout<<"Predkosc: "<<DaneStacji.Predkosc<<std::endl;
+    std::cout<<"Czas przelotu: "<<DaneStacji.CzasPrzelotu<<std::endl;
+    //QObject::connect(Html, SIGNAL(pobrano()), this, SLOT (Dane()));
+
+    TytulISS = new QLabel(tr("<center><font size=6 color=white>Miedzynarodowa stacja kosmiczna</font></center>"), this);
+    TytulISS->setGeometry(350,10,400,60);
+
+    PrzyciskPredkosc = new QPushButton(this);
+    PrzyciskPredkosc->setGeometry(50, 250, 250,250);
+    WykresPredkosci = new Wykres(PrzyciskPredkosc);
+    WykresPredkosci->resize(250,250);
+
+    WykresPredkosci->ZmienWykres(QRgb(0xffffff),1);
+    WykresPredkosci->ZmienIloscPodzialekOsiY(3);
+    WykresPredkosci->ZmienKolorTla(QRgb(0x000000));
+    WykresPredkosci->ZmienKolorOsiX(QRgb(0xffffff));
+    WykresPredkosci->ZmienKolorOsiY(QRgb(0xffffff));
+    WykresPredkosci->ZmienPodpisOsiX(tr("Czas"));
+    WykresPredkosci->ZmienPodpisOsiY(tr("Predkosc [km/h]"));
+
+    PrzyciskWysokosc = new QPushButton(this);
+    PrzyciskWysokosc->setGeometry(350, 250, 250,250);
+    WykresWysokosci = new Wykres(PrzyciskWysokosc);
+    WykresWysokosci->resize(250,250);
+
+    WykresWysokosci->ZmienWykres(QRgb(0xffffff),1);
+    WykresWysokosci->ZmienIloscPodzialekOsiY(3);
+    WykresWysokosci->ZmienKolorTla(QRgb(0x000000));
+    WykresWysokosci->ZmienKolorOsiX(QRgb(0xffffff));
+    WykresWysokosci->ZmienKolorOsiY(QRgb(0xffffff));
+    WykresWysokosci->ZmienPodpisOsiX(tr("Czas"));
+    WykresWysokosci->ZmienPodpisOsiY(tr("Wysokosc [km]"));
+
+
+    ObecnyZakresOsiCzasu = DaneStacji.CzasPrzelotu;
+    ObecnyZakresOsiPredkosci = DaneStacji.Predkosc;
+    ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
+
+    this->setStyleSheet("background-color:black;");
 }
 
 MainWindow::~MainWindow()
@@ -24,9 +82,32 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::Dane()
+void MainWindow::PobierzNoweDaneISS()
 {
-    DaneStrony = Html->ZwrocZawartoscStrony();
-    std::cout<<DaneStrony.toStdString()<<std::endl;
-}
+    DaneStacji = Html->PobierzDaneOISS();
+    //DodajElementDoDanych(DaneStacji);
 
+    if(ObecnyZakresOsiPredkosci+30 <= DaneStacji.Predkosc)
+    {
+        ObecnyZakresOsiPredkosci = DaneStacji.Predkosc;
+        WykresPredkosci->UstawZakresOsiY(DaneStacji.Predkosc-30, DaneStacji.Predkosc+30);
+    }
+
+    if(ObecnyZakresOsiWysokosci+30 <= DaneStacji.Wysokosc)
+    {
+        ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
+        WykresWysokosci->UstawZakresOsiY(DaneStacji.Wysokosc-30, DaneStacji.Wysokosc+30);
+    }
+
+    if(ObecnyZakresOsiCzasu+30 <= DaneStacji.CzasPrzelotu)
+    {
+        ObecnyZakresOsiCzasu = DaneStacji.CzasPrzelotu;
+        WykresPredkosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
+        WykresWysokosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
+    }
+
+    WykresPredkosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Predkosc);
+    WykresWysokosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Wysokosc);
+    emit noweDaneISS(DaneStacji);
+
+}

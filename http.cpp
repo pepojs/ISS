@@ -104,5 +104,13 @@ ISS_Dane Http::ParserDanychISS()
 
     NoweDane.Predkosc = NapisPomocniczy.toDouble();
 
+    PoczatekWyrazenia = htmlStrony.indexOf("timestamp");
+    DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+    KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+    NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+    NoweDane.CzasPrzelotu = NapisPomocniczy.toUInt();
+
     return  NoweDane;
 }
