@@ -87,16 +87,16 @@ void MainWindow::PobierzNoweDaneISS()
     DaneStacji = Html->PobierzDaneOISS();
     //DodajElementDoDanych(DaneStacji);
 
-    if(ObecnyZakresOsiPredkosci+30 <= DaneStacji.Predkosc)
+    if(ObecnyZakresOsiPredkosci+5 <= DaneStacji.Predkosc)
     {
         ObecnyZakresOsiPredkosci = DaneStacji.Predkosc;
-        WykresPredkosci->UstawZakresOsiY(DaneStacji.Predkosc-30, DaneStacji.Predkosc+30);
+        WykresPredkosci->UstawZakresOsiY(DaneStacji.Predkosc-5, DaneStacji.Predkosc+5);
     }
 
-    if(ObecnyZakresOsiWysokosci+30 <= DaneStacji.Wysokosc)
+    if(ObecnyZakresOsiWysokosci+5 <= DaneStacji.Wysokosc)
     {
         ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
-        WykresWysokosci->UstawZakresOsiY(DaneStacji.Wysokosc-30, DaneStacji.Wysokosc+30);
+        WykresWysokosci->UstawZakresOsiY(DaneStacji.Wysokosc-5, DaneStacji.Wysokosc+5);
     }
 
     if(ObecnyZakresOsiCzasu+30 <= DaneStacji.CzasPrzelotu)
@@ -108,6 +108,7 @@ void MainWindow::PobierzNoweDaneISS()
 
     WykresPredkosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Predkosc);
     WykresWysokosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Wysokosc);
+
     emit noweDaneISS(DaneStacji);
 
 }
