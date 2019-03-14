@@ -75,6 +75,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
 
     this->setStyleSheet("background-color:black;");
+
+    Model3D = new OpenGLWidget(this);
+
 }
 
 MainWindow::~MainWindow()

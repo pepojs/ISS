@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QLabel>
 #include <iostream>
+#include <QSurfaceFormat>
 
 #include "wykres.h"
 

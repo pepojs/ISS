@@ -7,12 +7,15 @@
 #include <QLabel>
 #include <QTimer>
 #include <QDateTime>
+#include <QOpenGLContext>
+#include <QWindow>
 
 #include "http.h"
 #include "iss_dane.h"
 #include "zegar.h"
 #include "lokalizator.h"
 #include "wykres.h"
+#include "openglwidget.h"
 
 
 namespace Ui {
@@ -51,6 +54,8 @@ private:
     QPushButton* PrzyciskPredkosc;
     Wykres* WykresWysokosci;
     QPushButton* PrzyciskWysokosc;
+
+    OpenGLWidget* Model3D;
 
     uint ObecnyZakresOsiCzasu;
     double ObecnyZakresOsiPredkosci;

@@ -39,7 +39,7 @@ ISS_Dane Http::PobierzDaneOISS()
 
     this->PobierzStrone(StronaZDanymi);
 
-    MaxCzasPobierania.start(10000);
+    MaxCzasPobierania.start(1000);
     PetlaOczekiwania.exec();
 
     if(htmlStrony.isEmpty())

@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += network charts
+QT       += network charts opengl
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ISS
@@ -30,7 +30,10 @@ SOURCES += \
     http.cpp \
     lokalizator.cpp \
     zegar.cpp \
-    wykres.cpp
+    wykres.cpp \
+    openglwidget.cpp \
+    KGrafika3D.cpp \
+    Shader.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,10 +41,30 @@ HEADERS += \
     iss_dane.h \
     lokalizator.h \
     zegar.h \
-    wykres.h
+    wykres.h \
+    openglwidget.h \
+    KGrafika3D.h \
+    Shader.h \
+    SObiektNaScenie.h
 
 FORMS += \
         mainwindow.ui
+
+INCLUDEPATH += "D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\soil\soil\Simple OpenGL Image Library\src" \
+"C:\Users\Piotr\Downloads\freetype-windows-binaries-master\freetype-windows-binaries-master\include" \
+"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\include\GL" \
+"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glm-0.9.9.3\glm\glm"
+
+
+LIBS += -L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\soil\soil\Simple OpenGL Image Library\lib"\
+-L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\freetype-windows-binaries-master\freetype-windows-binaries-master\win64" -lfreetype
+
+LIBS += -L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32\glew32s.lib"\
+-L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64"\
+-L"D:\Program Files (x86)\CodeBlocks\MinGW\lib\libglu32.a"\
+
+
+LIBS += -lglu32 -lSOIL -lglew32 -lopengl32
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
