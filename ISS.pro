@@ -45,26 +45,14 @@ HEADERS += \
     openglwidget.h \
     KGrafika3D.h \
     Shader.h \
-    SObiektNaScenie.h
+    SObiektNaScenie.h \
+    modele.h
 
 FORMS += \
         mainwindow.ui
 
-INCLUDEPATH += "D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\soil\soil\Simple OpenGL Image Library\src" \
-"C:\Users\Piotr\Downloads\freetype-windows-binaries-master\freetype-windows-binaries-master\include" \
-"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\include\GL" \
-"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glm-0.9.9.3\glm\glm"
 
-
-LIBS += -L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\soil\soil\Simple OpenGL Image Library\lib"\
--L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\freetype-windows-binaries-master\freetype-windows-binaries-master\win64" -lfreetype
-
-LIBS += -L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32\glew32s.lib"\
--L"D:\Program Files (x86)\CodeBlocks\MinGW\downloaded\glew-2.1.0-win32\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64"\
--L"D:\Program Files (x86)\CodeBlocks\MinGW\lib\libglu32.a"\
-
-
-LIBS += -lglu32 -lSOIL -lglew32 -lopengl32
+LIBS +=  -lglu32 -lSOIL -lglew32 -lopengl32 -lfreetype
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

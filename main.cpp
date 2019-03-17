@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     QApplication Aplikacja(argc, argv);
 
     MainWindow GlowneOkno;
-    GlowneOkno.setGeometry(100,100,1024,512);
+    GlowneOkno.setGeometry(100,100,1024,800);
     Http Strona(&GlowneOkno);
     GlowneOkno.show();
 

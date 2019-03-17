@@ -7,7 +7,6 @@
 #include <QLabel>
 #include <QTimer>
 #include <QDateTime>
-#include <QOpenGLContext>
 #include <QWindow>
 
 #include "http.h"

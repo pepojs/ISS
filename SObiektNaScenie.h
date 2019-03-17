@@ -3,12 +3,12 @@
 
 #include <vector>
 #include <string>
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
-#include <gtc/type_ptr.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #define GLEW_STATIC
-#include <glew.h>
+#include <GL/glew.h>
 
 using namespace std;
 
@@ -19,7 +19,9 @@ enum Graf3D_RodzajObiektu
     Graf3D_Punkt = 0,
     Graf3D_Krawedz = 1,
     Graf3D_PolaczonaKrawedz = 2,
-    Graf3D_Plaszczyzna = 3
+    Graf3D_Plaszczyzna = 3,
+    Graf3D_TasmaCzworokatow = 4
+
 };
 
 

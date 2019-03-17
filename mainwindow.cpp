@@ -77,6 +77,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setStyleSheet("background-color:black;");
 
     Model3D = new OpenGLWidget(this);
+    Model3D->setGeometry(600, 200, 300,300);
 
 }
 

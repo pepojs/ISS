@@ -5,14 +5,14 @@
 #include <string>
 #include <cstdio>
 #include <vector>
-#include "SOIL.h"
+#include "SOIL/SOIL.h"
 #include <map>
 
-#include <ft2build.h>
+#include <freetype/ft2build.h>
 #include FT_FREETYPE_H
 
 #define GLEW_STATIC
-#include <glew.h>
+#include <GL/glew.h>
 
 #include "Shader.h"
 #include "SObiektNaScenie.h"
@@ -46,6 +46,9 @@ class Grafika3D
                        GLvoid* TablicaKolorow, size_t RozmiarTablicyKolorow, uint8_t IloscWspolrzednychKoloru);
     GLuint TworzObiekt(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
                        uint8_t IloscWspolrzednychTekstury);
+    GLuint TworzObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
+                       uint8_t IloscWspolrzednychTekstury);
+
     GLuint DodajObiektDoSceny(GLuint vaoObiektu, GLuint IloscPunktowWObiekcie);
     GLuint DodajObiektDoSceny(GLuint vaoObiektu, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
 
@@ -66,6 +69,10 @@ class Grafika3D
                        uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie);
     GLuint DodajObiekt(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
                        uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
+
+    GLuint DodajObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
+                       uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
+
 
     //***Metody Transformacja Obiektu
     void PrzesunObiekt(GLuint IDObiektu, glm::vec3 Przesuniecie);

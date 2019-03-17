@@ -127,14 +127,15 @@ void Shader::WypiszBledyLinkowania(int32_t shaderID)
     cout<<"Nacisni przycisk aby kontynuowac. "<<endl;
     getchar();
 
-    delete shaderProgramInfoLog;
+    delete[] shaderProgramInfoLog;
 
 }
 
 uint8_t Shader::Init()
 {
     //Tworzy shader program
-    shaderProgram = glCreateProgram();
+    if(shaderProgram == 0)
+        shaderProgram = glCreateProgram();
 
     return (shaderProgram != 0);
 }

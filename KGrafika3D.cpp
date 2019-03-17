@@ -28,9 +28,9 @@ GLuint Grafika3D::TworzObiekt(GLvoid* TablicaPunktow, size_t RozmiarTablicyPunkt
 
     //Ustawia atrybut dla vertex shader
     if(IloscWspolrzednychPunktu >= 4 || IloscWspolrzednychPunktu == 0)
-        glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
+        glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, nullptr);
     else
-        glVertexAttribPointer(0, IloscWspolrzednychPunktu, GL_FLOAT, GL_FALSE, 0, 0);
+        glVertexAttribPointer(0, IloscWspolrzednychPunktu, GL_FLOAT, GL_FALSE, 0, nullptr);
 
     glEnableVertexAttribArray(0);
 
@@ -162,6 +162,80 @@ GLuint Grafika3D::TworzObiekt(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uin
 
     return vao[vao.size()-1];
 }
+
+//Metoda tworzy nowy obiekt rysowany statycznie oraz okresla jego kolor,
+//pierwszy argument to tablica zepunktami, kolorami, i rozmieszczeniem tekstur, drugi argument to ilosc wspolrzednych opisujacych punkt,
+//trzeci to ilosc wspolrzednych opisujacych kolor (np. RGB i Alpha), czwarty to ilosc wspolrzednych tekstur, zwraca vao obiektu
+GLuint Grafika3D::TworzObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru, uint8_t IloscWspolrzednychTekstury)
+{
+    //Ilosc wszystkich danych potrzebnych do opisanie jednego punktu
+    int SumaWspolrzednych = IloscWspolrzednychPunktu + IloscWspolrzednychKoloru + IloscWspolrzednychTekstury;
+
+    vao.push_back(0); //Nowa tablica obiektu (mozna w niej umiescic bufor z punktami, kolore itp.)
+    vbo.push_back(0); //Nowy bufor obiektu dla punktow obiektu
+
+    //Tworzy nowy voa i ustawia na aktywna
+    glGenVertexArrays(1, &vao[vao.size()-1]);
+    glBindVertexArray(vao[vao.size()-1]);
+
+    //Tworzy nowy bufor, ustawia na aktywny i umieszcza dane z punktami
+    glGenBuffers(1, &vbo[vbo.size()-1]);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo[vbo.size()-1]);
+    glBufferData(GL_ARRAY_BUFFER, RozmiarTablicy, WspolnaTablica, GL_STATIC_DRAW);
+
+
+    //Ustawia atrybuty dla vertex shader
+    //Punkty
+    if(IloscWspolrzednychPunktu != 0)
+    {
+        if(IloscWspolrzednychPunktu >= 4)// || IloscWspolrzednychPunktu == 0)
+        {
+            IloscWspolrzednychPunktu = 4;
+            glVertexAttribPointer(0, IloscWspolrzednychPunktu, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat), 0);
+
+        }else
+            glVertexAttribPointer(0, IloscWspolrzednychPunktu, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat), 0);
+
+        glEnableVertexAttribArray(0);
+    }
+
+
+    //Kolor
+    if(IloscWspolrzednychKoloru != 0)
+    {
+        if(IloscWspolrzednychKoloru >= 4)
+        {
+            IloscWspolrzednychKoloru = 4;
+            glVertexAttribPointer(1, IloscWspolrzednychKoloru, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat)*sizeof(GLfloat), (GLvoid*)(IloscWspolrzednychPunktu * sizeof(GLfloat)));
+
+        }else
+            glVertexAttribPointer(1, IloscWspolrzednychKoloru, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat)*sizeof(GLfloat), (GLvoid*)(IloscWspolrzednychPunktu * sizeof(GLfloat)));
+
+        glEnableVertexAttribArray(1);
+    }
+
+
+    //Tekstura
+    if(IloscWspolrzednychTekstury != 0)
+    {
+        if(IloscWspolrzednychTekstury >= 3)// || IloscWspolrzednychTekstury == 0)
+        {
+            IloscWspolrzednychTekstury = 3;
+            glVertexAttribPointer(2, IloscWspolrzednychTekstury, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat), (GLvoid*)((IloscWspolrzednychPunktu + IloscWspolrzednychKoloru) * sizeof(GLfloat)));
+
+        }else
+            glVertexAttribPointer(2, IloscWspolrzednychTekstury, GL_FLOAT, GL_FALSE, SumaWspolrzednych*sizeof(GLfloat), (GLvoid*)((IloscWspolrzednychPunktu + IloscWspolrzednychKoloru) * sizeof(GLfloat)));
+
+        glEnableVertexAttribArray(2);
+    }
+
+
+    //Dezaktywuje voa
+    glBindVertexArray(0);
+
+    return vao[vao.size()-1];
+}
+
 
 //Metoda dodaje nowy obiekt do sceny, bedzie on teraz wyswietlany, jako argumet podajemy
 //vao obiektu ktory chcemy dodac oraz liczbe punktow z ktorych sklada sie nasz obiekt
@@ -330,6 +404,20 @@ GLuint Grafika3D::DodajObiekt(GLvoid* TablicaPunktow, size_t RozmiarTablicyPunkt
     GLuint vao = TworzObiekt(WspolnaTablica, RozmiarTablicy, IloscWspolrzednychPunktu, IloscWspolrzednychKoloru, IloscWspolrzednychTekstury);
     return DodajObiektDoSceny(vao, IloscPunktowWObiekcie, RodzajObiektu);
 }
+
+
+ //Metoda pozwala dodac obiekt na scene bez koniecznosci wywolywania kolejnych metod,
+ //Pierwszy argument to tablica zawierajaca wspolne dane punktow, koloru i tekstur, drugi to rozmiar tablicy zawierajacej dane,
+ //trzeci to ilosc wspolrzednych opisujacych punkt,czwart ilosc elementow w wektorze opisujacym kolor (np. RGB i Alpha),
+ //piaty to ilosc wspolrzednych dla tektury, szosty liczbe punktow z ktorych sklada sie nasz obiekt (potrzebne w procesie rysowania obiektu),
+ //siodmy sposob w jaki bedzie rysowany obiekt (jako punkty, krawedzie albo plaszczyzny), zwraca identyfikator obiektu.
+ //Aby dodawac kolejne takie same obiekty nalezy kopiowac pierwszy utworzony
+  GLuint Grafika3D::DodajObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
+                        uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu)
+ {
+     GLuint vao = TworzObiekt(WspolnaTablica, RozmiarTablicy, IloscWspolrzednychPunktu, IloscWspolrzednychKoloru, IloscWspolrzednychTekstury);
+     return DodajObiektDoSceny(vao, IloscPunktowWObiekcie, RodzajObiektu);
+ }
 
 //Metoda pozwalajaca przesunac obiekt o wektor, pierwszy argument to identyfikator obiektu na scenie,
 //drugi argument to wektor przesuniecia
@@ -773,12 +861,12 @@ void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
     string TeksturyWShader = "Tekstura";
     string Tymczasowy = "";
 
-    glClearColor(0.0, 0.0, 0.0, 1.0); //Ustawia kolor tla
+    glClearColor(1.0, 1.0, 1.0, 1.0); //Ustawia kolor tla
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Czysci tlo
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
 
-    for(int i = 0; i < ObiektyNaScenie.size(); i++)
+    for(GLuint i = 0; i < ObiektyNaScenie.size(); i++)
     {
         glBindVertexArray(ObiektyNaScenie[i].IDvaoObiektu);
         shader.PrzekazMacierz4x4("transformacja", ObiektyNaScenie[i].MacierzTransformacji);
@@ -786,7 +874,7 @@ void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
         //Aktywowanie tekstur
         if(ObiektyNaScenie[i].Tekstury.size() > 0)
         {
-            for(int j = 0; j < ObiektyNaScenie[i].Tekstury.size(); j++)
+            for(GLuint j = 0; j < ObiektyNaScenie[i].Tekstury.size(); j++)
             {
                 if(j < GL_MAX_TEXTURE_UNITS - GL_TEXTURE0)
                 {
@@ -814,6 +902,7 @@ void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
         switch(ObiektyNaScenie[i].RodzajObiektu)
         {
             case Graf3D_Punkt:
+                glPointSize(10);
                 glDrawArrays(GL_POINTS, 0 ,ObiektyNaScenie[i].IloscPunktow);
             break;
 
@@ -827,6 +916,10 @@ void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
 
             case Graf3D_Plaszczyzna:
                 glDrawArrays(GL_TRIANGLES, 0 ,ObiektyNaScenie[i].IloscPunktow);
+            break;
+
+            case Graf3D_TasmaCzworokatow:
+                glDrawArrays(GL_QUAD_STRIP, 0 ,ObiektyNaScenie[i].IloscPunktow);
             break;
 
             default:
