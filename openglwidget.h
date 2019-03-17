@@ -8,6 +8,9 @@
 #include <QOpenGLWidget>
 #include <QSurfaceFormat>
 #include <QCoreApplication>
+#include <QEvent>
+#include <QMouseEvent>
+#include <QWheelEvent>
 
 
 class OpenGLWidget : public QOpenGLWidget
@@ -26,9 +29,16 @@ protected:
     void initializeGL();
     void resizeGL(int Szerokosc, int Wysokosc);
     void paintGL();
+    bool event(QEvent* Zdarzenie);
 
 private:
     Grafika3D* Scena;
+    int SzerokoscOkna;
+    int WysokoscOkna;
+    GLfloat KameraOdObiektu;
+    GLfloat KameraX, KameraY, KameraZ;
+    GLfloat ObrotX, ObrotY;
+    int PosMyszyX, PosMyszyY;
 
 };
 

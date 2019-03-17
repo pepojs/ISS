@@ -861,7 +861,7 @@ void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
     string TeksturyWShader = "Tekstura";
     string Tymczasowy = "";
 
-    glClearColor(1.0, 1.0, 1.0, 1.0); //Ustawia kolor tla
+    glClearColor(0.0, 0.0, 0.0, 1.0); //Ustawia kolor tla
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Czysci tlo
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);

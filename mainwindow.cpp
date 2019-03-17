@@ -7,21 +7,20 @@
 //QUrl str("https://api.wheretheiss.at/v1/satellites/25544");
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    QMainWindow(parent)
 {
-    ui->setupUi(this);
-
+    setGeometry(100, 100, 1024,800);
+    QSize RozmiarOkna = size();
     CzasDoPobrania = new QTimer;
 
 
     Html = new Http();
     PrzyciskWspolrzedne = new QPushButton(this);
-    PrzyciskWspolrzedne->setGeometry(50,50, 200,60);
+    PrzyciskWspolrzedne->setGeometry(80,200, 200,60);
     WyswietlaczPolozeniaISS = new Lokalizator(PrzyciskWspolrzedne);
 
     PrzyciskCzas = new QPushButton(this);
-    PrzyciskCzas->setGeometry(50,150,110,80);
+    PrzyciskCzas->setGeometry(120,60,200,80);
     CzasPrzelotuISS = new Zegar(PrzyciskCzas);
 
     CzasPrzelotuISS->ZmienStrefeCzasowa(+1);
@@ -41,12 +40,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //QObject::connect(Html, SIGNAL(pobrano()), this, SLOT (Dane()));
 
     TytulISS = new QLabel(tr("<center><font size=6 color=white>Miedzynarodowa stacja kosmiczna</font></center>"), this);
-    TytulISS->setGeometry(350,10,400,60);
+    TytulISS->setGeometry(0,0,RozmiarOkna.width(),60);
 
     PrzyciskPredkosc = new QPushButton(this);
-    PrzyciskPredkosc->setGeometry(50, 250, 250,250);
+    PrzyciskPredkosc->setGeometry(20, 300, 360,250);
     WykresPredkosci = new Wykres(PrzyciskPredkosc);
-    WykresPredkosci->resize(250,250);
+    WykresPredkosci->resize(360,250);
 
     WykresPredkosci->ZmienWykres(QRgb(0xffffff),1);
     WykresPredkosci->ZmienIloscPodzialekOsiY(3);
@@ -57,9 +56,9 @@ MainWindow::MainWindow(QWidget *parent) :
     WykresPredkosci->ZmienPodpisOsiY(tr("Predkosc [km/h]"));
 
     PrzyciskWysokosc = new QPushButton(this);
-    PrzyciskWysokosc->setGeometry(350, 250, 250,250);
+    PrzyciskWysokosc->setGeometry(20, 550, 360,250);
     WykresWysokosci = new Wykres(PrzyciskWysokosc);
-    WykresWysokosci->resize(250,250);
+    WykresWysokosci->resize(360,250);
 
     WykresWysokosci->ZmienWykres(QRgb(0xffffff),1);
     WykresWysokosci->ZmienIloscPodzialekOsiY(3);
@@ -77,13 +76,13 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setStyleSheet("background-color:black;");
 
     Model3D = new OpenGLWidget(this);
-    Model3D->setGeometry(600, 200, 300,300);
-
+    Model3D->setGeometry(400, 60, RozmiarOkna.width()-400,RozmiarOkna.height()-60);
+    Model3D->setMouseTracking(true);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
 }
 
 void MainWindow::PobierzNoweDaneISS()
