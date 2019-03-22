@@ -29,10 +29,12 @@ struct ObiektNaScenie
 {
     GLuint IDObiektu;
     GLuint IDvaoObiektu;
+    GLuint IDvboObiektu;
     glm::mat4 MacierzTransformacji;
     GLuint IloscPunktow;
     vector<GLuint> Tekstury;
     Graf3D_RodzajObiektu RodzajObiektu;
+    GLboolean fRysowanieObiektu;
 };
 
 struct ZnakNaScenie

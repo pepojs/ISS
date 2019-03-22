@@ -7,6 +7,8 @@
 #include <QWidget>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QEvent>
+#include <QMouseEvent>
 
 #include "iss_dane.h"
 
@@ -17,6 +19,12 @@ public:
     Lokalizator(QWidget* Rodzic = nullptr);
     void ZmienSzerokoscGeo(double NowaSzerokosc);
     void ZmienDlugoscGeo(double NowaDlugosc);
+
+signals:
+    void Kliknieto();
+
+protected:
+    bool event(QEvent* Zdarzenie);
 
 private slots:
     void AktualizujDaneISS(ISS_Dane NoweDane);

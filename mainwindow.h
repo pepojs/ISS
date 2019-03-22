@@ -8,6 +8,7 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QWindow>
+#include <QSlider>
 
 #include "http.h"
 #include "iss_dane.h"
@@ -36,6 +37,9 @@ signals:
 
 private slots:
     void PobierzNoweDaneISS();
+    void PrzycisnietyCzas();
+    void PrzycisnietyWspolrzedne();
+    void PrzycisnietyWysokosc();
 
 
 private:
@@ -46,15 +50,14 @@ private:
     QTimer* CzasDoPobrania;
     QLabel* TytulISS;
     Lokalizator* WyswietlaczPolozeniaISS;
-    QPushButton* PrzyciskWspolrzedne;
     Zegar* CzasPrzelotuISS;
-    QPushButton* PrzyciskCzas;
     Wykres* WykresPredkosci;
-    QPushButton* PrzyciskPredkosc;
     Wykres* WykresWysokosci;
-    QPushButton* PrzyciskWysokosc;
 
     OpenGLWidget* Model3D;
+
+    QSlider* StrefaCzasowa;
+    QLabel* WybranaStrefa;
 
     uint ObecnyZakresOsiCzasu;
     double ObecnyZakresOsiPredkosci;

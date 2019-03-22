@@ -10,6 +10,8 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QtCharts/QDateTimeAxis>
+#include <QEvent>
+#include <QMouseEvent>
 
 #include "iss_dane.h"
 
@@ -17,7 +19,7 @@ QT_CHARTS_USE_NAMESPACE
 
 class Wykres : public QWidget
 {
-
+Q_OBJECT
 public:
     Wykres(QWidget* Rodzic = nullptr);
     void ZmienWykres(QRgb NowyKolor, int NowyRozmiar);
@@ -40,6 +42,11 @@ public:
     void DodajDaneDoWykresu(uint X, double Y);
     void WidokSiatki(bool Wlacz);
 
+signals:
+    void Kliknieto();
+
+protected:
+    bool event(QEvent* Zdarzenie);
 
 private:
     QChartView* WidokWykresu;

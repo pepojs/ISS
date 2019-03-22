@@ -24,13 +24,20 @@ OpenGLWidget::OpenGLWidget(QWidget* Rodzic)
     KameraY = 0.0f;
     KameraZ = 0.0f;
 
-    ObrotX = M_PI_2; ObrotY = M_PI_2;
+    ObrotX = 0; ObrotY = M_PI_2;
     PosMyszyX = 0; PosMyszyY = 0;
+    KatSzer = 0; KatDlug = 0;
+
+    fSledzenieStacji = false;
+    OffsetTrajektori = 0;
+
+    PromienKuli = 50.0f;
 }
 
 OpenGLWidget::~OpenGLWidget()
 {
-    delete[] Scena;
+    Scena->ZwrocAdresShadera()->Sprzatanie();
+    Scena->CzyscPoGrafice3D();
 }
 
 void OpenGLWidget::initializeGL()
@@ -41,22 +48,26 @@ void OpenGLWidget::initializeGL()
     if (GLEW_OK != err)
         cerr<<"Error: "<< glewGetErrorString(err)<<endl;
 
-
     UstawVertexShader("Vert.glsl");
     UstawFragmentShader("Frag.glsl");
     LinkujShader();
 
     Scena->ZwrocAdresShadera()->Uzyjprogramu();
 
-
     glDepthFunc(GL_LEQUAL);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    //Scena->UstawRzutowanieOrtogonalne(-100.0f, 100.0,-100.0f, 100.0, 0.1f, 150.0f);
     Scena->UstawRzutowaniePerspektywiczne(45.0f, (GLfloat)(SzerokoscOkna)/(GLfloat)(WysokoscOkna*4),  0.1f, 160.0f);
     Scena->UstawKamere(glm::vec3(KameraOdObiektu, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-    TworzZiemie(50);
+    TworzZiemie(PromienKuli);
+    TworzPunktPozycji();
+    TworzTrajektorie();
+    Scena->RysujObiekt(IDTrajektoria, false);
+    TworzSiatke();
+    Scena->RysujObiekt(IDSiatki, false);
+
+    //Scena->UstawRzutowanieOrtogonalne(-100.0f, 100.0,-100.0f, 100.0, 0.1f, 160.0f);
 }
 
 void OpenGLWidget::paintGL()
@@ -96,6 +107,8 @@ bool OpenGLWidget::event(QEvent* Zdarzenie)
 
             if((Mysz->buttons() & Qt::LeftButton))
             {
+               fSledzenieStacji = false;
+
                ObrotX += (GLfloat)(PosMyszyX - Mysz->pos().x())*0.01f;
                ObrotY += (GLfloat)(PosMyszyY - Mysz->pos().y())*0.01f;
 
@@ -123,9 +136,19 @@ bool OpenGLWidget::event(QEvent* Zdarzenie)
             if(KameraOdObiektu <= 55) KameraOdObiektu = 55;
             if(KameraOdObiektu >= 130) KameraOdObiektu = 130;
 
-            KameraX = KameraOdObiektu*cos(ObrotX)*sin(ObrotY);
-            KameraY = KameraOdObiektu*sin(ObrotX);
-            KameraZ = KameraOdObiektu*cos(ObrotY);
+            if(fSledzenieStacji == false)
+            {
+                KameraX = KameraOdObiektu*cos(ObrotX)*sin(ObrotY);
+                KameraY = KameraOdObiektu*sin(ObrotX);
+                KameraZ = KameraOdObiektu*cos(ObrotY);
+
+            }else
+            {
+                KameraX = KameraOdObiektu*cos(KatDlug)*cos(KatSzer);
+                KameraY = KameraOdObiektu*cos(KatSzer)*sin(KatDlug);
+                KameraZ = KameraOdObiektu*sin(KatSzer);
+            }
+
 
             update();
 
@@ -137,6 +160,59 @@ bool OpenGLWidget::event(QEvent* Zdarzenie)
 
 
     return QOpenGLWidget::event(Zdarzenie);
+}
+
+void OpenGLWidget::NoweDaneISS(ISS_Dane NoweDane)
+{
+    //Szerokosc - 7.0f (porawka)
+    GLfloat Szer = glm::radians(NoweDane.SzerokoscGeo);
+    GLfloat Dlug = glm::radians(NoweDane.DlugoscGeo);
+    GLfloat Wyso = 0;
+    //Zerowanie pozycji
+    Scena->PrzesunObiekt(IDWskaznikStacji, glm::vec3(0.0f, 0.0f , PromienKuli));
+    Scena->ObrocObiekt(IDWskaznikStacji, -KatSzer , glm::vec3(1.0f, 0.0f, 0.0f));
+    Scena->ObrocObiekt(IDWskaznikStacji, -KatDlug, glm::vec3(0.0f, 1.0f, 0.0f));
+
+
+    //Nowa pozycja
+    Scena->ObrocObiekt(IDWskaznikStacji, Dlug, glm::vec3(0.0f, 1.0f, 0.0f));
+    Scena->ObrocObiekt(IDWskaznikStacji, Szer , glm::vec3(1.0f, 0.0f, 0.0f));
+    Scena->PrzesunObiekt(IDWskaznikStacji, glm::vec3(0.0f, 0.0f , -PromienKuli));
+
+    KatDlug = Dlug;
+    KatSzer = Szer;
+
+    if(fSledzenieStacji == true)
+    {
+        KameraX = KameraOdObiektu*cos(Dlug)*cos(Szer);
+        KameraY = KameraOdObiektu*cos(Szer)*sin(Dlug);
+        KameraZ = KameraOdObiektu*sin(Szer);
+    }
+
+
+    if(OffsetTrajektori <= 599)
+    {
+        if(Dlug != 0 && Szer != 0)
+        {
+            vector<GLfloat> Punkt(3);
+            //6 371 prom->50 400->x prom/400 = 50/x 400*50/prom =x
+            Wyso = (NoweDane.Wysokosc*PromienKuli)/6371.0f;
+            Punkt[0] = (Wyso+PromienKuli)*cos(Dlug)*cos(Szer);
+            Punkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
+            Punkt[2] = (Wyso+PromienKuli)*sin(Szer);
+
+            Scena->UaktualniDaneObiektu(IDTrajektoria, OffsetTrajektori*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
+            OffsetTrajektori += 1;
+        }else
+        {
+            OffsetTrajektori = 0;
+        }
+    }
+
+
+
+    update();
+
 }
 
 int8_t OpenGLWidget::UstawVertexShader(QString NazwaShadera)
@@ -173,14 +249,43 @@ void OpenGLWidget::TworzZiemie(GLfloat Promien)
 {
     GLuint IDKuli;
     GLuint IDTekstury;
+    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
 
-    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
-
-    IDTekstury = Scena->GenerujTeksture2D(PlikZMapa.toStdString().c_str(), GL_CLAMP_TO_BORDER, GL_LINEAR);
+    IDTekstury = Scena->GenerujTeksture2D(PlikZMapa.toStdString().c_str(), GL_REPEAT, GL_LINEAR); //GL_CLAMP_TO_BORDER
 
     IDKuli = Scena->DodajObiekt(Ziemia, sizeof(Ziemia), 3, 0, 2, (50+1)*50*2, Graf3D_TasmaCzworokatow);
     Scena->DodajTekstureDoObiektu(IDTekstury, IDKuli);
 
     Scena->PrzeskalujObiekt(IDKuli, glm::vec3(Promien, Promien, Promien));
+    Scena->ObrocObiekt(IDKuli, M_PI, glm::vec3(0.0f, 0.0f, 1.0f));
+
+}
+
+void OpenGLWidget::TworzPunktPozycji()
+{
+
+    IDWskaznikStacji = Scena->DodajObiekt(Okrag, sizeof(Okrag), 3, 4, 0, 51, Graf3D_PolaczonaKrawedz);
+    glLineWidth(5);
+
+    //Scena->PrzeskalujObiekt(IDPunktuPozycji, glm::vec3(30.0f, 30.0f, 30.0f));
+    Scena->ObrocObiekt(IDWskaznikStacji, -M_PI_2, glm::vec3(0.0f, 0.0f, 1.0f));
+    Scena->PrzesunObiekt(IDWskaznikStacji, glm::vec3(0.0f, PromienKuli, 0.0f));
+    Scena->ObrocObiekt(IDWskaznikStacji, M_PI_2, glm::vec3(1.0f, 0.0f, 0.0f));
+
+
+}
+
+void OpenGLWidget::TworzTrajektorie()
+{
+    vector<GLfloat> Trajektoria(1800);
+
+    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 1800, Graf3D_PolaczonaKrawedz);
+
+}
+
+void OpenGLWidget::TworzSiatke()
+{
+    IDSiatki = Scena->DodajObiekt(ModelSiatki, sizeof(ModelSiatki), 3, 0, 0, 51*24*3, Graf3D_PolaczonaKrawedz);
+    Scena->PrzeskalujObiekt(IDSiatki, glm::vec3(PromienKuli+0.1f, PromienKuli+0.1f, PromienKuli+0.1f));
 
 }

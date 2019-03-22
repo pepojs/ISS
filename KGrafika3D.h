@@ -39,6 +39,7 @@ class Grafika3D
     public:
     ~Grafika3D();
     Shader* ZwrocAdresShadera(){return &shader;}
+    void CzyscPoGrafice3D();
 
     //***Metody Tworzenie, kopiowanie, dodawanie i usuwanie Obiektow***
     GLuint TworzObiekt(GLvoid* TablicaPunktow, size_t RozmiarTablicyPunktow, uint8_t IloscWspolrzednychPunktu);
@@ -49,8 +50,12 @@ class Grafika3D
     GLuint TworzObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
                        uint8_t IloscWspolrzednychTekstury);
 
+    GLuint TworzObiektD(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
+                       uint8_t IloscWspolrzednychTekstury, GLuint* NoweVBO);
+
     GLuint DodajObiektDoSceny(GLuint vaoObiektu, GLuint IloscPunktowWObiekcie);
     GLuint DodajObiektDoSceny(GLuint vaoObiektu, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
+    GLuint DodajObiektDoSceny(GLuint vaoObiektu, GLuint vboObiektu, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
 
     void UsunObiektZeSceny(GLuint IDObiektu);
     GLuint KopiujObiekt(GLuint IDObiektu);
@@ -70,10 +75,13 @@ class Grafika3D
     GLuint DodajObiekt(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
                        uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
 
+    GLuint DodajObiektD(GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
+                       uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
+
     GLuint DodajObiekt(const GLvoid* WspolnaTablica, size_t RozmiarTablicy, uint8_t IloscWspolrzednychPunktu, uint8_t IloscWspolrzednychKoloru,
                        uint8_t IloscWspolrzednychTekstury, GLuint IloscPunktowWObiekcie, Graf3D_RodzajObiektu RodzajObiektu);
 
-
+    void UaktualniDaneObiektu(GLuint IDObiektu, GLintptr Offset, GLsizeiptr Rozmiar, const GLvoid * ZmienioneDane);
     //***Metody Transformacja Obiektu
     void PrzesunObiekt(GLuint IDObiektu, glm::vec3 Przesuniecie);
     void ObrocObiekt(GLuint IDObiektu, GLfloat KatObrotu, glm::vec3 OsObrotu);
@@ -103,8 +111,9 @@ class Grafika3D
     void UsunNapisZeSceny(GLuint IDNapisu);
     void UsunNapisZeSceny(string Napis);
 
-    void Rysuj(GLint SzerokoscOkna, GLint WysokoscOkan);
+    void RysujObiekt(GLuint IDObiektu, GLboolean Rysuj);
 
+    void Rysuj(GLint SzerokoscOkna, GLint WysokoscOkan);
 
 };
 

@@ -6,6 +6,8 @@
 #include <QWidget>
 #include <QDateTime>
 #include <QVBoxLayout>
+#include <QEvent>
+#include <QMouseEvent>
 #include <iostream>
 
 #include "iss_dane.h"
@@ -17,6 +19,12 @@ public:
     Zegar(QWidget* Rodzic = nullptr);
     void UstawCzasUnixFormatUTC1(uint NowyCzas);
     void ZmienStrefeCzasowa(int Strefa);
+
+signals:
+    void Kliknieto();
+
+protected:
+    bool event(QEvent* Zdarzenie);
 
 private slots:
     void AktualizujDaneISS(ISS_Dane NoweDane);

@@ -4,7 +4,7 @@ Zegar::Zegar(QWidget* Rodzic)
     :QWidget (Rodzic)
 {
     Czas = new QLabel(tr("<center><font color=white>Czas przelotu:</font></center>"));
-    StrefaCzasowa = new QLabel(tr("<font color=whiteStrefa: UTC-0</font>"));
+    StrefaCzasowa = new QLabel(tr("<center><font color=white>Strefa: UTC-0</font></center>"));
     Wyswietlacz = new QLCDNumber;
 
     GlownaWarstwa = new QVBoxLayout;
@@ -19,6 +19,28 @@ Zegar::Zegar(QWidget* Rodzic)
     Wyswietlacz->setDigitCount(8);
 
     Strefa = 0;
+}
+
+bool Zegar::event(QEvent* Zdarzenie)
+{
+    QMouseEvent *Mysz;
+
+    switch(Zdarzenie->type())
+    {
+        case QEvent::MouseButtonPress:
+            Mysz = static_cast<QMouseEvent* >(Zdarzenie);
+
+            if(Mysz->button() == Qt::LeftButton)
+            {
+                emit Kliknieto();
+            }
+        break;
+
+        default:
+        break;
+    }
+
+    return QWidget::event(Zdarzenie);
 }
 
 void Zegar::UstawCzasUnixFormatUTC1(uint NowyCzas)
@@ -44,7 +66,7 @@ void Zegar::ZmienStrefeCzasowa(int NowaStrefa)
     else
         Strefa = NowaStrefa;
 
-    StrefaCzasowa->setText(tr("<font color=white>Strefa: UTC") + QString::number(Strefa)+"</font>");
+    StrefaCzasowa->setText(tr("<center><font color=white>Strefa: UTC") + QString::number(Strefa)+"</font></center>");
 }
 
 void Zegar::AktualizujDaneISS(ISS_Dane NoweDane)

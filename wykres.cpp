@@ -63,6 +63,28 @@ Wykres::Wykres(QWidget* Rodzic)
 
 }
 
+bool Wykres::event(QEvent* Zdarzenie)
+{
+    QMouseEvent *Mysz;
+
+    switch(Zdarzenie->type())
+    {
+        case QEvent::MouseButtonPress:
+            Mysz = static_cast<QMouseEvent* >(Zdarzenie);
+
+            if(Mysz->button() == Qt::LeftButton)
+            {
+                emit Kliknieto();
+            }
+        break;
+
+        default:
+        break;
+    }
+
+    return QWidget::event(Zdarzenie);
+}
+
 
 void Wykres::ZmienWykres(QRgb NowyKolor, int NowyRozmiar)
 {

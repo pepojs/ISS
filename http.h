@@ -13,6 +13,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QEventLoop>
+#include <iostream>
 
 #include "iss_dane.h"
 

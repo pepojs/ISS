@@ -12,11 +12,12 @@ Lokalizator::Lokalizator(QWidget* Rodzic)
     WarstwaWyswietlaczy = new QHBoxLayout;
     WarstwaGlowna = new QVBoxLayout;
 
+    WarstwaWyswietlaczy->addStretch();
     WarstwaWyswietlaczy->addWidget(SzerokoscGeo);
     WarstwaWyswietlaczy->addWidget(SzerokoscZnak);
-    WarstwaWyswietlaczy->addStretch();
     WarstwaWyswietlaczy->addWidget(DlugoscGeo);
     WarstwaWyswietlaczy->addWidget(DlugoscZnak);
+    WarstwaWyswietlaczy->addStretch();
 
     WarstwaGlowna->addWidget(Tytul);
     WarstwaGlowna->addLayout(WarstwaWyswietlaczy);
@@ -27,6 +28,29 @@ Lokalizator::Lokalizator(QWidget* Rodzic)
 
     SzerokoscGeo->setDigitCount(6);
     DlugoscGeo->setDigitCount(6);
+
+}
+
+bool Lokalizator::event(QEvent* Zdarzenie)
+{
+    QMouseEvent *Mysz;
+
+    switch(Zdarzenie->type())
+    {
+        case QEvent::MouseButtonPress:
+            Mysz = static_cast<QMouseEvent* >(Zdarzenie);
+
+            if(Mysz->button() == Qt::LeftButton)
+            {
+                emit Kliknieto();
+            }
+        break;
+
+        default:
+        break;
+    }
+
+    return QWidget::event(Zdarzenie);
 
 }
 

@@ -44,10 +44,11 @@ ISS_Dane Http::PobierzDaneOISS()
 
     if(htmlStrony.isEmpty())
     {
-        QMessageBox* Komunikat = new QMessageBox();
+      /*QMessageBox* Komunikat = new QMessageBox();
         Komunikat->setText("Nie udało się pobrać danych z strony: \nhttps://api.wheretheiss.at/v1/satellites/25544");
         Komunikat->setStandardButtons(QMessageBox::Ok);
-        Komunikat->show();
+        Komunikat->show();*/
+        std::cerr<<"Nie pobrano danych ze strony"<<std::endl;
         return Dane;
     }
 
