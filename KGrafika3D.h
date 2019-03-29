@@ -112,6 +112,7 @@ class Grafika3D
     void UsunNapisZeSceny(string Napis);
 
     void RysujObiekt(GLuint IDObiektu, GLboolean Rysuj);
+    void PrzekazIntaDoShedera(const char* NazwaWShederze, int Wartosc);
 
     void Rysuj(GLint SzerokoscOkna, GLint WysokoscOkan);
 

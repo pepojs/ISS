@@ -42,7 +42,7 @@ class Shader
     GLuint ZwrocProgramID(){return shaderProgram;}
 
     void PrzekazMacierz4x4(const char* NazwaWShaderze, mat4 macierz);
-
+    void PrzekazInt(const char* NazwaWShederze, int Wartosc);
 };
 
 #endif

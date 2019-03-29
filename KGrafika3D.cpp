@@ -1038,6 +1038,11 @@ void Grafika3D::RysujObiekt(GLuint IDObiektu, GLboolean Rysuj)
     ObiektyNaScenie[i].fRysowanieObiektu = Rysuj;
 }
 
+void Grafika3D::PrzekazIntaDoShedera(const char *NazwaWShederze, int Wartosc)
+{
+    shader.PrzekazInt(NazwaWShederze, Wartosc);
+}
+
 void Grafika3D::Rysuj(GLint WysokoscOkna, GLint SzerokoscOkna)
 {
     string TeksturyWShader = "Tekstura";

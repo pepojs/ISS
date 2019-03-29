@@ -9,6 +9,11 @@
 #include <QDateTime>
 #include <QWindow>
 #include <QSlider>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QSizePolicy>
+#include <QSpacerItem>
+#include <QSpinBox>
 
 #include "http.h"
 #include "iss_dane.h"
@@ -17,10 +22,6 @@
 #include "wykres.h"
 #include "openglwidget.h"
 
-
-namespace Ui {
-class MainWindow;
-}
 
 class MainWindow : public QMainWindow
 {
@@ -40,10 +41,10 @@ private slots:
     void PrzycisnietyCzas();
     void PrzycisnietyWspolrzedne();
     void PrzycisnietyWysokosc();
+    void ZmianaStrefy(int NowaStrefa);
 
 
 private:
-    Ui::MainWindow *ui;
     QString DaneStrony;
     Http* Html;
     ISS_Dane DaneStacji;
@@ -59,9 +60,20 @@ private:
     QSlider* StrefaCzasowa;
     QLabel* WybranaStrefa;
 
+    QSpinBox* Tymczasowy;
+
     uint ObecnyZakresOsiCzasu;
     double ObecnyZakresOsiPredkosci;
     double ObecnyZakresOsiWysokosci;
+
+
+    QVBoxLayout* WarstwaWyswietlaczy;
+    QVBoxLayout* WarstwaOpenGL;
+    QHBoxLayout* WarstwaPosrednia;
+    QHBoxLayout* WarstwaTytulu;
+    QVBoxLayout* WarstwaGlowna;
+
+    int Strefa;
 };
 
 #endif // MAINWINDOW_H

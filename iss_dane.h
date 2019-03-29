@@ -3,6 +3,9 @@
 
 #include <QWidget>
 
+//Przerobic to na klase wraz z całym interfejsem opisac 4 klasy, na pewno http oraz dane_stacji, 2 dodatkowe wybrac (ciekawsze)
+//Dane stacji dodac jakie jednoski na przyklad pobierz_predkosc_kmH, dokumentacja html-u doxygen, metody ktore nie zmieniaja
+//obiekt dodac const.
 struct ISS_Dane{
     double SzerokoscGeo;
     double DlugoscGeo;

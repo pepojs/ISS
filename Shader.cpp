@@ -188,3 +188,13 @@ void Shader::PrzekazMacierz4x4(const char* NazwaWShederze, mat4 macierz)
     }
 
 }
+
+void Shader::PrzekazInt(const char *NazwaWShederze, int Wartosc)
+{
+    if(shaderProgram != 0)
+    {
+        //Sprawdza polozenie naszej zmiennej w shederze i przekazuje dane w postaci macierzy
+        GLuint PozycjaInta = glGetUniformLocation(shaderProgram, NazwaWShederze);
+        glUniform1i(PozycjaInta, Wartosc);
+    }
+}

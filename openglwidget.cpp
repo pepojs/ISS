@@ -287,5 +287,19 @@ void OpenGLWidget::TworzSiatke()
 {
     IDSiatki = Scena->DodajObiekt(ModelSiatki, sizeof(ModelSiatki), 3, 0, 0, 51*24*3, Graf3D_PolaczonaKrawedz);
     Scena->PrzeskalujObiekt(IDSiatki, glm::vec3(PromienKuli+0.1f, PromienKuli+0.1f, PromienKuli+0.1f));
+    Scena->ObrocObiekt(IDSiatki, -M_PI/24.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+}
 
+void OpenGLWidget::UstawKamereNaStrefie(int Strefa)
+{
+    GLfloat Dlugosc = (GLfloat)(glm::pi<double>()/12.0f * Strefa);
+
+    KameraX = KameraOdObiektu*cos(Dlugosc);
+    KameraY = KameraOdObiektu*sin(Dlugosc);
+    KameraZ = 0;
+
+    ObrotX = Dlugosc;
+    ObrotY = M_PI_2;
+
+    Scena->PrzekazIntaDoShedera("NumerStrefy", (Strefa+12)%24);
 }

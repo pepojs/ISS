@@ -32,6 +32,8 @@ public:
     void RysowanieTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDTrajektoria, Rysuj);}
     void RysowanieSiatki(GLboolean Rysuj){Scena->RysujObiekt(IDSiatki, Rysuj);}
     void RysowaniePunktuSledzacego(GLboolean Rysuj){Scena->RysujObiekt(IDWskaznikStacji, Rysuj);}
+    void UstawKamereNaStrefie(int Strefa);
+    void PodswietlenieStrefy(int Podswietl){Scena->PrzekazIntaDoShedera("WlaczStrefe", Podswietl);}
 
 protected:
     void initializeGL();
