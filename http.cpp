@@ -57,6 +57,46 @@ ISS_Dane Http::PobierzDaneOISS()
     return Dane;
 }
 
+void Http::PobierzDaneOISS(ISS_Dane *TablicaDanych, int IloscDanych, uint PoczatekCzasu, uint Czestotliwoasc)
+{
+    if(IloscDanych >= 10) IloscDanych = 10;
+
+    QTimer MaxCzasPobierania;
+    MaxCzasPobierania.setSingleShot(true);
+    QEventLoop PetlaOczekiwania;
+    QString NapisPomocniczy = "https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=";
+
+    connect(this, SIGNAL(pobrano()), &PetlaOczekiwania, SLOT(quit()));
+    connect(&MaxCzasPobierania, SIGNAL(timeout()), &PetlaOczekiwania, SLOT(quit()));
+
+    for (uint i = 0; i <IloscDanych; i++)
+    {
+        NapisPomocniczy.append(QString::number(PoczatekCzasu + i*Czestotliwoasc));
+        NapisPomocniczy.append(",");
+    }
+
+    NapisPomocniczy.remove(NapisPomocniczy.length()-1,1);
+
+    QUrl StronaZDanymi(NapisPomocniczy);
+    PobierzStrone(StronaZDanymi);
+
+    MaxCzasPobierania.start(1000);
+    PetlaOczekiwania.exec();
+
+    if(htmlStrony.isEmpty())
+    {
+      /*QMessageBox* Komunikat = new QMessageBox();
+        Komunikat->setText("Nie udało się pobrać danych z strony: \nhttps://api.wheretheiss.at/v1/satellites/25544");
+        Komunikat->setStandardButtons(QMessageBox::Ok);
+        Komunikat->show();*/
+        std::cerr<<"Nie pobrano danych ze strony"<<std::endl;
+        return;
+    }
+
+   PraserWieluDanychISS(TablicaDanych, IloscDanych);
+
+}
+
 ISS_Dane Http::ParserDanychISS()
 {
     ISS_Dane NoweDane;
@@ -114,4 +154,65 @@ ISS_Dane Http::ParserDanychISS()
     NoweDane.CzasPrzelotu = NapisPomocniczy.toUInt();
 
     return  NoweDane;
+}
+
+void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
+{
+    ISS_Dane NoweDane;
+    int PoczatekWyrazenia = 0;
+    int KoniecWyrazenia = 0;
+    int DlugoscWyrazenia = 0;
+    QString NapisPomocniczy;
+
+    htmlStrony.remove(0,1);
+
+    for(int i = 0; i < htmlStrony.size(); i++)
+    {
+        if(htmlStrony[i] == '"')
+            htmlStrony.remove(i,1);
+    }
+
+    for(int i = 0; i < IloscDanych; i++)
+    {
+        PoczatekWyrazenia = htmlStrony.indexOf("latitude", KoniecWyrazenia);
+        DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+        KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+        NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+        TablicaDanych[i].SzerokoscGeo = NapisPomocniczy.toDouble();
+
+        PoczatekWyrazenia = htmlStrony.indexOf("longitude", KoniecWyrazenia);
+        DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+        KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+        NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+        TablicaDanych[i].DlugoscGeo = NapisPomocniczy.toDouble();
+
+        PoczatekWyrazenia = htmlStrony.indexOf("altitude", KoniecWyrazenia);
+        DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+        KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+        NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+        TablicaDanych[i].Wysokosc = NapisPomocniczy.toDouble();
+
+        PoczatekWyrazenia = htmlStrony.indexOf("velocity", KoniecWyrazenia);
+        DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+        KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+        NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+        TablicaDanych[i].Predkosc = NapisPomocniczy.toDouble();
+
+        PoczatekWyrazenia = htmlStrony.indexOf("timestamp", KoniecWyrazenia);
+        DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
+        KoniecWyrazenia = htmlStrony.indexOf(',', PoczatekWyrazenia);
+
+        NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
+
+        TablicaDanych[i].CzasPrzelotu = NapisPomocniczy.toUInt();
+    }
+
 }

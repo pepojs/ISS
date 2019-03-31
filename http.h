@@ -27,6 +27,7 @@ public:
     void PobierzStrone(const QUrl &Url);
     QString ZwrocZawartoscStrony();
     ISS_Dane PobierzDaneOISS();
+    void PobierzDaneOISS(ISS_Dane* TablicaDanych, int IloscDanych, uint PoczatekCzasu, uint Czestotliwoasc);
 
 signals:
     void pobrano();
@@ -38,6 +39,7 @@ private:
     QNetworkAccessManager http;
     QString htmlStrony;
     ISS_Dane ParserDanychISS();
+    void PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych);
 };
 
 #endif // HTTP_H

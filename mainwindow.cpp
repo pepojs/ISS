@@ -154,6 +154,10 @@ MainWindow::MainWindow(QWidget *parent) :
     setCentralWidget(Centralny);
     Centralny->setLayout(WarstwaGlowna);
 
+    ISS_Dane Dane[10];
+    Html->PobierzDaneOISS(&Dane[0], 10, 1436029892, 15);
+
+    for(int i = 0; i < 10; i++)cout<<Dane[i].CzasPrzelotu<<endl;
 
 }
 
