@@ -21,6 +21,7 @@
 #include "lokalizator.h"
 #include "wykres.h"
 #include "openglwidget.h"
+#include "magazyn_danych.h"
 
 
 class MainWindow : public QMainWindow
@@ -74,6 +75,7 @@ private:
     QVBoxLayout* WarstwaGlowna;
 
     int Strefa;
+    Magazyn_danych MagazynDanychStacji;
 };
 
 #endif // MAINWINDOW_H

@@ -4,6 +4,7 @@
 #include "KGrafika3D.h"
 #include "modele.h"
 #include "iss_dane.h"
+#include "magazyn_danych.h"
 
 #include <QWidget>
 #include <QOpenGLWidget>
@@ -27,6 +28,7 @@ public:
     void TworzZiemie(GLfloat Promien);
     void TworzPunktPozycji();
     void TworzTrajektorie();
+    void WypelniTrajektorie(Magazyn_danych Dane);
     void TworzSiatke();
     void SledzenieStacji(GLboolean Sledz){fSledzenieStacji = Sledz;}
     void RysowanieTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDTrajektoria, Rysuj);}

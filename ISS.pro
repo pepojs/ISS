@@ -33,7 +33,8 @@ SOURCES += \
     wykres.cpp \
     openglwidget.cpp \
     KGrafika3D.cpp \
-    Shader.cpp
+    Shader.cpp \
+    magazyn_danych.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +47,8 @@ HEADERS += \
     KGrafika3D.h \
     Shader.h \
     SObiektNaScenie.h \
-    modele.h
+    modele.h \
+    magazyn_danych.h
 
 FORMS += \
         mainwindow.ui

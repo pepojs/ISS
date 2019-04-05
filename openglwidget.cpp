@@ -190,24 +190,23 @@ void OpenGLWidget::NoweDaneISS(ISS_Dane NoweDane)
     }
 
 
-    if(OffsetTrajektori <= 599)
+    if(Dlug != 0 && Szer != 0)
     {
-        if(Dlug != 0 && Szer != 0)
-        {
-            vector<GLfloat> Punkt(3);
-            //6 371 prom->50 400->x prom/400 = 50/x 400*50/prom =x
-            Wyso = (NoweDane.Wysokosc*PromienKuli)/6371.0f;
-            Punkt[0] = (Wyso+PromienKuli)*cos(Dlug)*cos(Szer);
-            Punkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
-            Punkt[2] = (Wyso+PromienKuli)*sin(Szer);
+        vector<GLfloat> Punkt(3);
+        //6 371 prom->50 400->x prom/400 = 50/x 400*50/prom =x
+        Wyso = (NoweDane.Wysokosc*PromienKuli)/6371.0f;
+        Punkt[0] = (Wyso+PromienKuli)*cos(Dlug)*cos(Szer);
+        Punkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
+        Punkt[2] = (Wyso+PromienKuli)*sin(Szer);
 
-            Scena->UaktualniDaneObiektu(IDTrajektoria, OffsetTrajektori*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
-            OffsetTrajektori += 1;
-        }else
-        {
-            OffsetTrajektori = 0;
-        }
+        Scena->UaktualniDaneObiektu(IDTrajektoria, (5400+OffsetTrajektori)*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
+        OffsetTrajektori += 1;
+        OffsetTrajektori = OffsetTrajektori%10;
+    }else
+    {
+        OffsetTrajektori = 0;
     }
+
 
 
 
@@ -277,9 +276,33 @@ void OpenGLWidget::TworzPunktPozycji()
 
 void OpenGLWidget::TworzTrajektorie()
 {
-    vector<GLfloat> Trajektoria(1800);
+    vector<GLfloat> Trajektoria(16230);
 
-    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 1800, Graf3D_PolaczonaKrawedz);
+    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 5410, Graf3D_PolaczonaKrawedz);
+
+}
+
+void OpenGLWidget::WypelniTrajektorie(Magazyn_danych Dane)
+{
+    vector<GLfloat> Trajektoria(16230);
+    ISS_Dane NoweDane;
+    GLfloat Szer = 0;
+    GLfloat Dlug = 0;
+    GLfloat Wyso = 0;
+
+    for(size_t i = 0; i < Dane.ZwrocIloscDanych(); i++)
+    {
+        NoweDane = Dane.ZwrocDane(i);
+        Wyso = (NoweDane.Wysokosc*PromienKuli)/6371.0f;
+        Szer = glm::radians(NoweDane.SzerokoscGeo);
+        Dlug = glm::radians(NoweDane.DlugoscGeo);
+
+        Trajektoria[(i*3)] = (Wyso+PromienKuli)*cos(Dlug)*cos(Szer);
+        Trajektoria[(i*3)+1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
+        Trajektoria[(i*3)+2] = (Wyso+PromienKuli)*sin(Szer);
+
+    }
+    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 5410, Graf3D_PolaczonaKrawedz);
 
 }
 

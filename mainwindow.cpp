@@ -82,6 +82,9 @@ MainWindow::MainWindow(QWidget *parent) :
     WybranaStrefa->setMaximumHeight(30);
     //WybranaStrefa->setMaximumWidth(300);
 
+    MagazynDanychStacji.WypelniDanymiZSieci(Html);
+    MagazynDanychStacji.ZapiszDane();
+
     QObject::connect(CzasDoPobrania, SIGNAL(timeout()), this, SLOT(PobierzNoweDaneISS()));
     QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
     QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
@@ -149,15 +152,9 @@ MainWindow::MainWindow(QWidget *parent) :
     WarstwaGlowna->addLayout(WarstwaPosrednia);
 
 
-
     QWidget* Centralny = new QWidget(this);
     setCentralWidget(Centralny);
     Centralny->setLayout(WarstwaGlowna);
-
-    ISS_Dane Dane[10];
-    Html->PobierzDaneOISS(&Dane[0], 10, 1436029892, 15);
-
-    for(int i = 0; i < 10; i++)cout<<Dane[i].CzasPrzelotu<<endl;
 
 }
 
