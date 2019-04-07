@@ -75,7 +75,9 @@ private:
     QVBoxLayout* WarstwaGlowna;
 
     int Strefa;
-    Magazyn_danych MagazynDanychStacji;
+    Magazyn_danych* MagazynDanychStacji;
+
+    int Licznik;
 };
 
 #endif // MAINWINDOW_H

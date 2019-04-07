@@ -199,9 +199,10 @@ void OpenGLWidget::NoweDaneISS(ISS_Dane NoweDane)
         Punkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
         Punkt[2] = (Wyso+PromienKuli)*sin(Szer);
 
-        Scena->UaktualniDaneObiektu(IDTrajektoria, (5400+OffsetTrajektori)*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
+        Scena->UaktualniDaneObiektu(IDTrajektoria, (24*60+OffsetTrajektori)*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
         OffsetTrajektori += 1;
-        OffsetTrajektori = OffsetTrajektori%10;
+        OffsetTrajektori = OffsetTrajektori%30;
+
     }else
     {
         OffsetTrajektori = 0;
@@ -248,7 +249,8 @@ void OpenGLWidget::TworzZiemie(GLfloat Promien)
 {
     GLuint IDKuli;
     GLuint IDTekstury;
-    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
+    //QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
+    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
 
     IDTekstury = Scena->GenerujTeksture2D(PlikZMapa.toStdString().c_str(), GL_REPEAT, GL_LINEAR); //GL_CLAMP_TO_BORDER
 
@@ -276,15 +278,15 @@ void OpenGLWidget::TworzPunktPozycji()
 
 void OpenGLWidget::TworzTrajektorie()
 {
-    vector<GLfloat> Trajektoria(16230);
+    vector<GLfloat> Trajektoria(24*60*3+90);
 
-    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 5410, Graf3D_PolaczonaKrawedz);
+    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 24*60+30, Graf3D_PolaczonaKrawedz);
 
 }
 
 void OpenGLWidget::WypelniTrajektorie(Magazyn_danych Dane)
 {
-    vector<GLfloat> Trajektoria(16230);
+    vector<GLfloat> Trajektoria(Dane.ZwrocIloscDanych()*3);
     ISS_Dane NoweDane;
     GLfloat Szer = 0;
     GLfloat Dlug = 0;
@@ -302,7 +304,7 @@ void OpenGLWidget::WypelniTrajektorie(Magazyn_danych Dane)
         Trajektoria[(i*3)+2] = (Wyso+PromienKuli)*sin(Szer);
 
     }
-    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 5410, Graf3D_PolaczonaKrawedz);
+    Scena->UaktualniDaneObiektu(IDTrajektoria, 0, Trajektoria.size()*sizeof(GLfloat), &Trajektoria[0]);
 
 }
 

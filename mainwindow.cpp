@@ -82,8 +82,20 @@ MainWindow::MainWindow(QWidget *parent) :
     WybranaStrefa->setMaximumHeight(30);
     //WybranaStrefa->setMaximumWidth(300);
 
-    MagazynDanychStacji.WypelniDanymiZSieci(Html);
-    MagazynDanychStacji.ZapiszDane();
+    MagazynDanychStacji = new Magazyn_danych(24*60);
+    long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*60+3*60);
+    cout<<"Ile danych: "<<IleDanych<<endl;
+    if(IleDanych >= 0)
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60+3*60);
+    else
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, 0, 24*60*60+3*60);
+
+    MagazynDanychStacji->ZapiszDane(60);
+
+    for(size_t k = 0; k < MagazynDanychStacji->ZwrocIloscDanych(); k++)
+    {
+        cout<<"K: "<<k<<",   "<<MagazynDanychStacji->ZwrocDane(k).CzasPrzelotu<<endl;
+    }
 
     QObject::connect(CzasDoPobrania, SIGNAL(timeout()), this, SLOT(PobierzNoweDaneISS()));
     QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
@@ -156,6 +168,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setCentralWidget(Centralny);
     Centralny->setLayout(WarstwaGlowna);
 
+    Licznik = 0;
 }
 
 MainWindow::~MainWindow()
@@ -193,6 +206,16 @@ void MainWindow::PobierzNoweDaneISS()
         WykresWysokosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Wysokosc);
 
         emit noweDaneISS(DaneStacji);
+
+        if(Licznik == 0)
+            Model3D->WypelniTrajektorie(*MagazynDanychStacji);
+
+        Licznik += 1;
+        if(Licznik == 30)
+        {
+            MagazynDanychStacji->DodajNoweDane(DaneStacji);
+            Licznik = 0;
+        }
     }
 
 
