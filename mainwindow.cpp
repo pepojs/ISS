@@ -303,3 +303,31 @@ void MainWindow::ZmianaStrefy(int NowaStrefa)
     Model3D->update();
 
 }
+
+
+bool MainWindow::event(QEvent* Zdarzenie)
+{
+    QKeyEvent *Przycisk;
+
+    switch(Zdarzenie->type())
+    {
+        case QEvent::KeyPress:
+            Przycisk = static_cast<QKeyEvent* >(Zdarzenie);
+            //cout<<Przycisk->key()<<endl;
+            if(Przycisk->key() == Qt::Key_A)
+            {
+                cout<<"Lewa strzalka"<<endl;
+            }
+
+            if(Przycisk->key() == Qt::Key_D)
+            {
+                cout<<"Prawa strzalka"<<endl;
+            }
+        break;
+
+        default:
+        break;
+    }
+
+    return QWidget::event(Zdarzenie);
+}

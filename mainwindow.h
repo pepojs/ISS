@@ -14,6 +14,7 @@
 #include <QSizePolicy>
 #include <QSpacerItem>
 #include <QSpinBox>
+#include <QEvent>
 
 #include "http.h"
 #include "iss_dane.h"
@@ -36,6 +37,9 @@ public:
 
 signals:
     void noweDaneISS(ISS_Dane);
+
+protected:
+    bool event(QEvent* Zdarzenie);
 
 private slots:
     void PobierzNoweDaneISS();
