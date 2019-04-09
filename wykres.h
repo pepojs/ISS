@@ -40,6 +40,7 @@ public:
     void ZmienPodpisOsiX(QString NowyPodpis);
     void ZmienPodpisOsiY(QString NowyPodpis);
     void DodajDaneDoWykresu(uint X, double Y);
+    void WyczyscWykres();
     void WidokSiatki(bool Wlacz);
 
 signals:

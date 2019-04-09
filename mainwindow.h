@@ -37,6 +37,7 @@ public:
 
 signals:
     void noweDaneISS(ISS_Dane);
+    void daneTrajektoriiISS(ISS_Dane);
 
 protected:
     bool event(QEvent* Zdarzenie);
@@ -82,6 +83,9 @@ private:
     Magazyn_danych* MagazynDanychStacji;
 
     int Licznik;
+    bool AktywnaTrajektoria;
+    bool PrzelaczAktualizacjeDanych;
+    uint32_t MagazynOdczytywaneDane;
 };
 
 #endif // MAINWINDOW_H

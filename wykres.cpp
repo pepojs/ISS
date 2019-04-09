@@ -43,7 +43,7 @@ Wykres::Wykres(QWidget* Rodzic)
     OsY->setRange(0,30);
     OsY->setTickCount(5);
 
-    OsX->setTickCount(2);
+    OsX->setTickCount(3);
     OsX->setFormat("hh:mm:ss");
     OsX->setTitleText("Dane");
 
@@ -195,6 +195,11 @@ void Wykres::DodajDaneDoWykresu(uint X, double Y)
     QDateTime Czas;
     Czas.setTime_t(X);
     LiniaWykresu->append(Czas.toMSecsSinceEpoch(), Y);
+}
+
+void Wykres::WyczyscWykres()
+{
+    LiniaWykresu->clear();
 }
 
 void Wykres::WidokSiatki(bool Wlacz)

@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     CzasDoPobrania = new QTimer;
     Strefa = 1;
 
+    AktywnaTrajektoria = false;
+    PrzelaczAktualizacjeDanych = false;
+
     Html = new Http();
 
     CzasPrzelotuISS = new Zegar(this);
@@ -94,7 +97,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     for(size_t k = 0; k < MagazynDanychStacji->ZwrocIloscDanych(); k++)
     {
-        cout<<"K: "<<k<<",   "<<MagazynDanychStacji->ZwrocDane(k).CzasPrzelotu<<endl;
+        cout<<"K: "<<k<<", Czas: "<<MagazynDanychStacji->ZwrocDane(k).CzasPrzelotu<<", Wysokosc: "<<MagazynDanychStacji->ZwrocDane(k).Wysokosc<<endl;
     }
 
     QObject::connect(CzasDoPobrania, SIGNAL(timeout()), this, SLOT(PobierzNoweDaneISS()));
@@ -183,24 +186,28 @@ void MainWindow::PobierzNoweDaneISS()
 
     if(DaneStacji.Wysokosc > 0)
     {
-        if(ObecnyZakresOsiPredkosci+5 <= DaneStacji.Predkosc || ObecnyZakresOsiPredkosci-5 >= DaneStacji.Predkosc)
+        if(PrzelaczAktualizacjeDanych == false)
         {
-            ObecnyZakresOsiPredkosci = DaneStacji.Predkosc;
-            WykresPredkosci->UstawZakresOsiY(DaneStacji.Predkosc-5, DaneStacji.Predkosc+5);
+            if(ObecnyZakresOsiPredkosci+5 <= DaneStacji.Predkosc || ObecnyZakresOsiPredkosci-5 >= DaneStacji.Predkosc)
+            {
+                ObecnyZakresOsiPredkosci = DaneStacji.Predkosc;
+                WykresPredkosci->UstawZakresOsiY(DaneStacji.Predkosc-5, DaneStacji.Predkosc+5);
+            }
+
+            if(ObecnyZakresOsiWysokosci+2 <= DaneStacji.Wysokosc || ObecnyZakresOsiWysokosci-2 >= DaneStacji.Wysokosc)
+            {
+                ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
+                WykresWysokosci->UstawZakresOsiY(DaneStacji.Wysokosc-2, DaneStacji.Wysokosc+2);
+            }
+
+            if(ObecnyZakresOsiCzasu+30 <= DaneStacji.CzasPrzelotu || ObecnyZakresOsiCzasu-30 >= DaneStacji.CzasPrzelotu)
+            {
+                ObecnyZakresOsiCzasu = DaneStacji.CzasPrzelotu;
+                WykresPredkosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
+                WykresWysokosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
+            }
         }
 
-        if(ObecnyZakresOsiWysokosci+2 <= DaneStacji.Wysokosc || ObecnyZakresOsiWysokosci-2 >= DaneStacji.Wysokosc)
-        {
-            ObecnyZakresOsiWysokosci = DaneStacji.Wysokosc;
-            WykresWysokosci->UstawZakresOsiY(DaneStacji.Wysokosc-2, DaneStacji.Wysokosc+2);
-        }
-
-        if(ObecnyZakresOsiCzasu+30 <= DaneStacji.CzasPrzelotu)
-        {
-            ObecnyZakresOsiCzasu = DaneStacji.CzasPrzelotu;
-            WykresPredkosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
-            WykresWysokosci->UstawZakresOsiX(DaneStacji.CzasPrzelotu-30, DaneStacji.CzasPrzelotu+30);
-        }
 
         WykresPredkosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Predkosc);
         WykresWysokosci->DodajDaneDoWykresu(DaneStacji.CzasPrzelotu, DaneStacji.Wysokosc);
@@ -225,6 +232,19 @@ void MainWindow::PobierzNoweDaneISS()
 
 void MainWindow::PrzycisnietyCzas()
 {
+    AktywnaTrajektoria = false;
+    if(PrzelaczAktualizacjeDanych == true)
+    {
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), Model3D, SLOT(TrajektoriaNoweDane(ISS_Dane)));
+    }
+
+    PrzelaczAktualizacjeDanych = false;
+
    /* Model3D->hide();
     QObject::disconnect(this, SIGNAL(noweDaneISS(ISS_Dane)), Model3D, SLOT(NoweDaneISS(ISS_Dane)));
     */
@@ -232,6 +252,8 @@ void MainWindow::PrzycisnietyCzas()
     Model3D->RysowanieTrajektorii(false);
     Model3D->SledzenieStacji(false);
     Model3D->RysowanieSiatki(false);
+    Model3D->RysowanieWskTrajektorii(false);
+
     StrefaCzasowa->show();
     WybranaStrefa->show();
     Model3D->PodswietlenieStrefy(1);
@@ -242,10 +264,24 @@ void MainWindow::PrzycisnietyCzas()
 
 void MainWindow::PrzycisnietyWspolrzedne()
 {
+    AktywnaTrajektoria = false;
+    if(PrzelaczAktualizacjeDanych == true)
+    {
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), Model3D, SLOT(TrajektoriaNoweDane(ISS_Dane)));
+    }
+
+    PrzelaczAktualizacjeDanych = false;
+
     Model3D->SledzenieStacji(true);
     Model3D->RysowaniePunktuSledzacego(true);
     Model3D->RysowanieTrajektorii(false);
     Model3D->RysowanieSiatki(false);
+    Model3D->RysowanieWskTrajektorii(false);
 
     StrefaCzasowa->hide();
     WybranaStrefa->hide();
@@ -264,9 +300,24 @@ void MainWindow::PrzycisnietyWspolrzedne()
 
 void MainWindow::PrzycisnietyWysokosc()
 {
+    AktywnaTrajektoria = true;
+
+    if(PrzelaczAktualizacjeDanych == true)
+    {
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::connect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+        QObject::disconnect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), Model3D, SLOT(TrajektoriaNoweDane(ISS_Dane)));
+    }
+
+    PrzelaczAktualizacjeDanych = false;
+
     Model3D->RysowanieTrajektorii(true);
     Model3D->RysowaniePunktuSledzacego(true);
     Model3D->RysowanieSiatki(false);
+    Model3D->RysowanieWskTrajektorii(false);
 
     StrefaCzasowa->hide();
     WybranaStrefa->hide();
@@ -309,6 +360,7 @@ bool MainWindow::event(QEvent* Zdarzenie)
 {
     QKeyEvent *Przycisk;
 
+
     switch(Zdarzenie->type())
     {
         case QEvent::KeyPress:
@@ -316,12 +368,155 @@ bool MainWindow::event(QEvent* Zdarzenie)
             //cout<<Przycisk->key()<<endl;
             if(Przycisk->key() == Qt::Key_A)
             {
-                cout<<"Lewa strzalka"<<endl;
+                if(AktywnaTrajektoria == true)
+                {
+                    if(PrzelaczAktualizacjeDanych == false)
+                    {
+                        Model3D->SledzenieStacji(false);
+
+                        QObject::disconnect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::disconnect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), Model3D, SLOT(TrajektoriaNoweDane(ISS_Dane)));
+
+                        Model3D->RysowanieWskTrajektorii(true);
+                        MagazynOdczytywaneDane = MagazynDanychStacji->ZwrocGlowe();
+                    }
+
+                    PrzelaczAktualizacjeDanych = true;
+
+                    if(MagazynOdczytywaneDane == 0)
+                        MagazynOdczytywaneDane = MagazynDanychStacji->ZwrocIloscDanych()-1;
+
+                    MagazynOdczytywaneDane -= 1;
+
+                    ISS_Dane DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
+
+                    if(ObecnyZakresOsiPredkosci+5 <= DanePomocnicze.Predkosc || ObecnyZakresOsiPredkosci-5 >= DanePomocnicze.Predkosc)
+                    {
+                        ObecnyZakresOsiPredkosci = DanePomocnicze.Predkosc;
+                        WykresPredkosci->UstawZakresOsiY(DanePomocnicze.Predkosc-5, DanePomocnicze.Predkosc+5);
+                    }
+
+                    if(ObecnyZakresOsiWysokosci+2 <= DanePomocnicze.Wysokosc || ObecnyZakresOsiWysokosci-2 >= DanePomocnicze.Wysokosc)
+                    {
+                        ObecnyZakresOsiWysokosci = DanePomocnicze.Wysokosc;
+                        WykresWysokosci->UstawZakresOsiY(DanePomocnicze.Wysokosc-2, DanePomocnicze.Wysokosc+2);
+                    }
+
+                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.CzasPrzelotu || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.CzasPrzelotu)
+                    {
+                        ObecnyZakresOsiCzasu = DanePomocnicze.CzasPrzelotu;
+                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.CzasPrzelotu-30, DanePomocnicze.CzasPrzelotu+30);
+                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.CzasPrzelotu-30, DanePomocnicze.CzasPrzelotu+30);
+                    }
+
+                    WykresPredkosci->WyczyscWykres();
+                    WykresWysokosci->WyczyscWykres();
+
+                    if(MagazynOdczytywaneDane != 0)
+                    {
+                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
+
+                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+                    }
+
+                    DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
+
+                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+
+                    if(MagazynOdczytywaneDane != MagazynDanychStacji->ZwrocIloscDanych()-1)
+                    {
+                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
+
+                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+                    }
+
+                    emit daneTrajektoriiISS(MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane));
+                }
+
             }
 
             if(Przycisk->key() == Qt::Key_D)
             {
-                cout<<"Prawa strzalka"<<endl;
+                if(AktywnaTrajektoria == true)
+                {
+                    if(PrzelaczAktualizacjeDanych == false)
+                    {
+                        Model3D->SledzenieStacji(false);
+
+                        QObject::disconnect(this, SIGNAL(noweDaneISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::disconnect(this, SIGNAL(noweDaneISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), WyswietlaczPolozeniaISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), CzasPrzelotuISS, SLOT(AktualizujDaneISS(ISS_Dane)));
+                        QObject::connect(this, SIGNAL(daneTrajektoriiISS(ISS_Dane)), Model3D, SLOT(TrajektoriaNoweDane(ISS_Dane)));
+
+                        Model3D->RysowanieWskTrajektorii(true);
+                        MagazynOdczytywaneDane = MagazynDanychStacji->ZwrocGlowe();
+                    }
+
+                    PrzelaczAktualizacjeDanych = true;
+
+                    MagazynOdczytywaneDane += 1;
+
+                    MagazynOdczytywaneDane = MagazynOdczytywaneDane%MagazynDanychStacji->ZwrocIloscDanych();
+
+
+                    ISS_Dane DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
+
+                    if(ObecnyZakresOsiPredkosci+5 <= DanePomocnicze.Predkosc || ObecnyZakresOsiPredkosci-5 >= DanePomocnicze.Predkosc)
+                    {
+                        ObecnyZakresOsiPredkosci = DanePomocnicze.Predkosc;
+                        WykresPredkosci->UstawZakresOsiY(DanePomocnicze.Predkosc-5, DanePomocnicze.Predkosc+5);
+                    }
+
+                    if(ObecnyZakresOsiWysokosci+2 <= DanePomocnicze.Wysokosc || ObecnyZakresOsiWysokosci-2 >= DanePomocnicze.Wysokosc)
+                    {
+                        ObecnyZakresOsiWysokosci = DanePomocnicze.Wysokosc;
+                        WykresWysokosci->UstawZakresOsiY(DanePomocnicze.Wysokosc-2, DanePomocnicze.Wysokosc+2);
+                    }
+
+                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.CzasPrzelotu || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.CzasPrzelotu)
+                    {
+                        ObecnyZakresOsiCzasu = DanePomocnicze.CzasPrzelotu;
+                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.CzasPrzelotu-30, DanePomocnicze.CzasPrzelotu+30);
+                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.CzasPrzelotu-30, DanePomocnicze.CzasPrzelotu+30);
+                    }
+
+                    WykresPredkosci->WyczyscWykres();
+                    WykresWysokosci->WyczyscWykres();
+
+
+                    if(MagazynOdczytywaneDane != 0)
+                    {
+                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
+
+                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+                    }
+
+                    DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
+
+                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+
+                    if(MagazynOdczytywaneDane != MagazynDanychStacji->ZwrocIloscDanych()-1)
+                    {
+                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
+
+                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Predkosc);
+                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.CzasPrzelotu, DanePomocnicze.Wysokosc);
+                    }
+
+                    emit daneTrajektoriiISS(MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane));
+                }
+
             }
         break;
 

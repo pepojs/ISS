@@ -66,7 +66,8 @@ void OpenGLWidget::initializeGL()
     Scena->RysujObiekt(IDTrajektoria, false);
     TworzSiatke();
     Scena->RysujObiekt(IDSiatki, false);
-
+    TworzWskaznikTrajektorii();
+    Scena->RysujObiekt(IDWskTrajektorii, false);
     //Scena->UstawRzutowanieOrtogonalne(-100.0f, 100.0,-100.0f, 100.0, 0.1f, 160.0f);
 }
 
@@ -209,10 +210,30 @@ void OpenGLWidget::NoweDaneISS(ISS_Dane NoweDane)
     }
 
 
+    update();
+}
 
+void OpenGLWidget::TrajektoriaNoweDane(ISS_Dane NoweDane)
+{
+    //Szerokosc - 7.0f (porawka)
+    GLfloat NowyPunkt[3];
+
+    GLfloat Szer = glm::radians(NoweDane.SzerokoscGeo);
+    GLfloat Dlug = glm::radians(NoweDane.DlugoscGeo);
+    GLfloat Wyso = (NoweDane.Wysokosc*PromienKuli)/6371.0f;
+    //Zerowanie pozycji
+
+    NowyPunkt[0] = (Wyso+PromienKuli)*cos(Dlug)*cos(Szer);
+    NowyPunkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
+    NowyPunkt[2] = (Wyso+PromienKuli)*sin(Szer);
+
+    Scena->UaktualniDaneObiektu(IDWskTrajektorii, 0, 3*sizeof(GLfloat), &NowyPunkt[0]);
+
+    KameraX = KameraOdObiektu*cos(Dlug)*cos(Szer);
+    KameraY = KameraOdObiektu*cos(Szer)*sin(Dlug);
+    KameraZ = KameraOdObiektu*sin(Szer);
 
     update();
-
 }
 
 int8_t OpenGLWidget::UstawVertexShader(QString NazwaShadera)
@@ -249,8 +270,8 @@ void OpenGLWidget::TworzZiemie(GLfloat Promien)
 {
     GLuint IDKuli;
     GLuint IDTekstury;
-    //QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
-    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
+    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
+    //QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
 
     IDTekstury = Scena->GenerujTeksture2D(PlikZMapa.toStdString().c_str(), GL_REPEAT, GL_LINEAR); //GL_CLAMP_TO_BORDER
 
@@ -273,6 +294,15 @@ void OpenGLWidget::TworzPunktPozycji()
     Scena->PrzesunObiekt(IDWskaznikStacji, glm::vec3(0.0f, PromienKuli, 0.0f));
     Scena->ObrocObiekt(IDWskaznikStacji, M_PI_2, glm::vec3(1.0f, 0.0f, 0.0f));
 
+
+}
+
+
+void OpenGLWidget::TworzWskaznikTrajektorii()
+{
+    GLfloat Punkt[3] = {0.0f, 0.0f, 0.0f};
+    IDWskTrajektorii = Scena->DodajObiektD(Punkt, sizeof(Punkt), 3, 0, 0, 1, Graf3D_Punkt);
+    glPointSize(20);
 
 }
 

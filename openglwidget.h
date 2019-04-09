@@ -28,12 +28,14 @@ public:
     void TworzZiemie(GLfloat Promien);
     void TworzPunktPozycji();
     void TworzTrajektorie();
+    void TworzWskaznikTrajektorii();
     void WypelniTrajektorie(Magazyn_danych Dane);
     void TworzSiatke();
     void SledzenieStacji(GLboolean Sledz){fSledzenieStacji = Sledz;}
     void RysowanieTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDTrajektoria, Rysuj);}
     void RysowanieSiatki(GLboolean Rysuj){Scena->RysujObiekt(IDSiatki, Rysuj);}
     void RysowaniePunktuSledzacego(GLboolean Rysuj){Scena->RysujObiekt(IDWskaznikStacji, Rysuj);}
+    void RysowanieWskTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDWskTrajektorii, Rysuj);}
     void UstawKamereNaStrefie(int Strefa);
     void PodswietlenieStrefy(int Podswietl){Scena->PrzekazIntaDoShedera("WlaczStrefe", Podswietl);}
 
@@ -45,6 +47,7 @@ protected:
 
 private slots:
     void NoweDaneISS(ISS_Dane NoweDane);
+    void TrajektoriaNoweDane(ISS_Dane NoweDane);
 
 
 private:
@@ -62,6 +65,7 @@ private:
     GLboolean IDTrajektoria;
     GLuint OffsetTrajektori;
     GLuint IDSiatki;
+    GLuint IDWskTrajektorii;
 
 };
 

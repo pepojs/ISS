@@ -12,6 +12,10 @@ Magazyn_danych::Magazyn_danych(size_t IloscDanych)
     Glowa = 0;
 }
 
+Magazyn_danych::~Magazyn_danych()
+{
+    ZapiszDane(60);
+}
 
 void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uint32_t IloscDanychWypelnionych, uint32_t CzasDoTylu_S)
 {
@@ -52,6 +56,7 @@ cout<<"Licznik "<<licznik<<endl;
 
     for(licznik = IloscDanychWypelnionych; licznik < (MagazynDanych.size()-10);)
     {
+        cout<<"Czas danych: "<<CzasDanych<<endl;
         Html->PobierzDaneOISS(&TabPom[0], 10, CzasDanych, Czestotliwosc);
         CzasDanych += 10*Czestotliwosc;
         for(size_t j = 0; j < 10; j++)
