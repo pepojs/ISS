@@ -34,7 +34,8 @@ SOURCES += \
     openglwidget.cpp \
     KGrafika3D.cpp \
     Shader.cpp \
-    magazyn_danych.cpp
+    magazyn_danych.cpp \
+    iss_dane.cpp
 
 HEADERS += \
         mainwindow.h \

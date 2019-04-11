@@ -84,8 +84,8 @@ void Lokalizator::ZmienDlugoscGeo(double NowaDlugosc)
 
 void Lokalizator::AktualizujDaneISS(ISS_Dane NoweDane)
 {
-    this->ZmienSzerokoscGeo(NoweDane.SzerokoscGeo);
-    this->ZmienDlugoscGeo(NoweDane.DlugoscGeo);
+    this->ZmienSzerokoscGeo(NoweDane.ZwrocSzerokoscGeo_Stopnie());
+    this->ZmienDlugoscGeo(NoweDane.ZwrocDlugoscGeo_Stopnie());
 }
 
 

@@ -1,0 +1,15 @@
+<map id="Grafika3D::Rysuj" name="Grafika3D::Rysuj">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="179,107,338,133"/>
+<area shape="rect" id="node13" href="$class_open_g_l_widget.html#a260a543726f601659cbd1809b90f9e4b" title="OpenGLWidget::paintGL" alt="" coords="177,157,341,184"/>
+<area shape="rect" id="node14" href="$class_open_g_l_widget.html#aef6abf8fbf038ac0b1b8624e743b4b75" title="OpenGLWidget::resizeGL" alt="" coords="173,208,344,235"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="420,5,603,32"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="392,56,631,83"/>
+<area shape="rect" id="node9" href="$class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="404,107,619,133"/>
+<area shape="rect" id="node10" href="$class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="400,158,623,199"/>
+<area shape="rect" id="node11" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="407,223,616,265"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="679,56,885,83"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="694,107,870,149"/>
+<area shape="rect" id="node8" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="694,173,870,214"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="933,115,1112,141"/>
+<area shape="rect" id="node12" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="715,239,849,265"/>
+</map>

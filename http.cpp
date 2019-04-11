@@ -69,7 +69,7 @@ void Http::PobierzDaneOISS(ISS_Dane *TablicaDanych, int IloscDanych, uint Poczat
     connect(this, SIGNAL(pobrano()), &PetlaOczekiwania, SLOT(quit()));
     connect(&MaxCzasPobierania, SIGNAL(timeout()), &PetlaOczekiwania, SLOT(quit()));
 
-    for (uint i = 0; i <IloscDanych; i++)
+    for (int i = 0; i <IloscDanych; i++)
     {
         NapisPomocniczy.append(QString::number(PoczatekCzasu + i*Czestotliwoasc));
         NapisPomocniczy.append(",");
@@ -119,7 +119,7 @@ ISS_Dane Http::ParserDanychISS()
 
     NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-    NoweDane.SzerokoscGeo = NapisPomocniczy.toDouble();
+    NoweDane.ZmienSzerokoscGeo_Stopnie(NapisPomocniczy.toDouble());
 
     PoczatekWyrazenia = htmlStrony.indexOf("longitude");
     DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -127,7 +127,7 @@ ISS_Dane Http::ParserDanychISS()
 
     NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-    NoweDane.DlugoscGeo = NapisPomocniczy.toDouble();
+    NoweDane.ZmienDlugoscGeo_Stopnie(NapisPomocniczy.toDouble());
 
     PoczatekWyrazenia = htmlStrony.indexOf("altitude");
     DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -135,7 +135,7 @@ ISS_Dane Http::ParserDanychISS()
 
     NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-    NoweDane.Wysokosc = NapisPomocniczy.toDouble();
+    NoweDane.ZmienWysokosc_km(NapisPomocniczy.toDouble());
 
     PoczatekWyrazenia = htmlStrony.indexOf("velocity");
     DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -143,7 +143,7 @@ ISS_Dane Http::ParserDanychISS()
 
     NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-    NoweDane.Predkosc = NapisPomocniczy.toDouble();
+    NoweDane.ZmienPredkosc_kmH(NapisPomocniczy.toDouble());
 
     PoczatekWyrazenia = htmlStrony.indexOf("timestamp");
     DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -151,7 +151,7 @@ ISS_Dane Http::ParserDanychISS()
 
     NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-    NoweDane.CzasPrzelotu = NapisPomocniczy.toUInt();
+    NoweDane.ZmienCzasPrzelotu_UTS(NapisPomocniczy.toUInt());
 
     return  NoweDane;
 }
@@ -180,7 +180,7 @@ void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
 
         NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-        TablicaDanych[i].SzerokoscGeo = NapisPomocniczy.toDouble();
+        TablicaDanych[i].ZmienSzerokoscGeo_Stopnie(NapisPomocniczy.toDouble());
 
         PoczatekWyrazenia = htmlStrony.indexOf("longitude", KoniecWyrazenia);
         DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -188,7 +188,7 @@ void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
 
         NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-        TablicaDanych[i].DlugoscGeo = NapisPomocniczy.toDouble();
+        TablicaDanych[i].ZmienDlugoscGeo_Stopnie(NapisPomocniczy.toDouble());
 
         PoczatekWyrazenia = htmlStrony.indexOf("altitude", KoniecWyrazenia);
         DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -196,7 +196,7 @@ void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
 
         NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-        TablicaDanych[i].Wysokosc = NapisPomocniczy.toDouble();
+        TablicaDanych[i].ZmienWysokosc_km(NapisPomocniczy.toDouble());
 
         PoczatekWyrazenia = htmlStrony.indexOf("velocity", KoniecWyrazenia);
         DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -204,7 +204,7 @@ void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
 
         NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-        TablicaDanych[i].Predkosc = NapisPomocniczy.toDouble();
+        TablicaDanych[i].ZmienPredkosc_kmH(NapisPomocniczy.toDouble());
 
         PoczatekWyrazenia = htmlStrony.indexOf("timestamp", KoniecWyrazenia);
         DlugoscWyrazenia = htmlStrony.indexOf(':', PoczatekWyrazenia) + 1 - PoczatekWyrazenia;
@@ -212,7 +212,7 @@ void Http::PraserWieluDanychISS(ISS_Dane* TablicaDanych, int IloscDanych)
 
         NapisPomocniczy = htmlStrony.mid(PoczatekWyrazenia + DlugoscWyrazenia, KoniecWyrazenia - (PoczatekWyrazenia + DlugoscWyrazenia));
 
-        TablicaDanych[i].CzasPrzelotu = NapisPomocniczy.toUInt();
+        TablicaDanych[i].ZmienCzasPrzelotu_UTS(NapisPomocniczy.toUInt());
     }
 
 }

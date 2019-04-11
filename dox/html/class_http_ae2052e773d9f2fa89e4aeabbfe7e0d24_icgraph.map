@@ -1,0 +1,7 @@
+<map id="Http::PobierzStrone" name="Http::PobierzStrone">
+<area shape="rect" id="node2" href="$class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="189,78,348,105"/>
+<area shape="rect" id="node3" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="400,5,623,47"/>
+<area shape="rect" id="node5" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="400,71,623,112"/>
+<area shape="rect" id="node6" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="396,137,627,163"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="675,78,853,105"/>
+</map>

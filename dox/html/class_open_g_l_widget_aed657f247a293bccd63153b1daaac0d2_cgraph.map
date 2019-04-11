@@ -1,0 +1,8 @@
+<map id="OpenGLWidget::RysowanieSiatki" name="OpenGLWidget::RysowanieSiatki">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="268,56,427,83"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="475,56,595,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="861,5,1048,32"/>
+<area shape="rect" id="node5" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="871,107,1038,133"/>
+<area shape="rect" id="node6" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="643,56,813,83"/>
+<area shape="rect" id="node7" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="879,56,1030,83"/>
+</map>

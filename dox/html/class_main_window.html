@@ -1,0 +1,1402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ISS: Dokumentacja klasy MainWindow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ISS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_main_window.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#signals">Sygnały</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pro-methods">Metody chronione</a> &#124;
+<a href="#pri-slots">Sloty prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_main_window-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy MainWindow</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla MainWindow</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window__inherit__graph.png" border="0" usemap="#_main_window_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagram współpracy dla MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window__coll__graph.png" border="0" usemap="#_main_window_coll__map" alt="Collaboration graph"/></div>
+<map name="_main_window_coll__map" id="_main_window_coll__map">
+<area shape="rect" id="node3" href="class_lokalizator.html" title="Lokalizator" alt="" coords="143,199,228,225"/>
+<area shape="rect" id="node5" href="class_wykres.html" title="Wykres" alt="" coords="257,199,324,225"/>
+<area shape="rect" id="node8" href="class_zegar.html" title="Zegar" alt="" coords="378,199,433,225"/>
+<area shape="rect" id="node6" href="class_http.html" title="Http" alt="" coords="518,199,565,225"/>
+<area shape="rect" id="node9" href="struct_i_s_s___dane.html" title="Przechowywanie dane na temat stacji. " alt="" coords="589,199,669,225"/>
+<area shape="rect" id="node10" href="class_magazyn__danych.html" title="Magazyn_danych" alt="" coords="694,199,818,225"/>
+<area shape="rect" id="node11" href="class_open_g_l_widget.html" title="OpenGLWidget" alt="" coords="854,199,965,225"/>
+<area shape="rect" id="node13" href="class_grafika3_d.html" title="Grafika3D" alt="" coords="951,109,1030,136"/>
+<area shape="rect" id="node14" href="class_shader.html" title="Shader" alt="" coords="959,5,1022,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:aa8f1e80fab9bef41182682a39603dec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa8f1e80fab9bef41182682a39603dec0">noweDaneISS</a> (<a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>)</td></tr>
+<tr class="separator:aa8f1e80fab9bef41182682a39603dec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66692b25d441afe6f9f3b967f9195686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a66692b25d441afe6f9f3b967f9195686">daneTrajektoriiISS</a> (<a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>)</td></tr>
+<tr class="separator:a66692b25d441afe6f9f3b967f9195686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ca11be5bef00df7175506c2907a807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa3ca11be5bef00df7175506c2907a807">WypelniDanymi</a> (QString *dane)</td></tr>
+<tr class="separator:aa3ca11be5bef00df7175506c2907a807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:a44e3beb4c1b5434626c7da06ae4a511f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f">event</a> (QEvent *Zdarzenie)</td></tr>
+<tr class="separator:a44e3beb4c1b5434626c7da06ae4a511f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Sloty prywatne</h2></td></tr>
+<tr class="memitem:aa049ba6f94d822b2965bd4a42ce60f01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01">PobierzNoweDaneISS</a> ()</td></tr>
+<tr class="separator:aa049ba6f94d822b2965bd4a42ce60f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33245090cd200b4e7341b8c07e2c2513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a33245090cd200b4e7341b8c07e2c2513">PrzycisnietyCzas</a> ()</td></tr>
+<tr class="separator:a33245090cd200b4e7341b8c07e2c2513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7779b0eb5b7b37065cfd9f0a68e48baa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa">PrzycisnietyWspolrzedne</a> ()</td></tr>
+<tr class="separator:a7779b0eb5b7b37065cfd9f0a68e48baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd81167057398859ec56b4038c4e91b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5cd81167057398859ec56b4038c4e91b">PrzycisnietyWysokosc</a> ()</td></tr>
+<tr class="separator:a5cd81167057398859ec56b4038c4e91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71f2118fc1aef6b925c2213b8775c58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58">ZmianaStrefy</a> (int NowaStrefa)</td></tr>
+<tr class="separator:ab71f2118fc1aef6b925c2213b8775c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a94414da919c67836c08352a61a97aa74"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a94414da919c67836c08352a61a97aa74">DaneStrony</a></td></tr>
+<tr class="separator:a94414da919c67836c08352a61a97aa74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59939808e13953f537829e81320cc0f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_http.html">Http</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a59939808e13953f537829e81320cc0f0">Html</a></td></tr>
+<tr class="separator:a59939808e13953f537829e81320cc0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac440918080c33a580586712c390889b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac440918080c33a580586712c390889b7">DaneStacji</a></td></tr>
+<tr class="separator:ac440918080c33a580586712c390889b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5def3e96eb9f95aafc0a17dae413c6f3"><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5def3e96eb9f95aafc0a17dae413c6f3">CzasDoPobrania</a></td></tr>
+<tr class="separator:a5def3e96eb9f95aafc0a17dae413c6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7dbb65a9d865364f78e91fa7ab2fb8"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a6b7dbb65a9d865364f78e91fa7ab2fb8">TytulISS</a></td></tr>
+<tr class="separator:a6b7dbb65a9d865364f78e91fa7ab2fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4c523a395dd8428673c5b33db8263e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lokalizator.html">Lokalizator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a4b4c523a395dd8428673c5b33db8263e">WyswietlaczPolozeniaISS</a></td></tr>
+<tr class="separator:a4b4c523a395dd8428673c5b33db8263e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998215f12de550404186e0c2fee3df1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_zegar.html">Zegar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a998215f12de550404186e0c2fee3df1d">CzasPrzelotuISS</a></td></tr>
+<tr class="separator:a998215f12de550404186e0c2fee3df1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506816623663f13ea6b11caa0e607777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wykres.html">Wykres</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a506816623663f13ea6b11caa0e607777">WykresPredkosci</a></td></tr>
+<tr class="separator:a506816623663f13ea6b11caa0e607777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cddafaf21a1358e9fecacab82152fb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wykres.html">Wykres</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8cddafaf21a1358e9fecacab82152fb2">WykresWysokosci</a></td></tr>
+<tr class="separator:a8cddafaf21a1358e9fecacab82152fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3675c4dda638c8822e43ab13d0445fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_open_g_l_widget.html">OpenGLWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac3675c4dda638c8822e43ab13d0445fa">Model3D</a></td></tr>
+<tr class="separator:ac3675c4dda638c8822e43ab13d0445fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae929db2975ffd86a2ddf0f36f0533a57"><td class="memItemLeft" align="right" valign="top">QSlider *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae929db2975ffd86a2ddf0f36f0533a57">StrefaCzasowa</a></td></tr>
+<tr class="separator:ae929db2975ffd86a2ddf0f36f0533a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2339f842b1649460a93a8edf64880eb2"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a2339f842b1649460a93a8edf64880eb2">WybranaStrefa</a></td></tr>
+<tr class="separator:a2339f842b1649460a93a8edf64880eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec74748ec42606abf8545c083fc7c90"><td class="memItemLeft" align="right" valign="top">QSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#acec74748ec42606abf8545c083fc7c90">Tymczasowy</a></td></tr>
+<tr class="separator:acec74748ec42606abf8545c083fc7c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24abdeabff42c586b977f89547be4277"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a24abdeabff42c586b977f89547be4277">ObecnyZakresOsiCzasu</a></td></tr>
+<tr class="separator:a24abdeabff42c586b977f89547be4277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb61fb88ace6bbf84af02c1861ac5a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7cb61fb88ace6bbf84af02c1861ac5a3">ObecnyZakresOsiPredkosci</a></td></tr>
+<tr class="separator:a7cb61fb88ace6bbf84af02c1861ac5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f4abcdddb4caa9d63f0f7dc3f12d79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae8f4abcdddb4caa9d63f0f7dc3f12d79">ObecnyZakresOsiWysokosci</a></td></tr>
+<tr class="separator:ae8f4abcdddb4caa9d63f0f7dc3f12d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209dacb5d4f89762babd6ad0323ba14a"><td class="memItemLeft" align="right" valign="top">QVBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a209dacb5d4f89762babd6ad0323ba14a">WarstwaWyswietlaczy</a></td></tr>
+<tr class="separator:a209dacb5d4f89762babd6ad0323ba14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8a9fcd90954f502f877b713990adec"><td class="memItemLeft" align="right" valign="top">QVBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#adc8a9fcd90954f502f877b713990adec">WarstwaOpenGL</a></td></tr>
+<tr class="separator:adc8a9fcd90954f502f877b713990adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7578a312f8816d154e76689afc0cff"><td class="memItemLeft" align="right" valign="top">QHBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7a7578a312f8816d154e76689afc0cff">WarstwaPosrednia</a></td></tr>
+<tr class="separator:a7a7578a312f8816d154e76689afc0cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76963395119a0980968b7da686954ea3"><td class="memItemLeft" align="right" valign="top">QHBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a76963395119a0980968b7da686954ea3">WarstwaTytulu</a></td></tr>
+<tr class="separator:a76963395119a0980968b7da686954ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769985f77195cfaa83891585299b82c3"><td class="memItemLeft" align="right" valign="top">QVBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a769985f77195cfaa83891585299b82c3">WarstwaGlowna</a></td></tr>
+<tr class="separator:a769985f77195cfaa83891585299b82c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbbf2bca2f5af083f4f964b384dbd4f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#acbbf2bca2f5af083f4f964b384dbd4f0">Strefa</a></td></tr>
+<tr class="separator:acbbf2bca2f5af083f4f964b384dbd4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefb5b2f1f424eac51996154ed99f32a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_magazyn__danych.html">Magazyn_danych</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#adefb5b2f1f424eac51996154ed99f32a">MagazynDanychStacji</a></td></tr>
+<tr class="separator:adefb5b2f1f424eac51996154ed99f32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266e5ae746700caf3df6cad8599a8ae5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a266e5ae746700caf3df6cad8599a8ae5">Licznik</a></td></tr>
+<tr class="separator:a266e5ae746700caf3df6cad8599a8ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0c0ee1b2f96be6e430d91b6048a03a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a9a0c0ee1b2f96be6e430d91b6048a03a">AktywnaTrajektoria</a></td></tr>
+<tr class="separator:a9a0c0ee1b2f96be6e430d91b6048a03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7038dca8c842267f5963537a7a599fb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7038dca8c842267f5963537a7a599fb9">PrzelaczAktualizacjeDanych</a></td></tr>
+<tr class="separator:a7038dca8c842267f5963537a7a599fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261991b06de8648079248f10eb91fb05"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a261991b06de8648079248f10eb91fb05">MagazynOdczytywaneDane</a></td></tr>
+<tr class="separator:a261991b06de8648079248f10eb91fb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00028">28</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a996c5a2b6f77944776856f08ec30858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&nbsp;</a></span>MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::MainWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00008">8</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph.png" border="0" usemap="#class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" alt=""/></div>
+<map name="class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" id="class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph">
+<area shape="rect" id="node2" href="class_zegar.html#a6fa62122b30adc47f89f749f44fd9d45" title="Zegar::ZmienStrefeCzasowa" alt="" coords="538,20,722,47"/>
+<area shape="rect" id="node3" href="class_wykres.html#a5613ce71a32acd010f95f2a923bc5614" title="Wykres::ZmienWykres" alt="" coords="270,386,425,412"/>
+<area shape="rect" id="node4" href="class_wykres.html#a54f5ffc03406b89a172f54e0e25b3e7c" title="Wykres::ZmienIloscPodzialekOsiY" alt="" coords="236,436,459,463"/>
+<area shape="rect" id="node5" href="class_wykres.html#ac28a21951948e595cd013374bba19801" title="Wykres::ZmienKolorTla" alt="" coords="269,487,426,514"/>
+<area shape="rect" id="node6" href="class_wykres.html#a06cb92ba143c3881c62687596191a9ef" title="Wykres::ZmienKolorOsiX" alt="" coords="264,538,431,564"/>
+<area shape="rect" id="node7" href="class_wykres.html#a5185fd47efb86a1955254fd70815d03d" title="Wykres::ZmienKolorOsiY" alt="" coords="263,588,432,615"/>
+<area shape="rect" id="node8" href="class_wykres.html#ae6aa9a42dac5db9c99a8a3ebe4503a62" title="Wykres::ZmienPodpisOsiX" alt="" coords="259,639,436,666"/>
+<area shape="rect" id="node9" href="class_wykres.html#a12802bc14b95408c7605367db6476f9b" title="Wykres::ZmienPodpisOsiY" alt="" coords="258,690,437,716"/>
+<area shape="rect" id="node10" href="class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="236,741,459,782"/>
+<area shape="rect" id="node17" href="class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="236,806,459,848"/>
+<area shape="rect" id="node18" href="class_magazyn__danych.html#a34f1b895e8ace4db3e0e6bdbe6f38dc7" title="Magazyn_danych::ZapiszDane" alt="" coords="247,1287,447,1314"/>
+<area shape="rect" id="node19" href="class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Magazyn_danych::ZwrocIlosc\lDanych" alt="" coords="805,1170,999,1212"/>
+<area shape="rect" id="node20" href="class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Magazyn_danych::ZwrocDane" alt="" coords="804,1236,1000,1263"/>
+<area shape="rect" id="node21" href="struct_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="ZwrocWysokosc_km wartość wysokości na jakiej znajduje się stacja. " alt="" coords="797,874,1007,900"/>
+<area shape="rect" id="node22" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="232,958,463,984"/>
+<area shape="rect" id="node31" href="class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="525,138,735,164"/>
+<area shape="rect" id="node32" href="class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="259,254,435,296"/>
+<area shape="rect" id="node46" href="class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="244,203,451,230"/>
+<area shape="rect" id="node48" href="class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="259,320,435,361"/>
+<area shape="rect" id="node49" href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title="MainWindow::ZmianaStrefy" alt="" coords="257,79,437,106"/>
+<area shape="rect" id="node11" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="551,780,709,807"/>
+<area shape="rect" id="node12" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="834,751,970,778"/>
+<area shape="rect" id="node13" href="class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Http::ParserDanychISS" alt="" coords="823,802,981,828"/>
+<area shape="rect" id="node14" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="1067,729,1253,770"/>
+<area shape="rect" id="node15" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="1063,794,1257,836"/>
+<area shape="rect" id="node16" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="1055,860,1265,887"/>
+<area shape="rect" id="node23" href="class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Wykres::UstawZakresOsiY" alt="" coords="541,983,719,1010"/>
+<area shape="rect" id="node24" href="class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Wykres::UstawZakresOsiX" alt="" coords="541,1034,719,1060"/>
+<area shape="rect" id="node25" href="class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Wykres::DodajDaneDoWykresu" alt="" coords="527,1084,733,1111"/>
+<area shape="rect" id="node26" href="class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="OpenGLWidget::WypelniTrajektorie" alt="" coords="517,1135,743,1162"/>
+<area shape="rect" id="node28" href="class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Magazyn_danych::DodajNoweDane" alt="" coords="517,932,743,959"/>
+<area shape="rect" id="node27" href="class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title="Grafika3D::UaktualniDane\lObiektu" alt="" coords="817,1105,987,1146"/>
+<area shape="rect" id="node29" href="struct_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="ZwrocDlugoscGeo_Stopnie wartość dlugości geograficznej w stopniach. " alt="" coords="805,925,999,966"/>
+<area shape="rect" id="node30" href="struct_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="ZwrocSzerokoscGeo_Stopnie wartość szerokości geograficznej w stopniach. " alt="" coords="810,990,994,1032"/>
+<area shape="rect" id="node33" href="class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="519,320,741,361"/>
+<area shape="rect" id="node40" href="class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="511,386,749,412"/>
+<area shape="rect" id="node41" href="class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="523,436,737,463"/>
+<area shape="rect" id="node42" href="class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="525,254,735,296"/>
+<area shape="rect" id="node43" href="class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="531,189,729,230"/>
+<area shape="rect" id="node34" href="class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="823,356,981,383"/>
+<area shape="rect" id="node35" href="class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="1100,356,1220,383"/>
+<area shape="rect" id="node36" href="class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1532,306,1719,332"/>
+<area shape="rect" id="node37" href="class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1542,407,1709,434"/>
+<area shape="rect" id="node38" href="class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="1313,356,1484,383"/>
+<area shape="rect" id="node39" href="class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1550,356,1701,383"/>
+<area shape="rect" id="node44" href="class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="816,130,988,172"/>
+<area shape="rect" id="node45" href="class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="1093,138,1227,164"/>
+<area shape="rect" id="node47" href="class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="OpenGLWidget::UstawKamere\lNaStrefie" alt="" coords="530,72,730,113"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98d00a93bc118200eeef9f9bba1dba7">&#9670;&nbsp;</a></span>~MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::~MainWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00177">177</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae98d00a93bc118200eeef9f9bba1dba7_cgraph.png" border="0" usemap="#class_main_window_ae98d00a93bc118200eeef9f9bba1dba7_cgraph" alt=""/></div>
+<map name="class_main_window_ae98d00a93bc118200eeef9f9bba1dba7_cgraph" id="class_main_window_ae98d00a93bc118200eeef9f9bba1dba7_cgraph">
+<area shape="rect" id="node2" href="class_magazyn__danych.html#a34f1b895e8ace4db3e0e6bdbe6f38dc7" title="Magazyn_danych::ZapiszDane" alt="" coords="240,5,440,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a66692b25d441afe6f9f3b967f9195686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66692b25d441afe6f9f3b967f9195686">&#9670;&nbsp;</a></span>daneTrajektoriiISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::daneTrajektoriiISS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a66692b25d441afe6f9f3b967f9195686_icgraph.png" border="0" usemap="#class_main_window_a66692b25d441afe6f9f3b967f9195686_icgraph" alt=""/></div>
+<map name="class_main_window_a66692b25d441afe6f9f3b967f9195686_icgraph" id="class_main_window_a66692b25d441afe6f9f3b967f9195686_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="263,5,469,32"/>
+<area shape="rect" id="node4" href="class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="278,57,454,98"/>
+<area shape="rect" id="node5" href="class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="278,122,454,163"/>
+<area shape="rect" id="node6" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="299,188,433,215"/>
+<area shape="rect" id="node3" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="517,64,696,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44e3beb4c1b5434626c7da06ae4a511f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e3beb4c1b5434626c7da06ae4a511f">&#9670;&nbsp;</a></span>event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::event </td>
+          <td>(</td>
+          <td class="paramtype">QEvent *&#160;</td>
+          <td class="paramname"><em>Zdarzenie</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00359">359</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a44e3beb4c1b5434626c7da06ae4a511f_cgraph.png" border="0" usemap="#class_main_window_a44e3beb4c1b5434626c7da06ae4a511f_cgraph" alt=""/></div>
+<map name="class_main_window_a44e3beb4c1b5434626c7da06ae4a511f_cgraph" id="class_main_window_a44e3beb4c1b5434626c7da06ae4a511f_cgraph">
+<area shape="rect" id="node2" href="class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="188,5,397,32"/>
+<area shape="rect" id="node3" href="class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="188,57,397,98"/>
+<area shape="rect" id="node10" href="class_magazyn__danych.html#a37d57cc6daa63ef09eee38a7ec2a2279" title="Magazyn_danych::ZwrocGlowe" alt="" coords="191,123,394,149"/>
+<area shape="rect" id="node11" href="class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Magazyn_danych::ZwrocIlosc\lDanych" alt="" coords="196,174,389,215"/>
+<area shape="rect" id="node12" href="class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Magazyn_danych::ZwrocDane" alt="" coords="195,240,391,267"/>
+<area shape="rect" id="node13" href="class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Wykres::UstawZakresOsiY" alt="" coords="203,291,382,317"/>
+<area shape="rect" id="node14" href="struct_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="ZwrocWysokosc_km wartość wysokości na jakiej znajduje się stacja. " alt="" coords="188,341,397,368"/>
+<area shape="rect" id="node15" href="class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Wykres::UstawZakresOsiX" alt="" coords="204,392,381,419"/>
+<area shape="rect" id="node16" href="class_wykres.html#afa5aa4492a3d8ecc70800cafce977604" title="Wykres::WyczyscWykres" alt="" coords="205,443,380,469"/>
+<area shape="rect" id="node17" href="class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Wykres::DodajDaneDoWykresu" alt="" coords="189,493,396,520"/>
+<area shape="rect" id="node4" href="class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="445,64,604,91"/>
+<area shape="rect" id="node5" href="class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="652,64,772,91"/>
+<area shape="rect" id="node6" href="class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1039,13,1225,40"/>
+<area shape="rect" id="node7" href="class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1049,115,1215,141"/>
+<area shape="rect" id="node8" href="class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="820,64,991,91"/>
+<area shape="rect" id="node9" href="class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1057,64,1207,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8f1e80fab9bef41182682a39603dec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f1e80fab9bef41182682a39603dec0">&#9670;&nbsp;</a></span>noweDaneISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::noweDaneISS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aa8f1e80fab9bef41182682a39603dec0_icgraph.png" border="0" usemap="#class_main_window_aa8f1e80fab9bef41182682a39603dec0_icgraph" alt=""/></div>
+<map name="class_main_window_aa8f1e80fab9bef41182682a39603dec0_icgraph" id="class_main_window_aa8f1e80fab9bef41182682a39603dec0_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="517,90,696,117"/>
+<area shape="rect" id="node3" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="239,40,469,66"/>
+<area shape="rect" id="node4" href="class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="251,90,457,117"/>
+<area shape="rect" id="node5" href="class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="266,142,442,183"/>
+<area shape="rect" id="node6" href="class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="266,207,442,248"/>
+<area shape="rect" id="node7" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="287,273,421,300"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa049ba6f94d822b2965bd4a42ce60f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa049ba6f94d822b2965bd4a42ce60f01">&#9670;&nbsp;</a></span>PobierzNoweDaneISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::PobierzNoweDaneISS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00182">182</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_cgraph.png" border="0" usemap="#class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_cgraph" alt=""/></div>
+<map name="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_cgraph" id="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_cgraph">
+<area shape="rect" id="node2" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="318,78,477,105"/>
+<area shape="rect" id="node8" href="struct_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="ZwrocWysokosc_km wartość wysokości na jakiej znajduje się stacja. " alt="" coords="559,129,768,155"/>
+<area shape="rect" id="node9" href="class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Wykres::UstawZakresOsiY" alt="" coords="308,230,487,257"/>
+<area shape="rect" id="node10" href="class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Wykres::UstawZakresOsiX" alt="" coords="309,281,486,307"/>
+<area shape="rect" id="node11" href="class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Wykres::DodajDaneDoWykresu" alt="" coords="294,331,501,358"/>
+<area shape="rect" id="node12" href="class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="OpenGLWidget::WypelniTrajektorie" alt="" coords="284,382,511,409"/>
+<area shape="rect" id="node16" href="class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Magazyn_danych::DodajNoweDane" alt="" coords="284,179,511,206"/>
+<area shape="rect" id="node3" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="595,27,731,54"/>
+<area shape="rect" id="node4" href="class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Http::ParserDanychISS" alt="" coords="585,78,742,105"/>
+<area shape="rect" id="node5" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="829,5,1014,47"/>
+<area shape="rect" id="node6" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="824,71,1019,112"/>
+<area shape="rect" id="node7" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="816,137,1027,163"/>
+<area shape="rect" id="node13" href="class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Magazyn_danych::ZwrocIlosc\lDanych" alt="" coords="567,316,760,357"/>
+<area shape="rect" id="node14" href="class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Magazyn_danych::ZwrocDane" alt="" coords="565,382,761,409"/>
+<area shape="rect" id="node15" href="class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title="Grafika3D::UaktualniDane\lObiektu" alt="" coords="578,433,749,475"/>
+<area shape="rect" id="node17" href="struct_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="ZwrocDlugoscGeo_Stopnie wartość dlugości geograficznej w stopniach. " alt="" coords="567,180,760,221"/>
+<area shape="rect" id="node18" href="struct_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="ZwrocSzerokoscGeo_Stopnie wartość szerokości geograficznej w stopniach. " alt="" coords="571,245,755,287"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_icgraph.png" border="0" usemap="#class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_icgraph" alt=""/></div>
+<map name="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_icgraph" id="class_main_window_aa049ba6f94d822b2965bd4a42ce60f01_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="284,5,463,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a33245090cd200b4e7341b8c07e2c2513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33245090cd200b4e7341b8c07e2c2513">&#9670;&nbsp;</a></span>PrzycisnietyCzas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::PrzycisnietyCzas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00233">233</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a33245090cd200b4e7341b8c07e2c2513_cgraph.png" border="0" usemap="#class_main_window_a33245090cd200b4e7341b8c07e2c2513_cgraph" alt=""/></div>
+<map name="class_main_window_a33245090cd200b4e7341b8c07e2c2513_cgraph" id="class_main_window_a33245090cd200b4e7341b8c07e2c2513_cgraph">
+<area shape="rect" id="node2" href="class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="268,223,491,265"/>
+<area shape="rect" id="node9" href="class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="260,5,499,32"/>
+<area shape="rect" id="node10" href="class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="275,107,484,133"/>
+<area shape="rect" id="node11" href="class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="272,56,487,83"/>
+<area shape="rect" id="node12" href="class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="275,158,484,199"/>
+<area shape="rect" id="node13" href="class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="280,354,479,395"/>
+<area shape="rect" id="node16" href="class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="OpenGLWidget::UstawKamere\lNaStrefie" alt="" coords="279,289,479,330"/>
+<area shape="rect" id="node3" href="class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="553,111,712,137"/>
+<area shape="rect" id="node4" href="class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="773,111,893,137"/>
+<area shape="rect" id="node5" href="class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1167,60,1353,87"/>
+<area shape="rect" id="node6" href="class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1177,161,1343,188"/>
+<area shape="rect" id="node7" href="class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="948,111,1119,137"/>
+<area shape="rect" id="node8" href="class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1185,111,1335,137"/>
+<area shape="rect" id="node14" href="class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="547,321,719,362"/>
+<area shape="rect" id="node15" href="class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="767,328,900,355"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a33245090cd200b4e7341b8c07e2c2513_icgraph.png" border="0" usemap="#class_main_window_a33245090cd200b4e7341b8c07e2c2513_icgraph" alt=""/></div>
+<map name="class_main_window_a33245090cd200b4e7341b8c07e2c2513_icgraph" id="class_main_window_a33245090cd200b4e7341b8c07e2c2513_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="260,5,439,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7779b0eb5b7b37065cfd9f0a68e48baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7779b0eb5b7b37065cfd9f0a68e48baa">&#9670;&nbsp;</a></span>PrzycisnietyWspolrzedne</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::PrzycisnietyWspolrzedne </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00265">265</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_cgraph.png" border="0" usemap="#class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_cgraph" alt=""/></div>
+<map name="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_cgraph" id="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_cgraph">
+<area shape="rect" id="node2" href="class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="244,5,453,32"/>
+<area shape="rect" id="node3" href="class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="237,173,460,214"/>
+<area shape="rect" id="node10" href="class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="229,239,468,265"/>
+<area shape="rect" id="node11" href="class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="241,56,456,83"/>
+<area shape="rect" id="node12" href="class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="244,107,453,149"/>
+<area shape="rect" id="node13" href="class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="249,290,448,331"/>
+<area shape="rect" id="node4" href="class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="523,148,681,175"/>
+<area shape="rect" id="node5" href="class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="743,148,863,175"/>
+<area shape="rect" id="node6" href="class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1136,97,1323,124"/>
+<area shape="rect" id="node7" href="class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1146,199,1313,225"/>
+<area shape="rect" id="node8" href="class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="917,148,1088,175"/>
+<area shape="rect" id="node9" href="class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1154,148,1305,175"/>
+<area shape="rect" id="node14" href="class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="516,290,688,331"/>
+<area shape="rect" id="node15" href="class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="736,297,869,324"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_icgraph.png" border="0" usemap="#class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_icgraph" alt=""/></div>
+<map name="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_icgraph" id="class_main_window_a7779b0eb5b7b37065cfd9f0a68e48baa_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="229,13,408,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5cd81167057398859ec56b4038c4e91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd81167057398859ec56b4038c4e91b">&#9670;&nbsp;</a></span>PrzycisnietyWysokosc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::PrzycisnietyWysokosc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00301">301</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a5cd81167057398859ec56b4038c4e91b_cgraph.png" border="0" usemap="#class_main_window_a5cd81167057398859ec56b4038c4e91b_cgraph" alt=""/></div>
+<map name="class_main_window_a5cd81167057398859ec56b4038c4e91b_cgraph" id="class_main_window_a5cd81167057398859ec56b4038c4e91b_cgraph">
+<area shape="rect" id="node2" href="class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="229,71,468,98"/>
+<area shape="rect" id="node9" href="class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="237,123,460,164"/>
+<area shape="rect" id="node10" href="class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="241,189,456,215"/>
+<area shape="rect" id="node11" href="class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="244,5,453,47"/>
+<area shape="rect" id="node12" href="class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="249,240,448,281"/>
+<area shape="rect" id="node3" href="class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="523,101,681,127"/>
+<area shape="rect" id="node4" href="class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="743,101,863,127"/>
+<area shape="rect" id="node5" href="class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1136,50,1323,77"/>
+<area shape="rect" id="node6" href="class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1146,151,1313,178"/>
+<area shape="rect" id="node7" href="class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="917,101,1088,127"/>
+<area shape="rect" id="node8" href="class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1154,101,1305,127"/>
+<area shape="rect" id="node13" href="class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="516,240,688,281"/>
+<area shape="rect" id="node14" href="class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="736,247,869,274"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a5cd81167057398859ec56b4038c4e91b_icgraph.png" border="0" usemap="#class_main_window_a5cd81167057398859ec56b4038c4e91b_icgraph" alt=""/></div>
+<map name="class_main_window_a5cd81167057398859ec56b4038c4e91b_icgraph" id="class_main_window_a5cd81167057398859ec56b4038c4e91b_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="229,13,408,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa3ca11be5bef00df7175506c2907a807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ca11be5bef00df7175506c2907a807">&#9670;&nbsp;</a></span>WypelniDanymi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::WypelniDanymi </td>
+          <td>(</td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>dane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00036">36</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ab71f2118fc1aef6b925c2213b8775c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71f2118fc1aef6b925c2213b8775c58">&#9670;&nbsp;</a></span>ZmianaStrefy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::ZmianaStrefy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NowaStrefa</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00335">335</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_cgraph.png" border="0" usemap="#class_main_window_ab71f2118fc1aef6b925c2213b8775c58_cgraph" alt=""/></div>
+<map name="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_cgraph" id="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_cgraph">
+<area shape="rect" id="node2" href="class_zegar.html#a6fa62122b30adc47f89f749f44fd9d45" title="Zegar::ZmienStrefeCzasowa" alt="" coords="241,5,425,32"/>
+<area shape="rect" id="node3" href="class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="OpenGLWidget::UstawKamere\lNaStrefie" alt="" coords="233,57,433,98"/>
+<area shape="rect" id="node4" href="class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="481,57,653,98"/>
+<area shape="rect" id="node5" href="class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="701,64,835,91"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_icgraph.png" border="0" usemap="#class_main_window_ab71f2118fc1aef6b925c2213b8775c58_icgraph" alt=""/></div>
+<map name="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_icgraph" id="class_main_window_ab71f2118fc1aef6b925c2213b8775c58_icgraph">
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="233,5,412,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a9a0c0ee1b2f96be6e430d91b6048a03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0c0ee1b2f96be6e430d91b6048a03a">&#9670;&nbsp;</a></span>AktywnaTrajektoria</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::AktywnaTrajektoria</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00086">86</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a5def3e96eb9f95aafc0a17dae413c6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5def3e96eb9f95aafc0a17dae413c6f3">&#9670;&nbsp;</a></span>CzasDoPobrania</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer* MainWindow::CzasDoPobrania</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00057">57</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a998215f12de550404186e0c2fee3df1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998215f12de550404186e0c2fee3df1d">&#9670;&nbsp;</a></span>CzasPrzelotuISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_zegar.html">Zegar</a>* MainWindow::CzasPrzelotuISS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00060">60</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ac440918080c33a580586712c390889b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac440918080c33a580586712c390889b7">&#9670;&nbsp;</a></span>DaneStacji</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> MainWindow::DaneStacji</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00056">56</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a94414da919c67836c08352a61a97aa74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94414da919c67836c08352a61a97aa74">&#9670;&nbsp;</a></span>DaneStrony</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::DaneStrony</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00054">54</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a59939808e13953f537829e81320cc0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59939808e13953f537829e81320cc0f0">&#9670;&nbsp;</a></span>Html</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_http.html">Http</a>* MainWindow::Html</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00055">55</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a266e5ae746700caf3df6cad8599a8ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a266e5ae746700caf3df6cad8599a8ae5">&#9670;&nbsp;</a></span>Licznik</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainWindow::Licznik</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00085">85</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="adefb5b2f1f424eac51996154ed99f32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefb5b2f1f424eac51996154ed99f32a">&#9670;&nbsp;</a></span>MagazynDanychStacji</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_magazyn__danych.html">Magazyn_danych</a>* MainWindow::MagazynDanychStacji</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00083">83</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a261991b06de8648079248f10eb91fb05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261991b06de8648079248f10eb91fb05">&#9670;&nbsp;</a></span>MagazynOdczytywaneDane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t MainWindow::MagazynOdczytywaneDane</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00088">88</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ac3675c4dda638c8822e43ab13d0445fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3675c4dda638c8822e43ab13d0445fa">&#9670;&nbsp;</a></span>Model3D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_open_g_l_widget.html">OpenGLWidget</a>* MainWindow::Model3D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00064">64</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a24abdeabff42c586b977f89547be4277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24abdeabff42c586b977f89547be4277">&#9670;&nbsp;</a></span>ObecnyZakresOsiCzasu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint MainWindow::ObecnyZakresOsiCzasu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00071">71</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a7cb61fb88ace6bbf84af02c1861ac5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb61fb88ace6bbf84af02c1861ac5a3">&#9670;&nbsp;</a></span>ObecnyZakresOsiPredkosci</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MainWindow::ObecnyZakresOsiPredkosci</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00072">72</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ae8f4abcdddb4caa9d63f0f7dc3f12d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8f4abcdddb4caa9d63f0f7dc3f12d79">&#9670;&nbsp;</a></span>ObecnyZakresOsiWysokosci</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MainWindow::ObecnyZakresOsiWysokosci</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00073">73</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a7038dca8c842267f5963537a7a599fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7038dca8c842267f5963537a7a599fb9">&#9670;&nbsp;</a></span>PrzelaczAktualizacjeDanych</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::PrzelaczAktualizacjeDanych</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00087">87</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="acbbf2bca2f5af083f4f964b384dbd4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbbf2bca2f5af083f4f964b384dbd4f0">&#9670;&nbsp;</a></span>Strefa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainWindow::Strefa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00082">82</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ae929db2975ffd86a2ddf0f36f0533a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae929db2975ffd86a2ddf0f36f0533a57">&#9670;&nbsp;</a></span>StrefaCzasowa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSlider* MainWindow::StrefaCzasowa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00066">66</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="acec74748ec42606abf8545c083fc7c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec74748ec42606abf8545c083fc7c90">&#9670;&nbsp;</a></span>Tymczasowy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSpinBox* MainWindow::Tymczasowy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00069">69</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b7dbb65a9d865364f78e91fa7ab2fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7dbb65a9d865364f78e91fa7ab2fb8">&#9670;&nbsp;</a></span>TytulISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLabel* MainWindow::TytulISS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00058">58</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a769985f77195cfaa83891585299b82c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769985f77195cfaa83891585299b82c3">&#9670;&nbsp;</a></span>WarstwaGlowna</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVBoxLayout* MainWindow::WarstwaGlowna</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00080">80</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="adc8a9fcd90954f502f877b713990adec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc8a9fcd90954f502f877b713990adec">&#9670;&nbsp;</a></span>WarstwaOpenGL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVBoxLayout* MainWindow::WarstwaOpenGL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00077">77</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a7578a312f8816d154e76689afc0cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7578a312f8816d154e76689afc0cff">&#9670;&nbsp;</a></span>WarstwaPosrednia</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHBoxLayout* MainWindow::WarstwaPosrednia</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00078">78</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a76963395119a0980968b7da686954ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76963395119a0980968b7da686954ea3">&#9670;&nbsp;</a></span>WarstwaTytulu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHBoxLayout* MainWindow::WarstwaTytulu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00079">79</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a209dacb5d4f89762babd6ad0323ba14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a209dacb5d4f89762babd6ad0323ba14a">&#9670;&nbsp;</a></span>WarstwaWyswietlaczy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVBoxLayout* MainWindow::WarstwaWyswietlaczy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00076">76</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a2339f842b1649460a93a8edf64880eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2339f842b1649460a93a8edf64880eb2">&#9670;&nbsp;</a></span>WybranaStrefa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLabel* MainWindow::WybranaStrefa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00067">67</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a506816623663f13ea6b11caa0e607777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506816623663f13ea6b11caa0e607777">&#9670;&nbsp;</a></span>WykresPredkosci</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wykres.html">Wykres</a>* MainWindow::WykresPredkosci</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00061">61</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a8cddafaf21a1358e9fecacab82152fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cddafaf21a1358e9fecacab82152fb2">&#9670;&nbsp;</a></span>WykresWysokosci</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wykres.html">Wykres</a>* MainWindow::WykresWysokosci</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00062">62</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b4c523a395dd8428673c5b33db8263e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4c523a395dd8428673c5b33db8263e">&#9670;&nbsp;</a></span>WyswietlaczPolozeniaISS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lokalizator.html">Lokalizator</a>* MainWindow::WyswietlaczPolozeniaISS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00059">59</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="mainwindow_8h_source.html">mainwindow.h</a></li>
+<li><a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_main_window.html">MainWindow</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

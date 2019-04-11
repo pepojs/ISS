@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ISS: Plik źródłowy filedonwloader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ISS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('filedonwloader_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">filedonwloader.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="filedonwloader_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="filedonwloader_8h.html">filedonwloader.h</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_file_downloader.html#ad1a2da7b5cd2946b022598a134a6fb0d">    3</a></span>&#160;<a class="code" href="class_file_downloader.html#ad1a2da7b5cd2946b022598a134a6fb0d">FileDownloader::FileDownloader</a>(QUrl imageUrl, QObject *parent) :</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; QObject(parent)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; connect(</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  &amp;<a class="code" href="class_file_downloader.html#aaac3c0469add0fba8df51e4b57d9be5d">m_WebCtrl</a>, SIGNAL (finished(QNetworkReply*)),</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">this</span>, SLOT (<a class="code" href="class_file_downloader.html#ab611510b35d110b16108d931bc16d195">fileDownloaded</a>(QNetworkReply*))</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  );</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; QNetworkRequest request(imageUrl);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <a class="code" href="class_file_downloader.html#aaac3c0469add0fba8df51e4b57d9be5d">m_WebCtrl</a>.get(request);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_file_downloader.html#aca2c406b38e2c9a38a9e380c8c6290ab">   15</a></span>&#160;<a class="code" href="class_file_downloader.html#aca2c406b38e2c9a38a9e380c8c6290ab">FileDownloader::~FileDownloader</a>() { }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_file_downloader.html#ab611510b35d110b16108d931bc16d195">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_file_downloader.html#ab611510b35d110b16108d931bc16d195">FileDownloader::fileDownloaded</a>(QNetworkReply* pReply) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <a class="code" href="class_file_downloader.html#ad9742e35f847080474402aa26b010028">m_DownloadedData</a> = pReply-&gt;readAll();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="comment">//emit a signal</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; pReply-&gt;deleteLater();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; emit <a class="code" href="class_file_downloader.html#a7db4dc6a2c111233285ce0a18b6d6b72">downloaded</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_file_downloader.html#a757786f213be41cb7edc21229cf60d68">   24</a></span>&#160;QByteArray <a class="code" href="class_file_downloader.html#a757786f213be41cb7edc21229cf60d68">FileDownloader::downloadedData</a>()<span class="keyword"> const </span>{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keywordflow">return</span> <a class="code" href="class_file_downloader.html#ad9742e35f847080474402aa26b010028">m_DownloadedData</a>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="ttc" id="class_file_downloader_html_a757786f213be41cb7edc21229cf60d68"><div class="ttname"><a href="class_file_downloader.html#a757786f213be41cb7edc21229cf60d68">FileDownloader::downloadedData</a></div><div class="ttdeci">QByteArray downloadedData() const</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8cpp_source.html#l00024">filedonwloader.cpp:24</a></div></div>
+<div class="ttc" id="filedonwloader_8h_html"><div class="ttname"><a href="filedonwloader_8h.html">filedonwloader.h</a></div></div>
+<div class="ttc" id="class_file_downloader_html_a7db4dc6a2c111233285ce0a18b6d6b72"><div class="ttname"><a href="class_file_downloader.html#a7db4dc6a2c111233285ce0a18b6d6b72">FileDownloader::downloaded</a></div><div class="ttdeci">void downloaded()</div></div>
+<div class="ttc" id="class_file_downloader_html_ab611510b35d110b16108d931bc16d195"><div class="ttname"><a href="class_file_downloader.html#ab611510b35d110b16108d931bc16d195">FileDownloader::fileDownloaded</a></div><div class="ttdeci">void fileDownloaded(QNetworkReply *pReply)</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8cpp_source.html#l00017">filedonwloader.cpp:17</a></div></div>
+<div class="ttc" id="class_file_downloader_html_aca2c406b38e2c9a38a9e380c8c6290ab"><div class="ttname"><a href="class_file_downloader.html#aca2c406b38e2c9a38a9e380c8c6290ab">FileDownloader::~FileDownloader</a></div><div class="ttdeci">virtual ~FileDownloader()</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8cpp_source.html#l00015">filedonwloader.cpp:15</a></div></div>
+<div class="ttc" id="class_file_downloader_html_aaac3c0469add0fba8df51e4b57d9be5d"><div class="ttname"><a href="class_file_downloader.html#aaac3c0469add0fba8df51e4b57d9be5d">FileDownloader::m_WebCtrl</a></div><div class="ttdeci">QNetworkAccessManager m_WebCtrl</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8h_source.html#l00026">filedonwloader.h:26</a></div></div>
+<div class="ttc" id="class_file_downloader_html_ad1a2da7b5cd2946b022598a134a6fb0d"><div class="ttname"><a href="class_file_downloader.html#ad1a2da7b5cd2946b022598a134a6fb0d">FileDownloader::FileDownloader</a></div><div class="ttdeci">FileDownloader(QUrl imageUrl, QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8cpp_source.html#l00003">filedonwloader.cpp:3</a></div></div>
+<div class="ttc" id="class_file_downloader_html_ad9742e35f847080474402aa26b010028"><div class="ttname"><a href="class_file_downloader.html#ad9742e35f847080474402aa26b010028">FileDownloader::m_DownloadedData</a></div><div class="ttdeci">QByteArray m_DownloadedData</div><div class="ttdef"><b>Definition:</b> <a href="filedonwloader_8h_source.html#l00027">filedonwloader.h:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="filedonwloader_8cpp.html">filedonwloader.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

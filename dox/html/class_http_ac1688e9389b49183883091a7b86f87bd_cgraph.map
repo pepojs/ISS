@@ -1,0 +1,5 @@
+<map id="Http::ParserDanychISS" name="Http::ParserDanychISS">
+<area shape="rect" id="node2" href="$struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="223,5,409,47"/>
+<area shape="rect" id="node3" href="$struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="219,71,413,112"/>
+<area shape="rect" id="node4" href="$struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="211,137,421,163"/>
+</map>

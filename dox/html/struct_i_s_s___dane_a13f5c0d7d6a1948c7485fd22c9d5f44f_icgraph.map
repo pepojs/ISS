@@ -1,0 +1,8 @@
+<map id="ISS_Dane::ZwrocDlugoscGeo_Stopnie" name="ISS_Dane::ZwrocDlugoscGeo_Stopnie">
+<area shape="rect" id="node2" href="$class_lokalizator.html#a39bfbfafca7f059328c4f7e43210668f" title="Lokalizator::AktualizujDaneISS" alt="" coords="259,5,461,32"/>
+<area shape="rect" id="node3" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Magazyn_danych::DodajNoweDane" alt="" coords="247,56,473,83"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a7cff564a786f0a2fad7d50d4c3e1e326" title="OpenGLWidget::NoweDaneISS" alt="" coords="259,107,461,133"/>
+<area shape="rect" id="node7" href="$class_open_g_l_widget.html#a0f02a6761837cb6209a40377b2fbde41" title="OpenGLWidget::Trajektoria\lNoweDane" alt="" coords="271,158,449,199"/>
+<area shape="rect" id="node4" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="521,56,752,83"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="800,56,979,83"/>
+</map>

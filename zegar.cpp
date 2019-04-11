@@ -71,7 +71,7 @@ void Zegar::ZmienStrefeCzasowa(int NowaStrefa)
 
 void Zegar::AktualizujDaneISS(ISS_Dane NoweDane)
 {
-    this->UstawCzasUnixFormatUTC1(NoweDane.CzasPrzelotu);
+    this->UstawCzasUnixFormatUTC1(NoweDane.ZwrocCzasPrzelotu_UTS());
 }
 
 

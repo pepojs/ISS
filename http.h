@@ -17,6 +17,9 @@
 
 #include "iss_dane.h"
 
+//Zla kolejnosc pobierania danych, wysyla w odpowiedniej kolejnosci, ale odbiera
+//w rozne, brak uzupelniania danych kiedy gdzies w srodku pojawia sie zera
+
 class Http : public QObject
 {
     Q_OBJECT

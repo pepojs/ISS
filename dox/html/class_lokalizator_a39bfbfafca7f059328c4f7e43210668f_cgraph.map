@@ -1,0 +1,6 @@
+<map id="Lokalizator::AktualizujDaneISS" name="Lokalizator::AktualizujDaneISS">
+<area shape="rect" id="node2" href="$class_lokalizator.html#a55345cf8b0e0e26f21a16862382a0771" title="Lokalizator::ZmienSzerokoscGeo" alt="" coords="255,5,469,32"/>
+<area shape="rect" id="node3" href="$struct_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="ZwrocSzerokoscGeo_Stopnie wartość szerokości geograficznej w stopniach. " alt="" coords="270,57,454,98"/>
+<area shape="rect" id="node4" href="$class_lokalizator.html#acd5f5bff726f35c140cf541356b56c0d" title="Lokalizator::ZmienDlugoscGeo" alt="" coords="263,123,461,149"/>
+<area shape="rect" id="node5" href="$struct_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="ZwrocDlugoscGeo_Stopnie wartość dlugości geograficznej w stopniach. " alt="" coords="265,174,459,215"/>
+</map>

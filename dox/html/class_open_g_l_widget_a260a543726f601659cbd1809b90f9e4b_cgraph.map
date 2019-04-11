@@ -1,0 +1,8 @@
+<map id="OpenGLWidget::paintGL" name="OpenGLWidget::paintGL">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a65f5cab0c939e3c5376d2dbbbac7764f" title="Grafika3D::UstawKamere" alt="" coords="387,5,555,32"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="217,95,337,121"/>
+<area shape="rect" id="node3" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="604,56,791,83"/>
+<area shape="rect" id="node5" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="614,157,781,184"/>
+<area shape="rect" id="node6" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="385,107,556,133"/>
+<area shape="rect" id="node7" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="622,107,773,133"/>
+</map>

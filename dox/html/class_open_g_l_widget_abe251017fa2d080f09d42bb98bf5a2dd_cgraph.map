@@ -1,0 +1,9 @@
+<map id="OpenGLWidget::TworzZiemie" name="OpenGLWidget::TworzZiemie">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a7f2b6565c78095a116d58fb05f80f75e" title="Grafika3D::GenerujTeksture2D" alt="" coords="244,5,443,32"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html#a2b40edadcd34538cf03b9e4f9f08c8ab" title="Grafika3D::DodajObiekt" alt="" coords="264,56,423,83"/>
+<area shape="rect" id="node6" href="$class_grafika3_d.html#a16101cfc9cb07b013fc42dc0ba519120" title="Grafika3D::DodajTeksture\lDoObiektu" alt="" coords="258,107,429,149"/>
+<area shape="rect" id="node7" href="$class_grafika3_d.html#a383e4ab7f84206ba2d963283f3f27a5a" title="Grafika3D::PrzeskalujObiekt" alt="" coords="250,173,437,200"/>
+<area shape="rect" id="node8" href="$class_grafika3_d.html#a1a579f54bd0d32c31bea7e77fde6437f" title="Grafika3D::ObrocObiekt" alt="" coords="263,224,423,251"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a9efe83b4bc994611884fae27be78166e" title="Grafika3D::TworzObiekt" alt="" coords="499,27,657,53"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#a9286dcecbbf1a480232b50dd61ed2411" title="Grafika3D::DodajObiektDo\lSceny" alt="" coords="491,78,665,119"/>
+</map>

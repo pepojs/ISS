@@ -1,0 +1,16 @@
+<map id="MainWindow::PrzycisnietyWspolrzedne" name="MainWindow::PrzycisnietyWspolrzedne">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="244,5,453,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="237,173,460,214"/>
+<area shape="rect" id="node10" href="$class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="229,239,468,265"/>
+<area shape="rect" id="node11" href="$class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="241,56,456,83"/>
+<area shape="rect" id="node12" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="244,107,453,149"/>
+<area shape="rect" id="node13" href="$class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="249,290,448,331"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="523,148,681,175"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="743,148,863,175"/>
+<area shape="rect" id="node6" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1136,97,1323,124"/>
+<area shape="rect" id="node7" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1146,199,1313,225"/>
+<area shape="rect" id="node8" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="917,148,1088,175"/>
+<area shape="rect" id="node9" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1154,148,1305,175"/>
+<area shape="rect" id="node14" href="$class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="516,290,688,331"/>
+<area shape="rect" id="node15" href="$class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="736,297,869,324"/>
+</map>

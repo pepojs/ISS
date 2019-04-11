@@ -1,0 +1,18 @@
+<map id="MainWindow::event" name="MainWindow::event">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a9e30a5a006fd6e9a1e3bdd034365a1c6" title="OpenGLWidget::SledzenieStacji" alt="" coords="188,5,397,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="188,57,397,98"/>
+<area shape="rect" id="node10" href="$class_magazyn__danych.html#a37d57cc6daa63ef09eee38a7ec2a2279" title="Magazyn_danych::ZwrocGlowe" alt="" coords="191,123,394,149"/>
+<area shape="rect" id="node11" href="$class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Magazyn_danych::ZwrocIlosc\lDanych" alt="" coords="196,174,389,215"/>
+<area shape="rect" id="node12" href="$class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Magazyn_danych::ZwrocDane" alt="" coords="195,240,391,267"/>
+<area shape="rect" id="node13" href="$class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Wykres::UstawZakresOsiY" alt="" coords="203,291,382,317"/>
+<area shape="rect" id="node14" href="$struct_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="ZwrocWysokosc_km wartość wysokości na jakiej znajduje się stacja. " alt="" coords="188,341,397,368"/>
+<area shape="rect" id="node15" href="$class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Wykres::UstawZakresOsiX" alt="" coords="204,392,381,419"/>
+<area shape="rect" id="node16" href="$class_wykres.html#afa5aa4492a3d8ecc70800cafce977604" title="Wykres::WyczyscWykres" alt="" coords="205,443,380,469"/>
+<area shape="rect" id="node17" href="$class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Wykres::DodajDaneDoWykresu" alt="" coords="189,493,396,520"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="445,64,604,91"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="652,64,772,91"/>
+<area shape="rect" id="node6" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="1039,13,1225,40"/>
+<area shape="rect" id="node7" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="1049,115,1215,141"/>
+<area shape="rect" id="node8" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="820,64,991,91"/>
+<area shape="rect" id="node9" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="1057,64,1207,91"/>
+</map>

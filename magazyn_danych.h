@@ -25,7 +25,7 @@ public:
     void WypelniDanymiZSieci(Http* Html, uint32_t Czestotliwosc, uint32_t IloscDanychWypelnionych, uint32_t CzasDoTylu_S);
     void ZapiszDane(uint32_t Czestotliwosc);
     long int WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S);
-    size_t ZwrocIloscDanych(){MagazynDanych.size();}
+    size_t ZwrocIloscDanych(){return MagazynDanych.size();}
     ISS_Dane ZwrocDane(size_t Ktore){return MagazynDanych[Ktore];}
     uint32_t ZwrocGlowe(){return Glowa;}
     void DodajNoweDane(ISS_Dane NoweDane);

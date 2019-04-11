@@ -24,16 +24,16 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
 
     if(IloscDanychWypelnionych == 0)
     {
-        if(NoweDane.CzasPrzelotu == 0)NoweDane = Html->PobierzDaneOISS();
+        if(NoweDane.ZwrocCzasPrzelotu_UTS() == 0)NoweDane = Html->PobierzDaneOISS();
 
-        if(NoweDane.CzasPrzelotu > CzasDoTylu_S)
-            CzasDanych = NoweDane.CzasPrzelotu - CzasDoTylu_S;
+        if(NoweDane.ZwrocCzasPrzelotu_UTS() > CzasDoTylu_S)
+            CzasDanych = NoweDane.ZwrocCzasPrzelotu_UTS() - CzasDoTylu_S;
         else
             CzasDanych = QDateTime::currentSecsSinceEpoch() - CzasDoTylu_S;
 
     }else
     {
-        CzasDanych = MagazynDanych[IloscDanychWypelnionych].CzasPrzelotu+Czestotliwosc;
+        CzasDanych = MagazynDanych[IloscDanychWypelnionych].ZwrocCzasPrzelotu_UTS()+Czestotliwosc;
         IloscDanychWypelnionych += 1;
     }
 
@@ -50,7 +50,7 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
         NoweDane = Html->PobierzDaneOISS();
         licznik += 1;
 
-    }while(NoweDane.CzasPrzelotu == 0 && licznik < 100);
+    }while(NoweDane.ZwrocCzasPrzelotu_UTS() == 0 && licznik < 100);
 cout<<"Licznik "<<licznik<<endl;
     licznik = 0;
 
@@ -62,7 +62,7 @@ cout<<"Licznik "<<licznik<<endl;
         for(size_t j = 0; j < 10; j++)
         {
             MagazynDanych[licznik] = TabPom[j];
-            cout<<"Mag: "<<MagazynDanych[licznik].CzasPrzelotu<<endl;
+            cout<<"Mag: "<<MagazynDanych[licznik].ZwrocCzasPrzelotu_UTS()<<endl;
             licznik += 1;
         }
 
@@ -98,7 +98,7 @@ void Magazyn_danych::ZapiszDane(uint32_t Czestotliwosc)
         GlowaKopia1 = Glowa;
         for(j = 0; j < MagazynDanych.size(); j++)
         {
-            if(MagazynDanych[GlowaKopia1].CzasPrzelotu != 0)break;
+            if(MagazynDanych[GlowaKopia1].ZwrocCzasPrzelotu_UTS() != 0)break;
             GlowaKopia1 += 1;
             GlowaKopia1 = GlowaKopia1%MagazynDanych.size();
         }
@@ -106,7 +106,7 @@ void Magazyn_danych::ZapiszDane(uint32_t Czestotliwosc)
         GlowaKopia2 = Glowa;
         for(i = 0; i < MagazynDanych.size(); i++)
         {
-            if(MagazynDanych[GlowaKopia2].CzasPrzelotu == 0)break;
+            if(MagazynDanych[GlowaKopia2].ZwrocCzasPrzelotu_UTS() == 0)break;
             GlowaKopia2 += 1;
             GlowaKopia2 = GlowaKopia2%MagazynDanych.size();
         }
@@ -114,12 +114,12 @@ void Magazyn_danych::ZapiszDane(uint32_t Czestotliwosc)
         if(GlowaKopia2 == 0)
             GlowaKopia2 = MagazynDanych.size();
 
-        plik<<MagazynDanych[GlowaKopia1].CzasPrzelotu<<" "<<MagazynDanych[GlowaKopia2-1].CzasPrzelotu<<" "<<Czestotliwosc<<endl;
+        plik<<MagazynDanych[GlowaKopia1].ZwrocCzasPrzelotu_UTS()<<" "<<MagazynDanych[GlowaKopia2-1].ZwrocCzasPrzelotu_UTS()<<" "<<Czestotliwosc<<endl;
 
         GlowaKopia1 = Glowa;
         for (i = 0; i < MagazynDanych.size(); i++)
         {
-            plik<<MagazynDanych[GlowaKopia1].CzasPrzelotu<<" "<<MagazynDanych[GlowaKopia1].Predkosc<<" "<<MagazynDanych[GlowaKopia1].Wysokosc<<" "<<MagazynDanych[GlowaKopia1].DlugoscGeo<<" "<<MagazynDanych[GlowaKopia1].SzerokoscGeo<<endl;
+            plik<<MagazynDanych[GlowaKopia1];
             GlowaKopia1 += 1;
             GlowaKopia1 = GlowaKopia1%MagazynDanych.size();
         }
@@ -145,10 +145,10 @@ long int Magazyn_danych::WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S)
 
     size_t k = 0;
 
-    if(NoweDane.CzasPrzelotu == 0)NoweDane = Html->PobierzDaneOISS();
+    if(NoweDane.ZwrocCzasPrzelotu_UTS() == 0)NoweDane = Html->PobierzDaneOISS();
 
-    if(NoweDane.CzasPrzelotu > CzasDoTylu_S)
-        CzasDanych = NoweDane.CzasPrzelotu - CzasDoTylu_S;
+    if(NoweDane.ZwrocCzasPrzelotu_UTS() > CzasDoTylu_S)
+        CzasDanych = NoweDane.ZwrocCzasPrzelotu_UTS() - CzasDoTylu_S;
     else
         CzasDanych = QDateTime::currentSecsSinceEpoch() - CzasDoTylu_S;
 
@@ -156,7 +156,7 @@ long int Magazyn_danych::WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S)
     {
         plik>>CzasPoczatku>>CzasKonca>>Czestotliwosc;
 
-        if(CzasDanych > CzasKonca) return 1;
+        if(CzasDanych > CzasKonca) return 0;
         else
         {
            Wierzsz = (uint32_t)(ceil((float)(CzasDanych - CzasPoczatku)/(float)Czestotliwosc)+1);
@@ -164,9 +164,9 @@ long int Magazyn_danych::WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S)
            k = 0;
            while(!plik.eof())
            {
-               plik>>MagazynDanych[k].CzasPrzelotu>>MagazynDanych[k].Predkosc>>MagazynDanych[k].Wysokosc>>MagazynDanych[k].DlugoscGeo>>MagazynDanych[k].SzerokoscGeo;
+               plik>>MagazynDanych[k];
 
-               if(MagazynDanych[k].CzasPrzelotu == 0)break;
+               if(MagazynDanych[k].ZwrocCzasPrzelotu_UTS() == 0)break;
                k += 1;
 
                if(Wierzsz-1 > 0)
@@ -184,15 +184,16 @@ long int Magazyn_danych::WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S)
     }else
         return -1;
 
+
 }
 
 void Magazyn_danych::DodajNoweDane(ISS_Dane NoweDane)
 {
-    MagazynDanych[Glowa].CzasPrzelotu = NoweDane.CzasPrzelotu;
-    MagazynDanych[Glowa].Predkosc = NoweDane.Predkosc;
-    MagazynDanych[Glowa].Wysokosc = NoweDane.Wysokosc;
-    MagazynDanych[Glowa].DlugoscGeo = NoweDane.DlugoscGeo;
-    MagazynDanych[Glowa].SzerokoscGeo = NoweDane.SzerokoscGeo;
+    MagazynDanych[Glowa].ZmienCzasPrzelotu_UTS(NoweDane.ZwrocCzasPrzelotu_UTS());
+    MagazynDanych[Glowa].ZmienPredkosc_kmH(NoweDane.ZwrocPredkosc_kmH());
+    MagazynDanych[Glowa].ZmienWysokosc_km(NoweDane.ZwrocWysokosc_km());
+    MagazynDanych[Glowa].ZmienDlugoscGeo_Stopnie(NoweDane.ZwrocDlugoscGeo_Stopnie());
+    MagazynDanych[Glowa].ZmienSzerokoscGeo_Stopnie(NoweDane.ZwrocSzerokoscGeo_Stopnie());
 
     Glowa += 1;
     Glowa = Glowa%MagazynDanych.size();

@@ -1,0 +1,9 @@
+<map id="OpenGLWidget::UstawFragmentShader" name="OpenGLWidget::UstawFragmentShader">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a042040fc28d0686e6500bfa352e949c2" title="Grafika3D::ZwrocAdresShadera" alt="" coords="264,5,467,32"/>
+<area shape="rect" id="node3" href="$class_shader.html#a41ca8bffd1e520da5f7b6e34c6421614" title="Shader::Init" alt="" coords="321,56,409,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title="Shader::WczytajShader" alt="" coords="285,107,445,133"/>
+<area shape="rect" id="node5" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title="Shader::StworzShader" alt="" coords="520,81,672,108"/>
+<area shape="rect" id="node7" href="$class_shader.html#ae3baccef022cd10aafbed1730a0439a7" title="Shader::KompilujShader" alt="" coords="515,132,677,159"/>
+<area shape="rect" id="node6" href="$class_shader.html#aa2b21faafdbb363559a9176f311bf784" title="Shader::WczytajPlik" alt="" coords="759,81,900,108"/>
+<area shape="rect" id="node8" href="$class_shader.html#a441a4bcc5850b3a1856415b0738e85f0" title="Shader::WypiszBledyKompilacji" alt="" coords="725,132,933,159"/>
+</map>

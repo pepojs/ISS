@@ -1,0 +1,10 @@
+<map id="ISS_Dane::ZmienSzerokoscGeo_Stopnie" name="ISS_Dane::ZmienSzerokoscGeo_Stopnie">
+<area shape="rect" id="node2" href="$class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Http::ParserDanychISS" alt="" coords="255,78,413,105"/>
+<area shape="rect" id="node8" href="$class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Http::PraserWieluDanychISS" alt="" coords="239,129,429,155"/>
+<area shape="rect" id="node3" href="$class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="477,78,636,105"/>
+<area shape="rect" id="node4" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="688,5,911,47"/>
+<area shape="rect" id="node6" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="688,71,911,112"/>
+<area shape="rect" id="node7" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="684,137,915,163"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="963,78,1141,105"/>
+<area shape="rect" id="node9" href="$class_http.html#a4c02cf3160c83692c70145922f5e8cd1" title="Http::PobierzDaneOISS" alt="" coords="477,129,636,155"/>
+</map>

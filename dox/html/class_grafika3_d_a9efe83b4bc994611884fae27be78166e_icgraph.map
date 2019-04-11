@@ -1,0 +1,7 @@
+<map id="Grafika3D::TworzObiekt" name="Grafika3D::TworzObiekt">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a2b40edadcd34538cf03b9e4f9f08c8ab" title="Grafika3D::DodajObiekt" alt="" coords="212,64,371,91"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#abe251017fa2d080f09d42bb98bf5a2dd" title="OpenGLWidget::TworzZiemie" alt="" coords="419,5,609,32"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a5ef7434b1c1e65d30f9a67bcc85fb41a" title="OpenGLWidget::TworzPunkt\lPozycji" alt="" coords="421,57,607,98"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a46b01b29b7ad001504d992fd762857ef" title="OpenGLWidget::TworzSiatke" alt="" coords="419,123,609,149"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="657,64,840,91"/>
+</map>

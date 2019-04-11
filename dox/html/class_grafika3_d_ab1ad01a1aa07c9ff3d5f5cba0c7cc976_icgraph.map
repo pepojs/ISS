@@ -1,0 +1,5 @@
+<map id="Grafika3D::PrzesunObiekt" name="Grafika3D::PrzesunObiekt">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a7cff564a786f0a2fad7d50d4c3e1e326" title="OpenGLWidget::NoweDaneISS" alt="" coords="227,5,429,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a5ef7434b1c1e65d30f9a67bcc85fb41a" title="OpenGLWidget::TworzPunkt\lPozycji" alt="" coords="235,57,421,98"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="477,64,660,91"/>
+</map>

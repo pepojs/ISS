@@ -1,0 +1,5 @@
+<map id="Grafika3D::DodajObiektD" name="Grafika3D::DodajObiektD">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a8ac27178bb9e00543eb2ef692189f89c" title="OpenGLWidget::TworzWskaznik\lTrajektorii" alt="" coords="221,5,432,47"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a965d90bf1539315de3a1a0bf58b68206" title="OpenGLWidget::TworzTrajektorie" alt="" coords="220,71,433,98"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="481,42,664,69"/>
+</map>

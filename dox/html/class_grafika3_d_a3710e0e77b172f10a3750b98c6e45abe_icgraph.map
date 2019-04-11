@@ -1,0 +1,9 @@
+<map id="Grafika3D::PrzekazIntaDoShedera" name="Grafika3D::PrzekazIntaDoShedera">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="OpenGLWidget::UstawKamere\lNaStrefie" alt="" coords="225,42,425,83"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="OpenGLWidget::Podswietlenie\lStrefy" alt="" coords="226,107,425,149"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="473,56,680,83"/>
+<area shape="rect" id="node5" href="$class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title="MainWindow::ZmianaStrefy" alt="" coords="487,5,667,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="728,85,907,112"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="489,107,665,149"/>
+<area shape="rect" id="node8" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="489,173,665,214"/>
+</map>

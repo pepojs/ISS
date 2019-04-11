@@ -1,0 +1,7 @@
+<map id="Http::PobierzDaneOISS" name="Http::PobierzDaneOISS">
+<area shape="rect" id="node2" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="223,27,359,54"/>
+<area shape="rect" id="node3" href="$class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Http::ParserDanychISS" alt="" coords="212,78,369,105"/>
+<area shape="rect" id="node4" href="$struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="430,5,615,47"/>
+<area shape="rect" id="node5" href="$struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="425,71,620,112"/>
+<area shape="rect" id="node6" href="$struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="417,137,628,163"/>
+</map>

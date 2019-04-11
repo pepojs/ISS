@@ -1,0 +1,7 @@
+<map id="Grafika3D::ZwrocAdresShadera" name="Grafika3D::ZwrocAdresShadera">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a293847f6a7e6c40344a1acfca3e9eb51" title="OpenGLWidget::~OpenGLWidget" alt="" coords="256,5,472,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="520,148,703,175"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a70b86c5c7080fd546183715606df59fc" title="OpenGLWidget::UstawVertex\lShader" alt="" coords="267,107,461,149"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a9e0172fdb46748079e055962cf8cc761" title="OpenGLWidget::UstawFragment\lShader" alt="" coords="259,173,469,214"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#ae28f093a50ce662dc0a8e072ca7a2eed" title="OpenGLWidget::LinkujShader" alt="" coords="267,239,461,265"/>
+</map>

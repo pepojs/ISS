@@ -1,0 +1,7 @@
+<map id="Grafika3D::UaktualniDaneObiektu" name="Grafika3D::UaktualniDaneObiektu">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a7cff564a786f0a2fad7d50d4c3e1e326" title="OpenGLWidget::NoweDaneISS" alt="" coords="236,5,439,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a0f02a6761837cb6209a40377b2fbde41" title="OpenGLWidget::Trajektoria\lNoweDane" alt="" coords="248,57,427,98"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="OpenGLWidget::WypelniTrajektorie" alt="" coords="224,123,451,149"/>
+<area shape="rect" id="node5" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="499,123,729,149"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="777,123,956,149"/>
+</map>

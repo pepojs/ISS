@@ -1,0 +1,6 @@
+<map id="OpenGLWidget::TrajektoriaNoweDane" name="OpenGLWidget::TrajektoriaNoweDane">
+<area shape="rect" id="node2" href="$struct_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="ZwrocSzerokoscGeo_Stopnie wartość szerokości geograficznej w stopniach. " alt="" coords="245,5,429,47"/>
+<area shape="rect" id="node3" href="$struct_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="ZwrocDlugoscGeo_Stopnie wartość dlugości geograficznej w stopniach. " alt="" coords="240,71,433,112"/>
+<area shape="rect" id="node4" href="$struct_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="ZwrocWysokosc_km wartość wysokości na jakiej znajduje się stacja. " alt="" coords="232,137,441,163"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title="Grafika3D::UaktualniDane\lObiektu" alt="" coords="251,188,422,229"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Grafika3D::RysujObiekt" name="Grafika3D::RysujObiekt">
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="240,5,423,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="OpenGLWidget::RysowanieTrajektorii" alt="" coords="212,56,451,83"/>
+<area shape="rect" id="node8" href="$class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="OpenGLWidget::RysowanieSiatki" alt="" coords="224,107,439,133"/>
+<area shape="rect" id="node9" href="$class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="OpenGLWidget::RysowaniePunktu\lSledzacego" alt="" coords="220,158,443,199"/>
+<area shape="rect" id="node10" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="OpenGLWidget::RysowanieWsk\lTrajektorii" alt="" coords="227,223,436,265"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="499,56,705,83"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="514,107,690,149"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="514,173,690,214"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="753,115,932,141"/>
+<area shape="rect" id="node11" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="535,239,669,265"/>
+</map>

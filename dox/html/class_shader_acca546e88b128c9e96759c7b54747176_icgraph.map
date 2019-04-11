@@ -1,0 +1,6 @@
+<map id="Shader::WczytajShader" name="Shader::WczytajShader">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a3b8544128d94a711457672bcbe5c8d17" title="Grafika3D::WczytajCzciake" alt="" coords="227,5,410,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a70b86c5c7080fd546183715606df59fc" title="OpenGLWidget::UstawVertex\lShader" alt="" coords="222,57,415,98"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a9e0172fdb46748079e055962cf8cc761" title="OpenGLWidget::UstawFragment\lShader" alt="" coords="213,122,424,163"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="472,97,655,124"/>
+</map>

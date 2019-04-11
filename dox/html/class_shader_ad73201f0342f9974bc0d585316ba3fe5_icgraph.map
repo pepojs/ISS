@@ -1,0 +1,5 @@
+<map id="Shader::LinkowanieShader" name="Shader::LinkowanieShader">
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a3b8544128d94a711457672bcbe5c8d17" title="Grafika3D::WczytajCzciake" alt="" coords="235,5,418,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#ae28f093a50ce662dc0a8e072ca7a2eed" title="OpenGLWidget::LinkujShader" alt="" coords="229,56,424,83"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="472,56,655,83"/>
+</map>
