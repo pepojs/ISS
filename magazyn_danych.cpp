@@ -40,6 +40,9 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
     ISS_Dane TabPom[10];
     size_t licznik = 0;
     size_t roznica = 0;
+    size_t licznik_pom = 0;
+    size_t licznik_prob = 0;
+    size_t wykryto0 = 0;
 
     cout<<"Czas danych "<<CzasDanych<<endl;
     cout<<"Ilosc "<<IloscDanychWypelnionych<<endl;
@@ -50,15 +53,40 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
         NoweDane = Html->PobierzDaneOISS();
         licznik += 1;
 
-    }while(NoweDane.ZwrocCzasPrzelotu_UTS() == 0 && licznik < 100);
-cout<<"Licznik "<<licznik<<endl;
+    }while(NoweDane.ZwrocCzasPrzelotu_UTS() == 0 && licznik < 60);
+
+    if(licznik >= 60)
+    {
+        cerr<<"Nie udalo nawiazac sie poloaczenia ze strona"<<endl;
+        return;
+    }
+
+    cout<<"Licznik "<<licznik<<endl;
     licznik = 0;
 
     for(licznik = IloscDanychWypelnionych; licznik < (MagazynDanych.size()-10);)
     {
-        cout<<"Czas danych: "<<CzasDanych<<endl;
-        Html->PobierzDaneOISS(&TabPom[0], 10, CzasDanych, Czestotliwosc);
-        CzasDanych += 10*Czestotliwosc;
+        licznik_pom = licznik;
+        licznik_prob = 0;
+
+        do
+        {
+            licznik = licznik_pom;
+            cout<<"Czas danych: "<<CzasDanych<<endl;
+
+            Html->PobierzDaneOISS(&TabPom[0], 10, CzasDanych, Czestotliwosc);
+            licznik_prob += 1;
+
+            licznik_prob += 1;
+
+        }while((TabPom[0].ZwrocCzasPrzelotu_UTS() == 0 || TabPom[0].ZwrocCzasPrzelotu_UTS() != CzasDanych) && licznik_prob < 60);
+
+        if(licznik_prob >= 60)
+        {
+            cerr<<"Polaczenie z serwerem zostalo przerwane"<<endl;
+            return;
+        }
+
         for(size_t j = 0; j < 10; j++)
         {
             MagazynDanych[licznik] = TabPom[j];
@@ -66,16 +94,40 @@ cout<<"Licznik "<<licznik<<endl;
             licznik += 1;
         }
 
+        CzasDanych += 10*Czestotliwosc;
         cout<<"Pobrano "<<licznik<<" danych"<<endl;
     }
 
+
+    licznik_pom = licznik;
+    licznik_prob = 0;
+
     roznica = MagazynDanych.size()-licznik;
-    Html->PobierzDaneOISS(&TabPom[0], roznica, CzasDanych, Czestotliwosc);
-    for(size_t j = 0; j < roznica; j++)
+    cout<<"roznica: "<<roznica<<endl;
+    do
     {
+        wykryto0 = 0;
+        licznik = licznik_pom;
+        Html->PobierzDaneOISS(&TabPom[0], roznica, CzasDanych, Czestotliwosc);
+        for(size_t j = 0; j < roznica; j++)
+        {
+            if(TabPom[j].ZwrocCzasPrzelotu_UTS() == 0)
+            {
+                wykryto0 = 1;
+                break;
+            }
             MagazynDanych[licznik] = TabPom[j];
-            //cout<<"Mag: "<<MagazynDanych[licznik].CzasPrzelotu<<endl;
+            cout<<"Mag: "<<MagazynDanych[licznik].ZwrocCzasPrzelotu_UTS()<<endl;
             licznik += 1;
+        }
+        licznik_prob += 1;
+
+    }while(wykryto0 != 0 && licznik_prob < 60 && roznica > 0);
+
+    if(licznik_prob >= 60)
+    {
+        cerr<<"Polaczenie z serwerem zostalo przerwane"<<endl;
+        return;
     }
 
     cout<<"Pobrano "<<licznik<<" danych"<<endl;
@@ -152,6 +204,8 @@ long int Magazyn_danych::WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S)
     else
         CzasDanych = QDateTime::currentSecsSinceEpoch() - CzasDoTylu_S;
 
+
+    cout<<"Czas danych: "<<CzasDanych<<endl;
     if(plik.good() == true)
     {
         plik>>CzasPoczatku>>CzasKonca>>Czestotliwosc;

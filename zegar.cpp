@@ -3,7 +3,7 @@
 Zegar::Zegar(QWidget* Rodzic)
     :QWidget (Rodzic)
 {
-    Czas = new QLabel(tr("<center><font color=white>Czas przelotu:</font></center>"));
+    Czas = new QLabel(tr("<center><font color=white>czas względem strefy:</font></center>"));
     StrefaCzasowa = new QLabel(tr("<center><font color=white>Strefa: UTC-0</font></center>"));
     Wyswietlacz = new QLCDNumber;
 

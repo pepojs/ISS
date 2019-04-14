@@ -27,7 +27,7 @@
 class ISS_Dane
 {
     /*!
-     * \brief CzasPrzelotu - czas, dla którego przechowywane są dane.
+     * \brief Czas, dla którego przechowywane są dane.
      *
      * Pole zawiera czas, dla którego stacja znajdowała się w wyznaczonej pozycji.
      * Dane przechowywane są w formacie uniksowym, w sekundach.
@@ -35,7 +35,7 @@ class ISS_Dane
     uint32_t CzasPrzelotu;
 
     /*!
-     * \brief Prędkość - predkość z jaką porusza się stacja.
+     * \brief Predkość z jaką porusza się stacja.
      *
      * Pole zawiera prędkość z jaką porusza się stacja kosmiczna.
      * Dane przechowywane są w kilometrach na godzinę.
@@ -43,7 +43,7 @@ class ISS_Dane
     double Predkosc;
 
     /*!
-     * \brief Wysokosc - wysokość stacji nad powierzchnią Ziemi.
+     * \brief Wysokość stacji nad powierzchnią Ziemi.
      *
      * Pole zawiera wysokość nad powierzchnią Zimei, na której znajduje się stacja kosmiczna.
      * Dane przechowywane są w kilometrach.
@@ -51,7 +51,7 @@ class ISS_Dane
     double Wysokosc;
 
     /*!
-     * \brief SzerokoscGeo - szerokość geograficzna stacji
+     * \brief Szerokość geograficzna stacji
      *
      * Pole zawiera szerokość geograficzną punktu, nad którym znajduje się stacja kosmiczna.
      * Dane przechowywane są w stopniach.
@@ -59,7 +59,7 @@ class ISS_Dane
     double SzerokoscGeo;
 
     /*!
-     * \brief DlugoscGeo - długość geograficzna stacji
+     * \brief Długość geograficzna stacji
      *
      * Pole zawiera długość geograficzną punktu, nad którym znajduje się stacja kosmiczna.
      * Dane przechowywane są w stopniach.

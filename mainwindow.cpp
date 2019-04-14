@@ -86,12 +86,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //WybranaStrefa->setMaximumWidth(300);
 
     MagazynDanychStacji = new Magazyn_danych(24*60);
-    long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*60+3*60);
+    long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*60);//+3*60
     cout<<"Ile danych: "<<IleDanych<<endl;
     if(IleDanych >= 0)
-        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60+3*60);
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60);//+3*60
     else
-        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, 0, 24*60*60+3*60);
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, 0, 24*60*60);//+3*60
 
     MagazynDanychStacji->ZapiszDane(60);
 
@@ -172,15 +172,21 @@ MainWindow::MainWindow(QWidget *parent) :
     Centralny->setLayout(WarstwaGlowna);
 
     Licznik = 0;
+
 }
 
 MainWindow::~MainWindow()
 {
+    CzasDoPobrania->stop();
     //MagazynDanychStacji->ZapiszDane(60);
 }
 
 void MainWindow::PobierzNoweDaneISS()
 {
+    size_t pom;
+    size_t roznica = 0;
+    ISS_Dane TabPom[10];
+
     DaneStacji = Html->PobierzDaneOISS();
     //DodajElementDoDanych(DaneStacji);
 
@@ -200,17 +206,17 @@ void MainWindow::PobierzNoweDaneISS()
                 WykresWysokosci->UstawZakresOsiY(DaneStacji.ZwrocWysokosc_km()-2, DaneStacji.ZwrocWysokosc_km()+2);
             }
 
-            if(ObecnyZakresOsiCzasu+30 <= DaneStacji.ZwrocCzasPrzelotu_UTS() || ObecnyZakresOsiCzasu-30 >= DaneStacji.ZwrocCzasPrzelotu_UTS())
+            if(ObecnyZakresOsiCzasu+30 <= DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60) || ObecnyZakresOsiCzasu-30 >= DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60))
             {
-                ObecnyZakresOsiCzasu = DaneStacji.ZwrocCzasPrzelotu_UTS();
-                WykresPredkosci->UstawZakresOsiX(DaneStacji.ZwrocCzasPrzelotu_UTS()-30, DaneStacji.ZwrocCzasPrzelotu_UTS()+30);
-                WykresWysokosci->UstawZakresOsiX(DaneStacji.ZwrocCzasPrzelotu_UTS()-30, DaneStacji.ZwrocCzasPrzelotu_UTS()+30);
+                ObecnyZakresOsiCzasu = DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60);
+                WykresPredkosci->UstawZakresOsiX(DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60) - 30, DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60) + 30);
+                WykresWysokosci->UstawZakresOsiX(DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60) - 30, DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60) + 30);
             }
         }
 
 
-        WykresPredkosci->DodajDaneDoWykresu(DaneStacji.ZwrocCzasPrzelotu_UTS(), DaneStacji.ZwrocPredkosc_kmH());
-        WykresWysokosci->DodajDaneDoWykresu(DaneStacji.ZwrocCzasPrzelotu_UTS(), DaneStacji.ZwrocWysokosc_km());
+        WykresPredkosci->DodajDaneDoWykresu(DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60), DaneStacji.ZwrocPredkosc_kmH());
+        WykresWysokosci->DodajDaneDoWykresu(DaneStacji.ZwrocCzasPrzelotu_UTS() + ((Strefa - 1)*60*60), DaneStacji.ZwrocWysokosc_km());
 
         emit noweDaneISS(DaneStacji);
 
@@ -218,7 +224,35 @@ void MainWindow::PobierzNoweDaneISS()
             Model3D->WypelniTrajektorie(*MagazynDanychStacji);
 
         Licznik += 1;
-        if(Licznik == 30)
+
+        if(MagazynDanychStacji->ZwrocGlowe() == 0)
+        {
+            pom = MagazynDanychStacji->ZwrocIloscDanych()-1;
+
+        }else
+        {
+            pom = MagazynDanychStacji->ZwrocGlowe()-1;
+        }
+
+        //cout<<"Roz czas : "<<(DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())<<endl;
+        //cout<<"MD: "<<MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()<<", DS: "<<DaneStacji.ZwrocCzasPrzelotu_UTS()<<endl;
+
+        if((DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()) >= 120)
+        {
+            roznica = (DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())/60;
+
+            if(roznica >= 10) roznica = 10;
+
+            Html->PobierzDaneOISS(&TabPom[0], roznica, MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS(), 60);
+            for(size_t j = 0; j < roznica; j++)
+            {
+                    MagazynDanychStacji->DodajNoweDane(TabPom[j]);
+                    cout<<"tabPom: "<<TabPom[j]<<endl;
+            }
+        }
+
+        //if(Licznik == 30)
+        if((DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()) >= 60)
         {
             MagazynDanychStacji->DodajNoweDane(DaneStacji);
             Licznik = 0;
@@ -330,6 +364,8 @@ void MainWindow::PrzycisnietyWysokosc()
     Model3D->PodswietlenieStrefy(0);
     //Model3D->setGeometry(400, 60, size().width()-400,size().height()-60);
     Model3D->update();
+
+    this->setFocus();
 }
 
 void MainWindow::ZmianaStrefy(int NowaStrefa)
@@ -353,6 +389,9 @@ void MainWindow::ZmianaStrefy(int NowaStrefa)
     Model3D->UstawKamereNaStrefie(NowaStrefa);
     Model3D->update();
 
+    WykresPredkosci->WyczyscWykres();
+    WykresWysokosci->WyczyscWykres();
+
 }
 
 
@@ -366,7 +405,7 @@ bool MainWindow::event(QEvent* Zdarzenie)
         case QEvent::KeyPress:
             Przycisk = static_cast<QKeyEvent* >(Zdarzenie);
             //cout<<Przycisk->key()<<endl;
-            if(Przycisk->key() == Qt::Key_A)
+            if(Przycisk->key() == Qt::Key_Left)
             {
                 if(AktywnaTrajektoria == true)
                 {
@@ -388,7 +427,7 @@ bool MainWindow::event(QEvent* Zdarzenie)
                     PrzelaczAktualizacjeDanych = true;
 
                     if(MagazynOdczytywaneDane == 0)
-                        MagazynOdczytywaneDane = MagazynDanychStacji->ZwrocIloscDanych()-1;
+                        MagazynOdczytywaneDane = MagazynDanychStacji->ZwrocIloscDanych();
 
                     MagazynOdczytywaneDane -= 1;
 
@@ -406,43 +445,73 @@ bool MainWindow::event(QEvent* Zdarzenie)
                         WykresWysokosci->UstawZakresOsiY(DanePomocnicze.ZwrocWysokosc_km()-2, DanePomocnicze.ZwrocWysokosc_km()+2);
                     }
 
-                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.ZwrocCzasPrzelotu_UTS() || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.ZwrocCzasPrzelotu_UTS())
+                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60) || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60))
                     {
-                        ObecnyZakresOsiCzasu = DanePomocnicze.ZwrocCzasPrzelotu_UTS();
-                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+30);
-                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+30);
+                        ObecnyZakresOsiCzasu = DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60);
+                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)+30);
+                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)+30);
                     }
 
                     WykresPredkosci->WyczyscWykres();
                     WykresWysokosci->WyczyscWykres();
 
+                    cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
+
                     if(MagazynOdczytywaneDane != 0)
                     {
-                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
+                        if(MagazynDanychStacji->ZwrocGlowe() != MagazynOdczytywaneDane)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
 
-                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
+                    }else
+                    {
+                        if(MagazynDanychStacji->ZwrocGlowe() != 0)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynDanychStacji->ZwrocIloscDanych()-1);
+
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
                     }
 
                     DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
 
-                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
 
                     if(MagazynOdczytywaneDane != MagazynDanychStacji->ZwrocIloscDanych()-1)
                     {
-                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
+                        if(MagazynDanychStacji->ZwrocGlowe() != (MagazynOdczytywaneDane+1))
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
 
-                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
+
+                    }else
+                    {
+                        if(MagazynDanychStacji->ZwrocGlowe() != 0)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(0);
+
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
                     }
 
                     emit daneTrajektoriiISS(MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane));
                 }
-
+                cout<<"MOD: "<<MagazynOdczytywaneDane<<endl;
             }
 
-            if(Przycisk->key() == Qt::Key_D)
+            if(Przycisk->key() == Qt::Key_Right)
             {
                 if(AktywnaTrajektoria == true)
                 {
@@ -482,41 +551,72 @@ bool MainWindow::event(QEvent* Zdarzenie)
                         WykresWysokosci->UstawZakresOsiY(DanePomocnicze.ZwrocWysokosc_km()-2, DanePomocnicze.ZwrocWysokosc_km()+2);
                     }
 
-                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.ZwrocCzasPrzelotu_UTS() || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.ZwrocCzasPrzelotu_UTS())
+                    if(ObecnyZakresOsiCzasu+30 <= DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60) || ObecnyZakresOsiCzasu-30 >= DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60))
                     {
-                        ObecnyZakresOsiCzasu = DanePomocnicze.ZwrocCzasPrzelotu_UTS();
-                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+30);
-                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+30);
+                        ObecnyZakresOsiCzasu = DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60);
+                        WykresPredkosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)+30);
+                        WykresWysokosci->UstawZakresOsiX(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)-30, DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60)+30);
                     }
 
                     WykresPredkosci->WyczyscWykres();
                     WykresWysokosci->WyczyscWykres();
 
 
+                    cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
+
                     if(MagazynOdczytywaneDane != 0)
                     {
-                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
+                        if(MagazynDanychStacji->ZwrocGlowe() != MagazynOdczytywaneDane)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane-1);
 
-                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
+                    }else
+                    {
+                        if(MagazynDanychStacji->ZwrocGlowe() != 0)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynDanychStacji->ZwrocIloscDanych()-1);
+
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
                     }
 
                     DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane);
 
-                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                    WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                    WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
 
                     if(MagazynOdczytywaneDane != MagazynDanychStacji->ZwrocIloscDanych()-1)
                     {
-                        DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
+                        if(MagazynDanychStacji->ZwrocGlowe() != (MagazynOdczytywaneDane+1))
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane+1);
 
-                        WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocPredkosc_kmH());
-                        WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS(), DanePomocnicze.ZwrocWysokosc_km());
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
+
+                    }else
+                    {
+                        if(MagazynDanychStacji->ZwrocGlowe() != 0)
+                        {
+                            DanePomocnicze = MagazynDanychStacji->ZwrocDane(0);
+
+                            WykresPredkosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocPredkosc_kmH());
+                            WykresWysokosci->DodajDaneDoWykresu(DanePomocnicze.ZwrocCzasPrzelotu_UTS()+ ((Strefa - 1)*60*60), DanePomocnicze.ZwrocWysokosc_km());
+                        }
+
                     }
 
                     emit daneTrajektoriiISS(MagazynDanychStacji->ZwrocDane(MagazynOdczytywaneDane));
                 }
 
+                cout<<"MOD: "<<MagazynOdczytywaneDane<<endl;
             }
         break;
 
