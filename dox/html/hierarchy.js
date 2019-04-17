@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "Grafika3D", "class_grafika3_d.html", null ],
-    [ "ISS_Dane", "struct_i_s_s___dane.html", null ],
+    [ "ISS_Dane", "class_i_s_s___dane.html", null ],
     [ "Magazyn_danych", "class_magazyn__danych.html", null ],
     [ "NapisNaScenie", "struct_napis_na_scenie.html", null ],
     [ "ObiektNaScenie", "struct_obiekt_na_scenie.html", null ],

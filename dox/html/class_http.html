@@ -75,6 +75,9 @@ $(document).ready(function(){initNavTree('class_http.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Komunikacja ze stroną internetową  
+ <a href="class_http.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="http_8h_source.html">http.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla Http</div>
@@ -97,12 +100,16 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a361ca5ad92cfd389b51795565dae5cf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#a361ca5ad92cfd389b51795565dae5cf7">Http</a> (QObject *Rodzic=nullptr)</td></tr>
 <tr class="separator:a361ca5ad92cfd389b51795565dae5cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2052e773d9f2fa89e4aeabbfe7e0d24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24">PobierzStrone</a> (const QUrl &amp;Url)</td></tr>
+<tr class="memdesc:ae2052e773d9f2fa89e4aeabbfe7e0d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera zawartość strony internetowej.  <a href="#ae2052e773d9f2fa89e4aeabbfe7e0d24">Więcej...</a><br /></td></tr>
 <tr class="separator:ae2052e773d9f2fa89e4aeabbfe7e0d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81006e562c8b774308f70975172d499a"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#a81006e562c8b774308f70975172d499a">ZwrocZawartoscStrony</a> ()</td></tr>
+<tr class="memdesc:a81006e562c8b774308f70975172d499a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca zawartość strony w postaci QString.  <a href="#a81006e562c8b774308f70975172d499a">Więcej...</a><br /></td></tr>
 <tr class="separator:a81006e562c8b774308f70975172d499a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e692c3b462cd0b7fb52f155e3b3bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee">PobierzDaneOISS</a> ()</td></tr>
+<tr class="memitem:ac2e692c3b462cd0b7fb52f155e3b3bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee">PobierzDaneOISS</a> ()</td></tr>
+<tr class="memdesc:ac2e692c3b462cd0b7fb52f155e3b3bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej.  <a href="#ac2e692c3b462cd0b7fb52f155e3b3bee">Więcej...</a><br /></td></tr>
 <tr class="separator:ac2e692c3b462cd0b7fb52f155e3b3bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c02cf3160c83692c70145922f5e8cd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#a4c02cf3160c83692c70145922f5e8cd1">PobierzDaneOISS</a> (<a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> *TablicaDanych, int IloscDanych, uint PoczatekCzasu, uint Czestotliwoasc)</td></tr>
+<tr class="memitem:a4c02cf3160c83692c70145922f5e8cd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#a4c02cf3160c83692c70145922f5e8cd1">PobierzDaneOISS</a> (<a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> *TablicaDanych, int IloscDanych, uint PoczatekCzasu, uint Czestotliwoasc)</td></tr>
+<tr class="memdesc:a4c02cf3160c83692c70145922f5e8cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera dane o Międzynarodowej Stacji Kosmicznej. Metoda pozwala pobrać do 10 rekordów na temat pozycji stacji kosmicznej od podanego czasu poczatkowego co podaną częstotliwość. Dane zostaną zapisane do tablicy.  <a href="#a4c02cf3160c83692c70145922f5e8cd1">Więcej...</a><br /></td></tr>
 <tr class="separator:a4c02cf3160c83692c70145922f5e8cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
@@ -112,21 +119,26 @@ Sloty prywatne</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
-<tr class="memitem:ac1688e9389b49183883091a7b86f87bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ac1688e9389b49183883091a7b86f87bd">ParserDanychISS</a> ()</td></tr>
+<tr class="memitem:ac1688e9389b49183883091a7b86f87bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ac1688e9389b49183883091a7b86f87bd">ParserDanychISS</a> ()</td></tr>
+<tr class="memdesc:ac1688e9389b49183883091a7b86f87bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda prywatna służąca do parserowania danych ze strony internetowej.  <a href="#ac1688e9389b49183883091a7b86f87bd">Więcej...</a><br /></td></tr>
 <tr class="separator:ac1688e9389b49183883091a7b86f87bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab605a2a0dc9727bb1ee970d03fb8e6c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6">PraserWieluDanychISS</a> (<a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> *TablicaDanych, int IloscDanych)</td></tr>
+<tr class="memitem:ab605a2a0dc9727bb1ee970d03fb8e6c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6">PraserWieluDanychISS</a> (<a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> *TablicaDanych, int IloscDanych)</td></tr>
+<tr class="memdesc:ab605a2a0dc9727bb1ee970d03fb8e6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10)  <a href="#ab605a2a0dc9727bb1ee970d03fb8e6c6">Więcej...</a><br /></td></tr>
 <tr class="separator:ab605a2a0dc9727bb1ee970d03fb8e6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:ab0935d5adeba201bdfb5fa267ff5f730"><td class="memItemLeft" align="right" valign="top">QNetworkAccessManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ab0935d5adeba201bdfb5fa267ff5f730">http</a></td></tr>
+<tr class="memdesc:ab0935d5adeba201bdfb5fa267ff5f730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt pozwalający na komunikacje ze stroną internetową.  <a href="#ab0935d5adeba201bdfb5fa267ff5f730">Więcej...</a><br /></td></tr>
 <tr class="separator:ab0935d5adeba201bdfb5fa267ff5f730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1395461fff730fe3f41bb3f2eed6d34"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http.html#ad1395461fff730fe3f41bb3f2eed6d34">htmlStrony</a></td></tr>
+<tr class="memdesc:ad1395461fff730fe3f41bb3f2eed6d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">String przechowujący treść pobranej strony.  <a href="#ad1395461fff730fe3f41bb3f2eed6d34">Więcej...</a><br /></td></tr>
 <tr class="separator:ad1395461fff730fe3f41bb3f2eed6d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00023">23</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
+<div class="textblock"><p>Klasa ma za zadanie realizowac komunikacje z serwerem przechowującym dane na temat stacji kosmicznej. Pozwala ona na pobranie danych ze strony oraz parserowanie tych danych do postać pozwalającej korzystać z nich w pozostałej części programu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00037">37</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a361ca5ad92cfd389b51795565dae5cf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a361ca5ad92cfd389b51795565dae5cf7">&#9670;&nbsp;</a></span>Http()</h2>
@@ -167,7 +179,7 @@ Oto graf wywołań dla tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> Http::ParserDanychISS </td>
+          <td class="memname"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> Http::ParserDanychISS </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -179,6 +191,7 @@ Oto graf wywołań dla tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca dane na temat stacji uzyskane ze strony internetowej. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00100">100</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 <div class="dynheader">
@@ -186,9 +199,11 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ac1688e9389b49183883091a7b86f87bd_cgraph.png" border="0" usemap="#class_http_ac1688e9389b49183883091a7b86f87bd_cgraph" alt=""/></div>
 <map name="class_http_ac1688e9389b49183883091a7b86f87bd_cgraph" id="class_http_ac1688e9389b49183883091a7b86f87bd_cgraph">
-<area shape="rect" id="node2" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="223,5,409,47"/>
-<area shape="rect" id="node3" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="219,71,413,112"/>
-<area shape="rect" id="node4" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="211,137,421,163"/>
+<area shape="rect" id="node2" href="class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="235,5,420,47"/>
+<area shape="rect" id="node3" href="class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="230,71,425,112"/>
+<area shape="rect" id="node4" href="class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="222,137,433,163"/>
+<area shape="rect" id="node5" href="class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="221,187,433,214"/>
+<area shape="rect" id="node6" href="class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="211,238,444,265"/>
 </map>
 </div>
 <div class="dynheader">
@@ -196,7 +211,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ac1688e9389b49183883091a7b86f87bd_icgraph.png" border="0" usemap="#class_http_ac1688e9389b49183883091a7b86f87bd_icgraph" alt=""/></div>
 <map name="class_http_ac1688e9389b49183883091a7b86f87bd_icgraph" id="class_http_ac1688e9389b49183883091a7b86f87bd_icgraph">
-<area shape="rect" id="node2" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="211,78,369,105"/>
+<area shape="rect" id="node2" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej. " alt="" coords="211,78,369,105"/>
 <area shape="rect" id="node3" href="class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="421,5,644,47"/>
 <area shape="rect" id="node5" href="class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="421,71,644,112"/>
 <area shape="rect" id="node6" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="417,137,648,163"/>
@@ -213,13 +228,14 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> Http::PobierzDaneOISS </td>
+          <td class="memname"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> Http::PobierzDaneOISS </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualne dane na temat stacji kosmicznej. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00028">28</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 <div class="dynheader">
@@ -227,11 +243,13 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ac2e692c3b462cd0b7fb52f155e3b3bee_cgraph.png" border="0" usemap="#class_http_ac2e692c3b462cd0b7fb52f155e3b3bee_cgraph" alt=""/></div>
 <map name="class_http_ac2e692c3b462cd0b7fb52f155e3b3bee_cgraph" id="class_http_ac2e692c3b462cd0b7fb52f155e3b3bee_cgraph">
-<area shape="rect" id="node2" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="223,27,359,54"/>
-<area shape="rect" id="node3" href="class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Http::ParserDanychISS" alt="" coords="212,78,369,105"/>
-<area shape="rect" id="node4" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="430,5,615,47"/>
-<area shape="rect" id="node5" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="425,71,620,112"/>
-<area shape="rect" id="node6" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="417,137,628,163"/>
+<area shape="rect" id="node2" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej. " alt="" coords="223,86,359,113"/>
+<area shape="rect" id="node3" href="class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Metoda prywatna służąca do parserowania danych ze strony internetowej. " alt="" coords="212,137,369,163"/>
+<area shape="rect" id="node4" href="class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="441,5,627,47"/>
+<area shape="rect" id="node5" href="class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="437,71,631,112"/>
+<area shape="rect" id="node6" href="class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="429,137,639,163"/>
+<area shape="rect" id="node7" href="class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="428,187,640,214"/>
+<area shape="rect" id="node8" href="class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="417,238,651,265"/>
 </map>
 </div>
 <div class="dynheader">
@@ -257,7 +275,7 @@ Oto graf wywoływań tej funkcji:</div>
         <tr>
           <td class="memname">void Http::PobierzDaneOISS </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> *&#160;</td>
           <td class="paramname"><em>TablicaDanych</em>, </td>
         </tr>
         <tr>
@@ -285,6 +303,15 @@ Oto graf wywoływań tej funkcji:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TablicaDanych</td><td>- wskaźnik na tablice, do której mają być zapisane pobrane dane. </td></tr>
+    <tr><td class="paramname">IloscDanych</td><td>- ilość danych do pobranie. (Maksymalnie 10) </td></tr>
+    <tr><td class="paramname">PoczatekCzasu</td><td>- wartość czas umieszczonego w danych stacji, od któreg rozpocznie się pobieranie danych, podany w formacie unixowym w sekundach. </td></tr>
+    <tr><td class="paramname">Czestotliwoasc</td><td>- odstęp czasu pomiedzy kolejnymi pobieranymi danami, wyrażony w sekundach. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00060">60</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 <div class="dynheader">
@@ -292,11 +319,13 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_a4c02cf3160c83692c70145922f5e8cd1_cgraph.png" border="0" usemap="#class_http_a4c02cf3160c83692c70145922f5e8cd1_cgraph" alt=""/></div>
 <map name="class_http_a4c02cf3160c83692c70145922f5e8cd1_cgraph" id="class_http_a4c02cf3160c83692c70145922f5e8cd1_cgraph">
-<area shape="rect" id="node2" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="239,27,375,54"/>
-<area shape="rect" id="node3" href="class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Http::PraserWieluDanychISS" alt="" coords="212,78,403,105"/>
-<area shape="rect" id="node4" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="463,5,649,47"/>
-<area shape="rect" id="node5" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="459,71,653,112"/>
-<area shape="rect" id="node6" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="451,137,661,163"/>
+<area shape="rect" id="node2" href="class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej. " alt="" coords="239,86,375,113"/>
+<area shape="rect" id="node3" href="class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10) ..." alt="" coords="212,137,403,163"/>
+<area shape="rect" id="node4" href="class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="475,5,660,47"/>
+<area shape="rect" id="node5" href="class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="470,71,665,112"/>
+<area shape="rect" id="node6" href="class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="462,137,673,163"/>
+<area shape="rect" id="node7" href="class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="461,187,673,214"/>
+<area shape="rect" id="node8" href="class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="451,238,684,265"/>
 </map>
 </div>
 
@@ -317,6 +346,12 @@ Oto graf wywołań dla tej funkcji:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Url</td><td>- adres strony internetowej do pobrania. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00016">16</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 <div class="dynheader">
@@ -324,7 +359,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ae2052e773d9f2fa89e4aeabbfe7e0d24_icgraph.png" border="0" usemap="#class_http_ae2052e773d9f2fa89e4aeabbfe7e0d24_icgraph" alt=""/></div>
 <map name="class_http_ae2052e773d9f2fa89e4aeabbfe7e0d24_icgraph" id="class_http_ae2052e773d9f2fa89e4aeabbfe7e0d24_icgraph">
-<area shape="rect" id="node2" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="189,78,348,105"/>
+<area shape="rect" id="node2" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej. " alt="" coords="189,78,348,105"/>
 <area shape="rect" id="node3" href="class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="400,5,623,47"/>
 <area shape="rect" id="node5" href="class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="400,71,623,112"/>
 <area shape="rect" id="node6" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="396,137,627,163"/>
@@ -362,7 +397,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="center"><img src="class_http_ad17a90dfa29397eaa168eedbc879e5bb_icgraph.png" border="0" usemap="#class_http_ad17a90dfa29397eaa168eedbc879e5bb_icgraph" alt=""/></div>
 <map name="class_http_ad17a90dfa29397eaa168eedbc879e5bb_icgraph" id="class_http_ad17a90dfa29397eaa168eedbc879e5bb_icgraph">
 <area shape="rect" id="node2" href="class_http.html#ae86a6bdd3c58ec73b9d6890c90d7eb7b" title="Http::PobranoStrone" alt="" coords="163,24,303,51"/>
-<area shape="rect" id="node4" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Http::PobierzDaneOISS" alt="" coords="153,111,312,137"/>
+<area shape="rect" id="node4" href="class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej. " alt="" coords="153,111,312,137"/>
 <area shape="rect" id="node3" href="class_http.html#a361ca5ad92cfd389b51795565dae5cf7" title="Http::Http" alt="" coords="436,5,515,32"/>
 <area shape="rect" id="node5" href="class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="364,57,587,98"/>
 <area shape="rect" id="node7" href="class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="364,122,587,163"/>
@@ -421,7 +456,7 @@ Oto graf wywoływań tej funkcji:</div>
         <tr>
           <td class="memname">void Http::PraserWieluDanychISS </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_i_s_s___dane.html">ISS_Dane</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_s_s___dane.html">ISS_Dane</a> *&#160;</td>
           <td class="paramname"><em>TablicaDanych</em>, </td>
         </tr>
         <tr>
@@ -442,6 +477,13 @@ Oto graf wywoływań tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TablicaDanych</td><td>- tablica, w której zostaną zapisane uzyskane dane o stacji. </td></tr>
+    <tr><td class="paramname">IloscDanych</td><td>- ilość danych do praserowania. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00159">159</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 <div class="dynheader">
@@ -449,9 +491,11 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_cgraph.png" border="0" usemap="#class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_cgraph" alt=""/></div>
 <map name="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_cgraph" id="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_cgraph">
-<area shape="rect" id="node2" href="struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="257,5,442,47"/>
-<area shape="rect" id="node3" href="struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="252,71,447,112"/>
-<area shape="rect" id="node4" href="struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="244,137,455,163"/>
+<area shape="rect" id="node2" href="class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="268,5,453,47"/>
+<area shape="rect" id="node3" href="class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="263,71,458,112"/>
+<area shape="rect" id="node4" href="class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="255,137,466,163"/>
+<area shape="rect" id="node5" href="class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="255,187,467,214"/>
+<area shape="rect" id="node6" href="class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="244,238,477,265"/>
 </map>
 </div>
 <div class="dynheader">
@@ -459,7 +503,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_icgraph.png" border="0" usemap="#class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_icgraph" alt=""/></div>
 <map name="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_icgraph" id="class_http_ab605a2a0dc9727bb1ee970d03fb8e6c6_icgraph">
-<area shape="rect" id="node2" href="class_http.html#a4c02cf3160c83692c70145922f5e8cd1" title="Http::PobierzDaneOISS" alt="" coords="244,5,403,32"/>
+<area shape="rect" id="node2" href="class_http.html#a4c02cf3160c83692c70145922f5e8cd1" title="Pobiera dane o Międzynarodowej Stacji Kosmicznej. Metoda pozwala pobrać do 10 rekordów na temat pozyc..." alt="" coords="244,5,403,32"/>
 </map>
 </div>
 
@@ -479,6 +523,7 @@ Oto graf wywoływań tej funkcji:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Zawartość pobranej strony. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="http_8cpp_source.html#l00023">23</a> pliku <a class="el" href="http_8cpp_source.html">http.cpp</a>.</p>
 
@@ -505,7 +550,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00043">43</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00090">90</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
 
 </div>
 </div>
@@ -529,7 +574,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00042">42</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="http_8h_source.html#l00085">85</a> pliku <a class="el" href="http_8h_source.html">http.h</a>.</p>
 
 </div>
 </div>

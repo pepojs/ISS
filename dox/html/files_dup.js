@@ -10,7 +10,7 @@ var files_dup =
     ] ],
     [ "iss_dane.cpp", "iss__dane_8cpp.html", "iss__dane_8cpp" ],
     [ "iss_dane.h", "iss__dane_8h.html", [
-      [ "ISS_Dane", "struct_i_s_s___dane.html", "struct_i_s_s___dane" ]
+      [ "ISS_Dane", "class_i_s_s___dane.html", "class_i_s_s___dane" ]
     ] ],
     [ "KGrafika3D.cpp", "_k_grafika3_d_8cpp.html", null ],
     [ "KGrafika3D.h", "_k_grafika3_d_8h.html", "_k_grafika3_d_8h" ],

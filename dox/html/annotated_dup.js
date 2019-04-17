@@ -3,7 +3,7 @@ var annotated_dup =
     [ "FileDownloader", "class_file_downloader.html", "class_file_downloader" ],
     [ "Grafika3D", "class_grafika3_d.html", "class_grafika3_d" ],
     [ "Http", "class_http.html", "class_http" ],
-    [ "ISS_Dane", "struct_i_s_s___dane.html", "struct_i_s_s___dane" ],
+    [ "ISS_Dane", "class_i_s_s___dane.html", "class_i_s_s___dane" ],
     [ "Lokalizator", "class_lokalizator.html", "class_lokalizator" ],
     [ "Magazyn_danych", "class_magazyn__danych.html", "class_magazyn__danych" ],
     [ "MainWindow", "class_main_window.html", "class_main_window" ],

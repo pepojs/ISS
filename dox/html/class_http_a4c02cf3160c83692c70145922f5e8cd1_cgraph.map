@@ -1,7 +1,9 @@
 <map id="Http::PobierzDaneOISS" name="Http::PobierzDaneOISS">
-<area shape="rect" id="node2" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Http::PobierzStrone" alt="" coords="239,27,375,54"/>
-<area shape="rect" id="node3" href="$class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Http::PraserWieluDanychISS" alt="" coords="212,78,403,105"/>
-<area shape="rect" id="node4" href="$struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="463,5,649,47"/>
-<area shape="rect" id="node5" href="$struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="459,71,653,112"/>
-<area shape="rect" id="node6" href="$struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="451,137,661,163"/>
+<area shape="rect" id="node2" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej. " alt="" coords="239,86,375,113"/>
+<area shape="rect" id="node3" href="$class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10) ..." alt="" coords="212,137,403,163"/>
+<area shape="rect" id="node4" href="$class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="475,5,660,47"/>
+<area shape="rect" id="node5" href="$class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="470,71,665,112"/>
+<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="462,137,673,163"/>
+<area shape="rect" id="node7" href="$class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="461,187,673,214"/>
+<area shape="rect" id="node8" href="$class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="451,238,684,265"/>
 </map>

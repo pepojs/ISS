@@ -1,5 +1,7 @@
 <map id="Http::PraserWieluDanychISS" name="Http::PraserWieluDanychISS">
-<area shape="rect" id="node2" href="$struct_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="ZmienSzerokoscGeo_Stopnie ustawia nową wartość szerokości geograficzne. " alt="" coords="257,5,442,47"/>
-<area shape="rect" id="node3" href="$struct_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="ZmienDlugoscGeo_Stopnie ustawia nową wartość długości geograficzne. " alt="" coords="252,71,447,112"/>
-<area shape="rect" id="node4" href="$struct_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="ZmienWysokosc_km ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="244,137,455,163"/>
+<area shape="rect" id="node2" href="$class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne. " alt="" coords="268,5,453,47"/>
+<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne. " alt="" coords="263,71,458,112"/>
+<area shape="rect" id="node4" href="$class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja. " alt="" coords="255,137,466,163"/>
+<area shape="rect" id="node5" href="$class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej. " alt="" coords="255,187,467,214"/>
+<area shape="rect" id="node6" href="$class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu. " alt="" coords="244,238,477,265"/>
 </map>

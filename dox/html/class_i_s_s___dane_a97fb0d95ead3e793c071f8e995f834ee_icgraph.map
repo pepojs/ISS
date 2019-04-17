@@ -1,0 +1,9 @@
+<map id="ISS_Dane::ZwrocCzasPrzelotu_UTS" name="ISS_Dane::ZwrocCzasPrzelotu_UTS">
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="564,5,787,47"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="839,101,1017,127"/>
+<area shape="rect" id="node4" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="564,123,787,164"/>
+<area shape="rect" id="node5" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Magazyn_danych::DodajNoweDane" alt="" coords="285,173,512,199"/>
+<area shape="rect" id="node6" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="560,189,791,215"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="331,274,466,301"/>
+<area shape="rect" id="node8" href="$class_zegar.html#a4e8f3e32c9b4f1be197d1c54edea812a" title="Zegar::AktualizujDaneISS" alt="" coords="313,325,484,351"/>
+</map>
