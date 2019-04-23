@@ -1,4 +1,6 @@
 <map id="OpenGLWidget" name="OpenGLWidget">
-<area shape="rect" id="node3" href="$class_grafika3_d.html" title="Grafika3D" alt="" coords="151,109,229,136"/>
-<area shape="rect" id="node4" href="$class_shader.html" title="Shader" alt="" coords="159,5,221,32"/>
+<area shape="rect" id="node1" title="Klasa pozwalająca wyświetlać model 3D Ziemi oraz inne elementy grafiki 3D." alt="" coords="52,199,163,225"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,127,136"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html" title=" " alt="" coords="151,109,229,136"/>
+<area shape="rect" id="node4" href="$class_shader.html" title=" " alt="" coords="159,5,221,32"/>
 </map>

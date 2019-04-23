@@ -1,6 +1,7 @@
 <map id="Grafika3D::Rysuj" name="Grafika3D::Rysuj">
-<area shape="rect" id="node2" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="392,5,579,32"/>
-<area shape="rect" id="node3" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="402,107,569,133"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="173,56,344,83"/>
-<area shape="rect" id="node5" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="410,56,561,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,125,83"/>
+<area shape="rect" id="node2" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title=" " alt="" coords="392,5,579,32"/>
+<area shape="rect" id="node3" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title=" " alt="" coords="402,107,569,133"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title=" " alt="" coords="173,56,344,83"/>
+<area shape="rect" id="node5" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title=" " alt="" coords="410,56,561,83"/>
 </map>

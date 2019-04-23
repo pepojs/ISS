@@ -1,7 +1,8 @@
 <map id="Magazyn_danych::DodajNoweDane" name="Magazyn_danych::DodajNoweDane">
-<area shape="rect" id="node2" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane. " alt="" coords="280,5,512,32"/>
-<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a2e4092318facf84c9cb3851d0a2a659d" title="Wartość prędkości. " alt="" coords="291,56,501,83"/>
-<area shape="rect" id="node4" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja. " alt="" coords="291,107,501,133"/>
-<area shape="rect" id="node5" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach. " alt="" coords="299,158,493,199"/>
-<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach. " alt="" coords="304,223,488,265"/>
+<area shape="rect" id="node1" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="5,107,232,133"/>
+<area shape="rect" id="node2" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane." alt="" coords="280,5,512,32"/>
+<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a2e4092318facf84c9cb3851d0a2a659d" title="Wartość prędkości." alt="" coords="291,56,501,83"/>
+<area shape="rect" id="node4" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja." alt="" coords="291,107,501,133"/>
+<area shape="rect" id="node5" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach." alt="" coords="299,158,493,199"/>
+<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach." alt="" coords="304,223,488,265"/>
 </map>

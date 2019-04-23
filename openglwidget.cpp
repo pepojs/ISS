@@ -1,5 +1,13 @@
 #include "openglwidget.h"
 
+/*!
+ * \file
+ * \brief Definicja meody klasy OpenGLWidget.
+ *
+ * Zawiera definicje metod klasy OpneGLWidget.
+ */
+
+
 OpenGLWidget::OpenGLWidget(QWidget* Rodzic)
     : QOpenGLWidget (Rodzic)
 {
@@ -62,8 +70,10 @@ void OpenGLWidget::initializeGL()
 
     TworzZiemie(PromienKuli);
     TworzPunktPozycji();
-    TworzTrajektorie();
+    TworzTrajektorie(24*60*3, &IDTrajektoria);
     Scena->RysujObiekt(IDTrajektoria, false);
+    TworzTrajektorie(90, &IDTrajektoriaKoncowka);
+    Scena->RysujObiekt(IDTrajektoriaKoncowka, false);
     TworzSiatke();
     Scena->RysujObiekt(IDSiatki, false);
     TworzWskaznikTrajektorii();
@@ -200,7 +210,7 @@ void OpenGLWidget::NoweDaneISS(ISS_Dane NoweDane)
         Punkt[1] = (Wyso+PromienKuli)*cos(Szer)*sin(Dlug);
         Punkt[2] = (Wyso+PromienKuli)*sin(Szer);
 
-        Scena->UaktualniDaneObiektu(IDTrajektoria, (24*60+OffsetTrajektori)*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
+        Scena->UaktualniDaneObiektu(IDTrajektoriaKoncowka, OffsetTrajektori*3*sizeof(GLfloat), Punkt.size()*sizeof(GLfloat), &Punkt[0]);
         OffsetTrajektori += 1;
         OffsetTrajektori = OffsetTrajektori%30;
 
@@ -306,11 +316,11 @@ void OpenGLWidget::TworzWskaznikTrajektorii()
 
 }
 
-void OpenGLWidget::TworzTrajektorie()
+void OpenGLWidget::TworzTrajektorie(size_t IloscDanych, GLuint* IDObiektu)
 {
-    vector<GLfloat> Trajektoria(24*60*3+90);
+    vector<GLfloat> Trajektoria(IloscDanych);
 
-    IDTrajektoria = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, 24*60+30, Graf3D_PolaczonaKrawedz);
+    *IDObiektu = Scena->DodajObiektD(&Trajektoria[0], Trajektoria.size()*sizeof(GLfloat), 3, 0 ,0, IloscDanych/3, Graf3D_PolaczonaKrawedz);
 
 }
 

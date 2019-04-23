@@ -61,3 +61,6 @@ LIBS +=  -lglu32 -lSOIL -lglew32 -lopengl32 -lfreetype
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+RESOURCES +=

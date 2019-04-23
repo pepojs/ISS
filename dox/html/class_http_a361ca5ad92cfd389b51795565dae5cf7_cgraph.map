@@ -1,3 +1,4 @@
 <map id="Http::Http" name="Http::Http">
-<area shape="rect" id="node2" href="$class_http.html#ae86a6bdd3c58ec73b9d6890c90d7eb7b" title="Http::PobranoStrone" alt="" coords="132,5,272,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node2" href="$class_http.html#ae86a6bdd3c58ec73b9d6890c90d7eb7b" title="Slot wywoływany po pobraniu strony aby zapisać ją do pola htmlStrony." alt="" coords="132,5,272,32"/>
 </map>

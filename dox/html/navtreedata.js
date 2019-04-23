@@ -24,6 +24,9 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "ISS", "index.html", [
+    [ "ISS - Aplikacja pozwalająca śledzić trajektorie Międzynarodowej Stacji Kosmicznej.", "index.html", [
+      [ "Główne funkcje aplikacji", "index.html#etykieta-glowne-funcjonalnosci", null ]
+    ] ],
     [ "Klasy", "annotated.html", [
       [ "Lista klas", "annotated.html", "annotated_dup" ],
       [ "Indeks klas", "classes.html", null ],

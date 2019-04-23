@@ -1,4 +1,5 @@
 <map id="Magazyn_danych::DodajNoweDane" name="Magazyn_danych::DodajNoweDane">
-<area shape="rect" id="node2" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="280,5,511,32"/>
-<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="559,5,737,32"/>
+<area shape="rect" id="node1" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="511,5,737,32"/>
+<area shape="rect" id="node2" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>

@@ -1,6 +1,7 @@
 <map id="Http::PobierzDaneOISS" name="Http::PobierzDaneOISS">
-<area shape="rect" id="node2" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Magazyn_danych::WypelniDanymi\lZSieci" alt="" coords="216,5,439,47"/>
-<area shape="rect" id="node4" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Magazyn_danych::WypelniDanymi\lZPliku" alt="" coords="216,71,439,112"/>
-<area shape="rect" id="node5" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="212,137,443,163"/>
-<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="491,78,669,105"/>
+<area shape="rect" id="node1" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="511,78,669,105"/>
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Wypełnia brakującą część wektora danych, danymi pobranymi z sieci." alt="" coords="236,5,459,47"/>
+<area shape="rect" id="node4" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="WypelniDanymiZPliku." alt="" coords="236,71,459,112"/>
+<area shape="rect" id="node5" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,137,463,163"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,78,184,105"/>
 </map>

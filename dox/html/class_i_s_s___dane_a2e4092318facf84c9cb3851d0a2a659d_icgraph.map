@@ -1,6 +1,7 @@
 <map id="ISS_Dane::ZwrocPredkosc_kmH" name="ISS_Dane::ZwrocPredkosc_kmH">
-<area shape="rect" id="node2" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Magazyn_danych::DodajNoweDane" alt="" coords="264,5,491,32"/>
-<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="539,56,769,83"/>
-<area shape="rect" id="node4" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="817,81,996,108"/>
-<area shape="rect" id="node5" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="310,157,445,184"/>
+<area shape="rect" id="node1" title="Wartość prędkości." alt="" coords="785,81,996,108"/>
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="511,5,737,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,56,463,83"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,81,184,108"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="557,157,691,184"/>
 </map>

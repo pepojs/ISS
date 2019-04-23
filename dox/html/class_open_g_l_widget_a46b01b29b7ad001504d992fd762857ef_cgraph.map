@@ -1,7 +1,8 @@
 <map id="OpenGLWidget::TworzSiatke" name="OpenGLWidget::TworzSiatke">
-<area shape="rect" id="node2" href="$class_grafika3_d.html#a2b40edadcd34538cf03b9e4f9f08c8ab" title="Grafika3D::DodajObiekt" alt="" coords="258,35,417,61"/>
-<area shape="rect" id="node5" href="$class_grafika3_d.html#a383e4ab7f84206ba2d963283f3f27a5a" title="Grafika3D::PrzeskalujObiekt" alt="" coords="244,85,431,112"/>
-<area shape="rect" id="node6" href="$class_grafika3_d.html#a1a579f54bd0d32c31bea7e77fde6437f" title="Grafika3D::ObrocObiekt" alt="" coords="257,136,417,163"/>
-<area shape="rect" id="node3" href="$class_grafika3_d.html#a9efe83b4bc994611884fae27be78166e" title="Grafika3D::TworzObiekt" alt="" coords="487,5,645,32"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#a9286dcecbbf1a480232b50dd61ed2411" title="Grafika3D::DodajObiektDo\lSceny" alt="" coords="479,57,653,98"/>
+<area shape="rect" id="node1" title="Tworz siatkę nad Ziemią pokazującą strefy czasowe." alt="" coords="5,85,196,112"/>
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a2b40edadcd34538cf03b9e4f9f08c8ab" title=" " alt="" coords="258,35,417,61"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#a383e4ab7f84206ba2d963283f3f27a5a" title=" " alt="" coords="244,85,431,112"/>
+<area shape="rect" id="node6" href="$class_grafika3_d.html#a1a579f54bd0d32c31bea7e77fde6437f" title=" " alt="" coords="257,136,417,163"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html#a9efe83b4bc994611884fae27be78166e" title=" " alt="" coords="487,5,645,32"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a9286dcecbbf1a480232b50dd61ed2411" title=" " alt="" coords="479,57,653,98"/>
 </map>

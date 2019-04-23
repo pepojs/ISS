@@ -1,5 +1,12 @@
 #include "magazyn_danych.h"
 
+/*!
+ * \file
+ * \brief Definicja meody klasy Magazyn_danych.
+ *
+ * Zawiera definicje metod klasy Magazyn_danych.
+ */
+
 Magazyn_danych::Magazyn_danych()
 {
     MagazynDanych.resize(5400);

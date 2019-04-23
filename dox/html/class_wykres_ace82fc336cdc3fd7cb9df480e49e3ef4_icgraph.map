@@ -1,3 +1,4 @@
 <map id="Wykres::Kliknieto" name="Wykres::Kliknieto">
-<area shape="rect" id="node2" href="$class_wykres.html#a050f1ca4319eb47d30f6a7beddfacfa3" title="Wykres::event" alt="" coords="179,5,284,32"/>
+<area shape="rect" id="node1" title="Sygnał emitowany po naciśnięciu myszką na wykres." alt="" coords="159,5,284,32"/>
+<area shape="rect" id="node2" href="$class_wykres.html#a050f1ca4319eb47d30f6a7beddfacfa3" title="Metoda obsługująca zdarzenia związane z kliknieciem myszką na wykres." alt="" coords="5,5,111,32"/>
 </map>

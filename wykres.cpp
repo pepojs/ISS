@@ -1,5 +1,13 @@
 #include "wykres.h"
 
+/*!
+ * \file
+ * \brief Definicja meody klasy Wykres.
+ *
+ * Zawiera definicje metod klasy Wykres.
+ */
+
+
 Wykres::Wykres(QWidget* Rodzic)
     :QWidget (Rodzic)
 {

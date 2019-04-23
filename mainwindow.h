@@ -86,6 +86,7 @@ private:
     bool AktywnaTrajektoria;
     bool PrzelaczAktualizacjeDanych;
     uint32_t MagazynOdczytywaneDane;
+    int fPierwszeDane;
 };
 
 #endif // MAINWINDOW_H

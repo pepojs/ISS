@@ -1,9 +1,10 @@
 <map id="OpenGLWidget::UstawVertexShader" name="OpenGLWidget::UstawVertexShader">
-<area shape="rect" id="node2" href="$class_grafika3_d.html#a042040fc28d0686e6500bfa352e949c2" title="Grafika3D::ZwrocAdresShadera" alt="" coords="247,5,449,32"/>
-<area shape="rect" id="node3" href="$class_shader.html#a41ca8bffd1e520da5f7b6e34c6421614" title="Shader::Init" alt="" coords="304,56,392,83"/>
-<area shape="rect" id="node4" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title="Shader::WczytajShader" alt="" coords="268,107,428,133"/>
-<area shape="rect" id="node5" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title="Shader::StworzShader" alt="" coords="503,81,655,108"/>
-<area shape="rect" id="node7" href="$class_shader.html#ae3baccef022cd10aafbed1730a0439a7" title="Shader::KompilujShader" alt="" coords="497,132,660,159"/>
-<area shape="rect" id="node6" href="$class_shader.html#aa2b21faafdbb363559a9176f311bf784" title="Shader::WczytajPlik" alt="" coords="741,81,883,108"/>
-<area shape="rect" id="node8" href="$class_shader.html#a441a4bcc5850b3a1856415b0738e85f0" title="Shader::WypiszBledyKompilacji" alt="" coords="708,132,916,159"/>
+<area shape="rect" id="node1" title="Metoda pozwala ustawić, który shader będzie używany jako Vertex Shader." alt="" coords="5,49,199,90"/>
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a042040fc28d0686e6500bfa352e949c2" title=" " alt="" coords="247,5,449,32"/>
+<area shape="rect" id="node3" href="$class_shader.html#a41ca8bffd1e520da5f7b6e34c6421614" title=" " alt="" coords="304,56,392,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title=" " alt="" coords="268,107,428,133"/>
+<area shape="rect" id="node5" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title=" " alt="" coords="503,81,655,108"/>
+<area shape="rect" id="node7" href="$class_shader.html#ae3baccef022cd10aafbed1730a0439a7" title=" " alt="" coords="497,132,660,159"/>
+<area shape="rect" id="node6" href="$class_shader.html#aa2b21faafdbb363559a9176f311bf784" title=" " alt="" coords="741,81,883,108"/>
+<area shape="rect" id="node8" href="$class_shader.html#a441a4bcc5850b3a1856415b0738e85f0" title=" " alt="" coords="708,132,916,159"/>
 </map>

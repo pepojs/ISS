@@ -30,12 +30,12 @@ using namespace std;
 class Magazyn_danych
 {
     /*!
-     * \brief MagazynDanych - wektor pozwalający przechowywać dane na temat stacji z różnych chwil czasu.
+     * \brief Wektor pozwalający przechowywać dane na temat stacji z różnych chwil czasu.
      */
     vector<ISS_Dane> MagazynDanych;
 
     /*!
-     * \brief Glowa - wskazuje, który element zostanie następny podmieniony przy dodaniu nowych danych.
+     * \brief Wskazuje, który element zostanie następny podmieniony przy dodaniu nowych danych.
      */
     uint32_t Glowa;
 

@@ -1,8 +1,9 @@
 <map id="OpenGLWidget::NoweDaneISS" name="OpenGLWidget::NoweDaneISS">
-<area shape="rect" id="node2" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach. " alt="" coords="269,5,453,47"/>
-<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach. " alt="" coords="264,71,457,112"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#ab1ad01a1aa07c9ff3d5f5cba0c7cc976" title="Grafika3D::PrzesunObiekt" alt="" coords="274,137,447,163"/>
-<area shape="rect" id="node5" href="$class_grafika3_d.html#a1a579f54bd0d32c31bea7e77fde6437f" title="Grafika3D::ObrocObiekt" alt="" coords="281,187,441,214"/>
-<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja. " alt="" coords="256,238,465,265"/>
-<area shape="rect" id="node7" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title="Grafika3D::UaktualniDane\lObiektu" alt="" coords="275,289,446,331"/>
+<area shape="rect" id="node1" title="Slot pozwalający aktualizować obecną pozycje wskaźnika stacji kosmicznej." alt="" coords="5,162,208,189"/>
+<area shape="rect" id="node2" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach." alt="" coords="269,5,453,47"/>
+<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach." alt="" coords="264,71,457,112"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#ab1ad01a1aa07c9ff3d5f5cba0c7cc976" title=" " alt="" coords="274,137,447,163"/>
+<area shape="rect" id="node5" href="$class_grafika3_d.html#a1a579f54bd0d32c31bea7e77fde6437f" title=" " alt="" coords="281,187,441,214"/>
+<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja." alt="" coords="256,238,465,265"/>
+<area shape="rect" id="node7" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title=" " alt="" coords="275,289,446,331"/>
 </map>

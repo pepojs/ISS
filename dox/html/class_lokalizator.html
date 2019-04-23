@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ISS: Dokumentacja klasy Lokalizator</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -80,11 +80,19 @@ $(document).ready(function(){initNavTree('class_lokalizator.html','');});
 Diagram dziedziczenia dla Lokalizator</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator__inherit__graph.png" border="0" usemap="#_lokalizator_inherit__map" alt="Inheritance graph"/></div>
+<map name="_lokalizator_inherit__map" id="_lokalizator_inherit__map">
+<area shape="rect"  title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect"  title=" " alt="" coords="11,5,85,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <div class="dynheader">
 Diagram współpracy dla Lokalizator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator__coll__graph.png" border="0" usemap="#_lokalizator_coll__map" alt="Collaboration graph"/></div>
+<map name="_lokalizator_coll__map" id="_lokalizator_coll__map">
+<area shape="rect"  title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect"  title=" " alt="" coords="11,5,85,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
@@ -149,7 +157,14 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="lokalizator_8cpp_source.html#l00003">3</a> pliku <a class="el" href="lokalizator_8cpp_source.html">lokalizator.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    :QWidget (Rodzic)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_lokalizator.html#af7a29d9e15ff16d4ed09503967f920e4">Tytul</a> = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;&lt;center&gt;&lt;font color=white&gt;Wspolrzedne Geograficzne&lt;/font&gt;&lt;/center&gt;&quot;</span>));</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">SzerokoscZnak</a> = <span class="keyword">new</span> QLabel(<span class="stringliteral">&quot;N&quot;</span>);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">DlugoscZnak</a> = <span class="keyword">new</span> QLabel(<span class="stringliteral">&quot;W&quot;</span>);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a> = <span class="keyword">new</span> QLCDNumber;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a> = <span class="keyword">new</span> QLCDNumber;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a> = <span class="keyword">new</span> QHBoxLayout;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_lokalizator.html#ab16a235e76121ad4ffcd1f37d5021a4f">WarstwaGlowna</a> = <span class="keyword">new</span> QVBoxLayout;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addStretch();</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addWidget(<a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addWidget(<a class="code" href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">SzerokoscZnak</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addWidget(<a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addWidget(<a class="code" href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">DlugoscZnak</a>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>-&gt;addStretch();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_lokalizator.html#ab16a235e76121ad4ffcd1f37d5021a4f">WarstwaGlowna</a>-&gt;addWidget(<a class="code" href="class_lokalizator.html#af7a29d9e15ff16d4ed09503967f920e4">Tytul</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_lokalizator.html#ab16a235e76121ad4ffcd1f37d5021a4f">WarstwaGlowna</a>-&gt;addLayout(<a class="code" href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">WarstwaWyswietlaczy</a>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    setLayout(<a class="code" href="class_lokalizator.html#ab16a235e76121ad4ffcd1f37d5021a4f">WarstwaGlowna</a>);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a>-&gt;setSegmentStyle(QLCDNumber::Outline);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a>-&gt;setSegmentStyle(QLCDNumber::Outline);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a>-&gt;setDigitCount(6);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a>-&gt;setDigitCount(6);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="class_lokalizator_html_ab16a235e76121ad4ffcd1f37d5021a4f"><div class="ttname"><a href="class_lokalizator.html#ab16a235e76121ad4ffcd1f37d5021a4f">Lokalizator::WarstwaGlowna</a></div><div class="ttdeci">QVBoxLayout * WarstwaGlowna</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00040">lokalizator.h:40</a></div></div>
+<div class="ttc" id="class_lokalizator_html_af7a29d9e15ff16d4ed09503967f920e4"><div class="ttname"><a href="class_lokalizator.html#af7a29d9e15ff16d4ed09503967f920e4">Lokalizator::Tytul</a></div><div class="ttdeci">QLabel * Tytul</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00033">lokalizator.h:33</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a0a10870aa8ca8a1c1f59ab304c4acd65"><div class="ttname"><a href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">Lokalizator::DlugoscZnak</a></div><div class="ttdeci">QLabel * DlugoscZnak</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00035">lokalizator.h:35</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a176aa056dbb58bc35eb45a0923390625"><div class="ttname"><a href="class_lokalizator.html#a176aa056dbb58bc35eb45a0923390625">Lokalizator::WarstwaWyswietlaczy</a></div><div class="ttdeci">QHBoxLayout * WarstwaWyswietlaczy</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00039">lokalizator.h:39</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a28490162086a32ac4fb9388f47146544"><div class="ttname"><a href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">Lokalizator::DlugoscGeo</a></div><div class="ttdeci">QLCDNumber * DlugoscGeo</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00037">lokalizator.h:37</a></div></div>
+<div class="ttc" id="class_lokalizator_html_aeb71687cbca1ff42f9530348d02f9ba3"><div class="ttname"><a href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">Lokalizator::SzerokoscGeo</a></div><div class="ttdeci">QLCDNumber * SzerokoscGeo</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00036">lokalizator.h:36</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a23dc28d0cc354d5eaaa6405479b8edc2"><div class="ttname"><a href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">Lokalizator::SzerokoscZnak</a></div><div class="ttdeci">QLabel * SzerokoscZnak</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00034">lokalizator.h:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
@@ -178,15 +193,20 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="lokalizator_8cpp_source.html#l00085">85</a> pliku <a class="el" href="lokalizator_8cpp_source.html">lokalizator.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    this-&gt;<a class="code" href="class_lokalizator.html#a55345cf8b0e0e26f21a16862382a0771">ZmienSzerokoscGeo</a>(NoweDane.<a class="code" href="class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48">ZwrocSzerokoscGeo_Stopnie</a>());</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    this-&gt;<a class="code" href="class_lokalizator.html#acd5f5bff726f35c140cf541356b56c0d">ZmienDlugoscGeo</a>(NoweDane.<a class="code" href="class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f">ZwrocDlugoscGeo_Stopnie</a>());</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div><div class="ttc" id="class_i_s_s___dane_html_a12a51565cb63a29d9c32d281b8ff5d48"><div class="ttname"><a href="class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48">ISS_Dane::ZwrocSzerokoscGeo_Stopnie</a></div><div class="ttdeci">double ZwrocSzerokoscGeo_Stopnie() const</div><div class="ttdoc">Wartość szerokości geograficznej w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="iss__dane_8h_source.html#l00085">iss_dane.h:85</a></div></div>
+<div class="ttc" id="class_lokalizator_html_acd5f5bff726f35c140cf541356b56c0d"><div class="ttname"><a href="class_lokalizator.html#acd5f5bff726f35c140cf541356b56c0d">Lokalizator::ZmienDlugoscGeo</a></div><div class="ttdeci">void ZmienDlugoscGeo(double NowaDlugosc)</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8cpp_source.html#l00071">lokalizator.cpp:71</a></div></div>
+<div class="ttc" id="class_i_s_s___dane_html_a13f5c0d7d6a1948c7485fd22c9d5f44f"><div class="ttname"><a href="class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f">ISS_Dane::ZwrocDlugoscGeo_Stopnie</a></div><div class="ttdeci">double ZwrocDlugoscGeo_Stopnie() const</div><div class="ttdoc">Wartość dlugości geograficznej w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="iss__dane_8h_source.html#l00097">iss_dane.h:97</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a55345cf8b0e0e26f21a16862382a0771"><div class="ttname"><a href="class_lokalizator.html#a55345cf8b0e0e26f21a16862382a0771">Lokalizator::ZmienSzerokoscGeo</a></div><div class="ttdeci">void ZmienSzerokoscGeo(double NowaSzerokosc)</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8cpp_source.html#l00057">lokalizator.cpp:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator_a39bfbfafca7f059328c4f7e43210668f_cgraph.png" border="0" usemap="#class_lokalizator_a39bfbfafca7f059328c4f7e43210668f_cgraph" alt=""/></div>
 <map name="class_lokalizator_a39bfbfafca7f059328c4f7e43210668f_cgraph" id="class_lokalizator_a39bfbfafca7f059328c4f7e43210668f_cgraph">
-<area shape="rect" id="node2" href="class_lokalizator.html#a55345cf8b0e0e26f21a16862382a0771" title="Lokalizator::ZmienSzerokoscGeo" alt="" coords="255,5,469,32"/>
-<area shape="rect" id="node3" href="class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach. " alt="" coords="270,57,454,98"/>
-<area shape="rect" id="node4" href="class_lokalizator.html#acd5f5bff726f35c140cf541356b56c0d" title="Lokalizator::ZmienDlugoscGeo" alt="" coords="263,123,461,149"/>
-<area shape="rect" id="node5" href="class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach. " alt="" coords="265,174,459,215"/>
+<area shape="rect"  title=" " alt="" coords="5,93,207,120"/>
+<area shape="rect"  href="class_lokalizator.html#a55345cf8b0e0e26f21a16862382a0771" title=" " alt="" coords="255,5,469,32"/>
+<area shape="rect"  href="class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="WartoÅÄ szerokoÅci geograficznej w stopniach." alt="" coords="270,57,454,98"/>
+<area shape="rect"  href="class_lokalizator.html#acd5f5bff726f35c140cf541356b56c0d" title=" " alt="" coords="263,123,461,149"/>
+<area shape="rect"  href="class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="WartoÅÄ dlugoÅci geograficznej w stopniach." alt="" coords="265,174,459,215"/>
 </map>
 </div>
 
@@ -217,7 +237,8 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="lokalizator_8cpp_source.html#l00034">34</a> pliku <a class="el" href="lokalizator_8cpp_source.html">lokalizator.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QMouseEvent *Mysz;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">switch</span>(Zdarzenie-&gt;type())</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">case</span> QEvent::MouseButtonPress:</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Mysz = static_cast&lt;QMouseEvent* &gt;(Zdarzenie);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span>(Mysz-&gt;button() == Qt::LeftButton)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                emit <a class="code" href="class_lokalizator.html#af0caa1fc266bb367ff2f14680df9753c">Kliknieto</a>();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">default</span>:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> QWidget::event(Zdarzenie);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="class_lokalizator_html_af0caa1fc266bb367ff2f14680df9753c"><div class="ttname"><a href="class_lokalizator.html#af0caa1fc266bb367ff2f14680df9753c">Lokalizator::Kliknieto</a></div><div class="ttdeci">void Kliknieto()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0caa1fc266bb367ff2f14680df9753c"></a>
@@ -247,7 +268,8 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator_af0caa1fc266bb367ff2f14680df9753c_icgraph.png" border="0" usemap="#class_lokalizator_af0caa1fc266bb367ff2f14680df9753c_icgraph" alt=""/></div>
 <map name="class_lokalizator_af0caa1fc266bb367ff2f14680df9753c_icgraph" id="class_lokalizator_af0caa1fc266bb367ff2f14680df9753c_icgraph">
-<area shape="rect" id="node2" href="class_lokalizator.html#a346ae947d32a704cb5d1b63f91da490d" title="Lokalizator::event" alt="" coords="196,5,319,32"/>
+<area shape="rect"  title=" " alt="" coords="176,5,319,32"/>
+<area shape="rect"  href="class_lokalizator.html#a346ae947d32a704cb5d1b63f91da490d" title=" " alt="" coords="5,5,128,32"/>
 </map>
 </div>
 
@@ -270,12 +292,15 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="lokalizator_8cpp_source.html#l00071">71</a> pliku <a class="el" href="lokalizator_8cpp_source.html">lokalizator.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span>(NowaDlugosc &gt;= 0)</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a>-&gt;display(NowaDlugosc);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">DlugoscZnak</a>-&gt;setText(tr(<span class="stringliteral">&quot;&lt;font color=white&gt;E&lt;/font&gt;&quot;</span>));</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }<span class="keywordflow">else</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">DlugoscGeo</a>-&gt;display(-NowaDlugosc);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">DlugoscZnak</a>-&gt;setText(tr(<span class="stringliteral">&quot;&lt;font color=white&gt;W&lt;/font&gt;&quot;</span>));</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div><div class="ttc" id="class_lokalizator_html_a0a10870aa8ca8a1c1f59ab304c4acd65"><div class="ttname"><a href="class_lokalizator.html#a0a10870aa8ca8a1c1f59ab304c4acd65">Lokalizator::DlugoscZnak</a></div><div class="ttdeci">QLabel * DlugoscZnak</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00035">lokalizator.h:35</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a28490162086a32ac4fb9388f47146544"><div class="ttname"><a href="class_lokalizator.html#a28490162086a32ac4fb9388f47146544">Lokalizator::DlugoscGeo</a></div><div class="ttdeci">QLCDNumber * DlugoscGeo</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00037">lokalizator.h:37</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator_acd5f5bff726f35c140cf541356b56c0d_icgraph.png" border="0" usemap="#class_lokalizator_acd5f5bff726f35c140cf541356b56c0d_icgraph" alt=""/></div>
 <map name="class_lokalizator_acd5f5bff726f35c140cf541356b56c0d_icgraph" id="class_lokalizator_acd5f5bff726f35c140cf541356b56c0d_icgraph">
-<area shape="rect" id="node2" href="class_lokalizator.html#a39bfbfafca7f059328c4f7e43210668f" title="Lokalizator::AktualizujDaneISS" alt="" coords="252,5,453,32"/>
+<area shape="rect"  title=" " alt="" coords="255,5,453,32"/>
+<area shape="rect"  href="class_lokalizator.html#a39bfbfafca7f059328c4f7e43210668f" title=" " alt="" coords="5,5,207,32"/>
 </map>
 </div>
 
@@ -298,12 +323,15 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="lokalizator_8cpp_source.html#l00057">57</a> pliku <a class="el" href="lokalizator_8cpp_source.html">lokalizator.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span>(NowaSzerokosc &gt;= 0)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a>-&gt;display(NowaSzerokosc);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">SzerokoscZnak</a>-&gt;setText(tr(<span class="stringliteral">&quot;&lt;font color=white&gt;N&lt;/font&gt;&quot;</span>));</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }<span class="keywordflow">else</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">SzerokoscGeo</a>-&gt;display(-NowaSzerokosc);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">SzerokoscZnak</a>-&gt;setText(tr(<span class="stringliteral">&quot;&lt;font color=white&gt;S&lt;/font&gt;&quot;</span>));</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="ttc" id="class_lokalizator_html_aeb71687cbca1ff42f9530348d02f9ba3"><div class="ttname"><a href="class_lokalizator.html#aeb71687cbca1ff42f9530348d02f9ba3">Lokalizator::SzerokoscGeo</a></div><div class="ttdeci">QLCDNumber * SzerokoscGeo</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00036">lokalizator.h:36</a></div></div>
+<div class="ttc" id="class_lokalizator_html_a23dc28d0cc354d5eaaa6405479b8edc2"><div class="ttname"><a href="class_lokalizator.html#a23dc28d0cc354d5eaaa6405479b8edc2">Lokalizator::SzerokoscZnak</a></div><div class="ttdeci">QLabel * SzerokoscZnak</div><div class="ttdef"><b>Definition:</b> <a href="lokalizator_8h_source.html#l00034">lokalizator.h:34</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lokalizator_a55345cf8b0e0e26f21a16862382a0771_icgraph.png" border="0" usemap="#class_lokalizator_a55345cf8b0e0e26f21a16862382a0771_icgraph" alt=""/></div>
 <map name="class_lokalizator_a55345cf8b0e0e26f21a16862382a0771_icgraph" id="class_lokalizator_a55345cf8b0e0e26f21a16862382a0771_icgraph">
-<area shape="rect" id="node2" href="class_lokalizator.html#a39bfbfafca7f059328c4f7e43210668f" title="Lokalizator::AktualizujDaneISS" alt="" coords="268,5,469,32"/>
+<area shape="rect"  title=" " alt="" coords="255,5,469,32"/>
+<area shape="rect"  href="class_lokalizator.html#a39bfbfafca7f059328c4f7e43210668f" title=" " alt="" coords="5,5,207,32"/>
 </map>
 </div>
 
@@ -490,7 +518,7 @@ Oto graf wywoływań tej funkcji:</div>
     <li class="navelem"><a class="el" href="class_lokalizator.html">Lokalizator</a></li>
     <li class="footer">Wygenerowano przez
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
 </div>
 </body>

@@ -1,5 +1,13 @@
 #include "http.h"
 
+/*!
+ * \file
+ * \brief Definicja meody klasy Http
+ *
+ * Zawiera definicje metod klasy Http.
+ */
+
+
 Http::Http(QObject* Rodzic)
     : QObject (Rodzic)
 {

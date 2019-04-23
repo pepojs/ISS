@@ -1,3 +1,4 @@
 <map id="OpenGLWidget::TworzPunktPozycji" name="OpenGLWidget::TworzPunktPozycji">
-<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="240,13,423,39"/>
+<area shape="rect" id="node1" title="Tworzy punkt wskazujący miejsce, nad którym znajduje się stacja kosmiczna." alt="" coords="236,5,423,47"/>
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="Metoda inicjująca działanie OpenGL." alt="" coords="5,13,188,39"/>
 </map>

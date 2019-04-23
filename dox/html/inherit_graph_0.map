@@ -1,4 +1,5 @@
 <map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
-<area shape="rect" id="node2" href="$class_file_downloader.html" title="FileDownloader" alt="" coords="124,5,235,32"/>
-<area shape="rect" id="node3" href="$class_http.html" title="Komunikacja ze stroną internetową " alt="" coords="156,56,203,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,76,57"/>
+<area shape="rect" id="node2" href="$class_file_downloader.html" title=" " alt="" coords="124,5,235,32"/>
+<area shape="rect" id="node3" href="$class_http.html" title="Komunikacja ze stroną internetową" alt="" coords="156,56,203,83"/>
 </map>

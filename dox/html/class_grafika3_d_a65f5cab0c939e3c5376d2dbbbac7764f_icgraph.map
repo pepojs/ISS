@@ -1,4 +1,5 @@
 <map id="Grafika3D::UstawKamere" name="Grafika3D::UstawKamere">
-<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="221,5,404,32"/>
-<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a260a543726f601659cbd1809b90f9e4b" title="OpenGLWidget::paintGL" alt="" coords="231,56,395,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="236,31,404,57"/>
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="Metoda inicjująca działanie OpenGL." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a260a543726f601659cbd1809b90f9e4b" title="Metoda pozwalająca rysować modele 3D." alt="" coords="15,56,179,83"/>
 </map>

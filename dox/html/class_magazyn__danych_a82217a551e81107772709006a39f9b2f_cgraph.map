@@ -1,3 +1,4 @@
 <map id="Magazyn_danych::~Magazyn_danych" name="Magazyn_danych::~Magazyn_danych">
-<area shape="rect" id="node2" href="$class_magazyn__danych.html#a34f1b895e8ace4db3e0e6bdbe6f38dc7" title="Magazyn_danych::ZapiszDane" alt="" coords="247,13,447,39"/>
+<area shape="rect" id="node1" title="Zapisuje dane z ustawioną częstotliwością na 60 sekund." alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a34f1b895e8ace4db3e0e6bdbe6f38dc7" title="Metoda pozwala zapisać obecny stan wektora z danymi do pliku o nazwie DaneStacji.txt." alt="" coords="247,13,447,39"/>
 </map>

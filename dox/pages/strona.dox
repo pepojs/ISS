@@ -1,0 +1,20 @@
+/*!
+	\mainpage ISS - Aplikacja pozwalająca śledzić trajektorie Międzynarodowej Stacji Kosmicznej.
+	\author Piotr Bogdoł
+	\version 1.0
+	
+	\section etykieta-glowne-funcjonalnosci Główne funkcje aplikacji
+	
+	- Śledzenia aktualnej pozycji Międzynarodowej Stacji Kosmicznej. \n
+    Głównym celem aplikacji jest zwizualizowanie aktualnego miejsca na Ziemi, nad którym znajduje się stacja kosmiczna. 
+	Zadanie to jest realizowane poprzez wyświetlanie czerwonego wskaźnika na modelu 3D Ziemi.
+
+	- Monitorowanie aktualnej trajektorii lotu stacji. \n
+    Za pomocą wykresów wysokości i prędkości oraz dzięki możliwości rysowania trajektorii stacji nad modelem Ziemi, 
+	aplikacja dostarcza informacje na temat trasy przelotu stacji w okresie jednego dnia wstecz od aktualnej godziny. 
+
+	- Zmianę strefy czasowej, dla której wyświetlane są informacje.
+	
+	\image html WidokGlowny.png
+	
+*/

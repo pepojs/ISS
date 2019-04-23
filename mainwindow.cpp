@@ -86,7 +86,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //WybranaStrefa->setMaximumWidth(300);
 
     MagazynDanychStacji = new Magazyn_danych(24*60);
-    long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*60);//+3*60
+    long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*59);//+3*60
     cout<<"Ile danych: "<<IleDanych<<endl;
     if(IleDanych >= 0)
         MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60);//+3*60
@@ -172,6 +172,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Centralny->setLayout(WarstwaGlowna);
 
     Licznik = 0;
+    fPierwszeDane = 0;
 
 }
 
@@ -186,6 +187,12 @@ void MainWindow::PobierzNoweDaneISS()
     size_t pom;
     size_t roznica = 0;
     ISS_Dane TabPom[10];
+
+    if(fPierwszeDane == 0)
+    {
+        emit noweDaneISS(MagazynDanychStacji->ZwrocDane(1439));
+        fPierwszeDane = 1;
+    }
 
     DaneStacji = Html->PobierzDaneOISS();
     //DodajElementDoDanych(DaneStacji);
@@ -234,22 +241,27 @@ void MainWindow::PobierzNoweDaneISS()
             pom = MagazynDanychStacji->ZwrocGlowe()-1;
         }
 
-        //cout<<"Roz czas : "<<(DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())<<endl;
-        //cout<<"MD: "<<MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()<<", DS: "<<DaneStacji.ZwrocCzasPrzelotu_UTS()<<endl;
+        cout<<"Roz czas : "<<(DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())<<endl;
+        cout<<"MD: "<<MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()<<", DS: "<<DaneStacji.ZwrocCzasPrzelotu_UTS()<<endl;
 
-        if((DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()) >= 120)
+        if(MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS() != 0)
         {
-            roznica = (DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())/60;
-
-            if(roznica >= 10) roznica = 10;
-
-            Html->PobierzDaneOISS(&TabPom[0], roznica, MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS(), 60);
-            for(size_t j = 0; j < roznica; j++)
+            if(((int)DaneStacji.ZwrocCzasPrzelotu_UTS() - (int)MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()) >= 120)
             {
-                    MagazynDanychStacji->DodajNoweDane(TabPom[j]);
-                    cout<<"tabPom: "<<TabPom[j]<<endl;
+                roznica = (DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())/60;
+
+                if(roznica >= 10) roznica = 10;
+
+                Html->PobierzDaneOISS(&TabPom[0], roznica, MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS(), 60);
+                for(size_t j = 0; j < roznica; j++)
+                {
+                        MagazynDanychStacji->DodajNoweDane(TabPom[j]);
+                        cout<<"tabPom: "<<TabPom[j]<<endl;
+                }
+
             }
         }
+
 
         //if(Licznik == 30)
         if((DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()) >= 60)
@@ -284,6 +296,7 @@ void MainWindow::PrzycisnietyCzas()
     */
     Model3D->RysowaniePunktuSledzacego(false);
     Model3D->RysowanieTrajektorii(false);
+    Model3D->RysowanieKoncowkeTrajektorii(false);
     Model3D->SledzenieStacji(false);
     Model3D->RysowanieSiatki(false);
     Model3D->RysowanieWskTrajektorii(false);
@@ -314,6 +327,7 @@ void MainWindow::PrzycisnietyWspolrzedne()
     Model3D->SledzenieStacji(true);
     Model3D->RysowaniePunktuSledzacego(true);
     Model3D->RysowanieTrajektorii(false);
+    Model3D->RysowanieKoncowkeTrajektorii(false);
     Model3D->RysowanieSiatki(false);
     Model3D->RysowanieWskTrajektorii(false);
 
@@ -349,6 +363,7 @@ void MainWindow::PrzycisnietyWysokosc()
     PrzelaczAktualizacjeDanych = false;
 
     Model3D->RysowanieTrajektorii(true);
+    Model3D->RysowanieKoncowkeTrajektorii(true);
     Model3D->RysowaniePunktuSledzacego(true);
     Model3D->RysowanieSiatki(false);
     Model3D->RysowanieWskTrajektorii(false);

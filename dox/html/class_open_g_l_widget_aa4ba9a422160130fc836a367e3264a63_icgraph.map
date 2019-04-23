@@ -1,6 +1,7 @@
 <map id="OpenGLWidget::RysowaniePunktuSledzacego" name="OpenGLWidget::RysowaniePunktuSledzacego">
-<area shape="rect" id="node2" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="276,5,483,32"/>
-<area shape="rect" id="node4" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="291,57,467,98"/>
-<area shape="rect" id="node5" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="291,122,467,163"/>
-<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="531,64,709,91"/>
+<area shape="rect" id="node1" title="Metoda pozwala włączyć rysowanie punktu śledzącego pozycje stacji co spowoduje, że stanie się widoczn..." alt="" coords="487,57,709,98"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title=" " alt="" coords="232,5,439,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title=" " alt="" coords="247,57,423,98"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title=" " alt="" coords="247,122,423,163"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,64,184,91"/>
 </map>

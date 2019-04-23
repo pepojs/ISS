@@ -1,3 +1,4 @@
 <map id="OpenGLWidget::UstawFragmentShader" name="OpenGLWidget::UstawFragmentShader">
-<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="264,13,447,39"/>
+<area shape="rect" id="node1" title="Metoda pozwala ustawić, który shader będzie używany jako Fragment Shader." alt="" coords="236,5,447,47"/>
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="Metoda inicjująca działanie OpenGL." alt="" coords="5,13,188,39"/>
 </map>

@@ -26,7 +26,7 @@ var class_open_g_l_widget =
     [ "WypelniTrajektorie", "class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678", null ],
     [ "fSledzenieStacji", "class_open_g_l_widget.html#ac608156039fd6b272bfb59d7c4212726", null ],
     [ "IDSiatki", "class_open_g_l_widget.html#ab10bd90e3a0b94d6640c5e3475e02b39", null ],
-    [ "IDTrajektoria", "class_open_g_l_widget.html#a3212a6097d0577177596cc89437acc63", null ],
+    [ "IDTrajektoria", "class_open_g_l_widget.html#a300ff2f4fc600df16af36187bde07055", null ],
     [ "IDWskaznikStacji", "class_open_g_l_widget.html#a0834f05b00bc9783a9f40faea0f98c19", null ],
     [ "IDWskTrajektorii", "class_open_g_l_widget.html#a10224bd455f50fbc0517f84fda4aeea9", null ],
     [ "KameraOdObiektu", "class_open_g_l_widget.html#aadd1cb17a751317f23e33b8eb361bd99", null ],

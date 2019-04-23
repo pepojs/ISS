@@ -1,7 +1,8 @@
 <map id="Grafika3D::ObrocObiekt" name="Grafika3D::ObrocObiekt">
-<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a7cff564a786f0a2fad7d50d4c3e1e326" title="OpenGLWidget::NoweDaneISS" alt="" coords="213,5,416,32"/>
-<area shape="rect" id="node3" href="$class_open_g_l_widget.html#abe251017fa2d080f09d42bb98bf5a2dd" title="OpenGLWidget::TworzZiemie" alt="" coords="219,56,410,83"/>
-<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a5ef7434b1c1e65d30f9a67bcc85fb41a" title="OpenGLWidget::TworzPunkt\lPozycji" alt="" coords="221,107,408,149"/>
-<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a46b01b29b7ad001504d992fd762857ef" title="OpenGLWidget::TworzSiatke" alt="" coords="219,173,410,200"/>
-<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="464,115,647,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="487,85,647,112"/>
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#a7cff564a786f0a2fad7d50d4c3e1e326" title="Slot pozwalający aktualizować obecną pozycje wskaźnika stacji kosmicznej." alt="" coords="236,5,439,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#abe251017fa2d080f09d42bb98bf5a2dd" title="Tworzenie modelu Ziemi i dodawanie jej do sceny." alt="" coords="242,56,433,83"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a5ef7434b1c1e65d30f9a67bcc85fb41a" title="Tworzy punkt wskazujący miejsce, nad którym znajduje się stacja kosmiczna." alt="" coords="244,107,431,149"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a46b01b29b7ad001504d992fd762857ef" title="Tworz siatkę nad Ziemią pokazującą strefy czasowe." alt="" coords="242,173,433,200"/>
+<area shape="rect" id="node4" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="Metoda inicjująca działanie OpenGL." alt="" coords="5,115,188,141"/>
 </map>

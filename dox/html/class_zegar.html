@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ISS: Dokumentacja klasy Zegar</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -80,11 +80,19 @@ $(document).ready(function(){initNavTree('class_zegar.html','');});
 Diagram dziedziczenia dla Zegar</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar__inherit__graph.png" border="0" usemap="#_zegar_inherit__map" alt="Inheritance graph"/></div>
+<map name="_zegar_inherit__map" id="_zegar_inherit__map">
+<area shape="rect"  title=" " alt="" coords="15,80,69,107"/>
+<area shape="rect"  title=" " alt="" coords="5,5,79,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <div class="dynheader">
 Diagram współpracy dla Zegar:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar__coll__graph.png" border="0" usemap="#_zegar_coll__map" alt="Collaboration graph"/></div>
+<map name="_zegar_coll__map" id="_zegar_coll__map">
+<area shape="rect"  title=" " alt="" coords="15,80,69,107"/>
+<area shape="rect"  title=" " alt="" coords="5,5,79,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
@@ -145,7 +153,12 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="zegar_8cpp_source.html#l00003">3</a> pliku <a class="el" href="zegar_8cpp_source.html">zegar.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    :QWidget (Rodzic)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_zegar.html#ac06dd12dd3b1535d5b9e23ee4ed21acc">Czas</a> = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;&lt;center&gt;&lt;font color=white&gt;czas względem strefy:&lt;/font&gt;&lt;/center&gt;&quot;</span>));</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_zegar.html#a56adaf0e8e24ceb4f49c6d77a0fcfc92">StrefaCzasowa</a> = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;&lt;center&gt;&lt;font color=white&gt;Strefa: UTC-0&lt;/font&gt;&lt;/center&gt;&quot;</span>));</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Wyswietlacz</a> = <span class="keyword">new</span> QLCDNumber;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_zegar.html#ac56284982f6d665068b2508e0536916e">GlownaWarstwa</a> = <span class="keyword">new</span> QVBoxLayout;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_zegar.html#ac56284982f6d665068b2508e0536916e">GlownaWarstwa</a>-&gt;addWidget(<a class="code" href="class_zegar.html#ac06dd12dd3b1535d5b9e23ee4ed21acc">Czas</a>);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_zegar.html#ac56284982f6d665068b2508e0536916e">GlownaWarstwa</a>-&gt;addWidget(<a class="code" href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Wyswietlacz</a>);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_zegar.html#ac56284982f6d665068b2508e0536916e">GlownaWarstwa</a>-&gt;addWidget(<a class="code" href="class_zegar.html#a56adaf0e8e24ceb4f49c6d77a0fcfc92">StrefaCzasowa</a>);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    setLayout(<a class="code" href="class_zegar.html#ac56284982f6d665068b2508e0536916e">GlownaWarstwa</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Wyswietlacz</a>-&gt;setSegmentStyle(QLCDNumber::Outline);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Wyswietlacz</a>-&gt;setDigitCount(8);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a> = 0;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="class_zegar_html_a56adaf0e8e24ceb4f49c6d77a0fcfc92"><div class="ttname"><a href="class_zegar.html#a56adaf0e8e24ceb4f49c6d77a0fcfc92">Zegar::StrefaCzasowa</a></div><div class="ttdeci">QLabel * StrefaCzasowa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00036">zegar.h:36</a></div></div>
+<div class="ttc" id="class_zegar_html_ac06dd12dd3b1535d5b9e23ee4ed21acc"><div class="ttname"><a href="class_zegar.html#ac06dd12dd3b1535d5b9e23ee4ed21acc">Zegar::Czas</a></div><div class="ttdeci">QLabel * Czas</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00035">zegar.h:35</a></div></div>
+<div class="ttc" id="class_zegar_html_ac56284982f6d665068b2508e0536916e"><div class="ttname"><a href="class_zegar.html#ac56284982f6d665068b2508e0536916e">Zegar::GlownaWarstwa</a></div><div class="ttdeci">QVBoxLayout * GlownaWarstwa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00039">zegar.h:39</a></div></div>
+<div class="ttc" id="class_zegar_html_a027fb0c34f628c13624439423b56d9a4"><div class="ttname"><a href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Zegar::Wyswietlacz</a></div><div class="ttdeci">QLCDNumber * Wyswietlacz</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00037">zegar.h:37</a></div></div>
+<div class="ttc" id="class_zegar_html_ab22208e40f72ee45ec38b4a4f35e2fbb"><div class="ttname"><a href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Zegar::Strefa</a></div><div class="ttdeci">int Strefa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00033">zegar.h:33</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
@@ -174,13 +187,16 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="zegar_8cpp_source.html#l00072">72</a> pliku <a class="el" href="zegar_8cpp_source.html">zegar.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    this-&gt;<a class="code" href="class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e">UstawCzasUnixFormatUTC1</a>(NoweDane.<a class="code" href="class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee">ZwrocCzasPrzelotu_UTS</a>());</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_zegar_html_a7edd3a906b95f0d38c0b6111e7118a9e"><div class="ttname"><a href="class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e">Zegar::UstawCzasUnixFormatUTC1</a></div><div class="ttdeci">void UstawCzasUnixFormatUTC1(uint NowyCzas)</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8cpp_source.html#l00046">zegar.cpp:46</a></div></div>
+<div class="ttc" id="class_i_s_s___dane_html_a97fb0d95ead3e793c071f8e995f834ee"><div class="ttname"><a href="class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee">ISS_Dane::ZwrocCzasPrzelotu_UTS</a></div><div class="ttdeci">uint32_t ZwrocCzasPrzelotu_UTS() const</div><div class="ttdoc">Wartość czasu, dla których są zapisane dane.</div><div class="ttdef"><b>Definition:</b> <a href="iss__dane_8h_source.html#l00109">iss_dane.h:109</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar_a4e8f3e32c9b4f1be197d1c54edea812a_cgraph.png" border="0" usemap="#class_zegar_a4e8f3e32c9b4f1be197d1c54edea812a_cgraph" alt=""/></div>
 <map name="class_zegar_a4e8f3e32c9b4f1be197d1c54edea812a_cgraph" id="class_zegar_a4e8f3e32c9b4f1be197d1c54edea812a_cgraph">
-<area shape="rect" id="node2" href="class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e" title="Zegar::UstawCzasUnixFormatUTC1" alt="" coords="227,5,453,32"/>
-<area shape="rect" id="node3" href="class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane. " alt="" coords="224,56,456,83"/>
+<area shape="rect"  title=" " alt="" coords="5,31,176,57"/>
+<area shape="rect"  href="class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e" title=" " alt="" coords="227,5,453,32"/>
+<area shape="rect"  href="class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="WartoÅÄ czasu, dla ktÃ³rych sÄ zapisane dane." alt="" coords="224,56,456,83"/>
 </map>
 </div>
 
@@ -211,7 +227,8 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="zegar_8cpp_source.html#l00024">24</a> pliku <a class="el" href="zegar_8cpp_source.html">zegar.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QMouseEvent *Mysz;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">switch</span>(Zdarzenie-&gt;type())</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">case</span> QEvent::MouseButtonPress:</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            Mysz = static_cast&lt;QMouseEvent* &gt;(Zdarzenie);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span>(Mysz-&gt;button() == Qt::LeftButton)</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                emit <a class="code" href="class_zegar.html#a47485748c8853e9c0ab264e218d30038">Kliknieto</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">default</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> QWidget::event(Zdarzenie);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div><div class="ttc" id="class_zegar_html_a47485748c8853e9c0ab264e218d30038"><div class="ttname"><a href="class_zegar.html#a47485748c8853e9c0ab264e218d30038">Zegar::Kliknieto</a></div><div class="ttdeci">void Kliknieto()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47485748c8853e9c0ab264e218d30038"></a>
@@ -241,7 +258,8 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar_a47485748c8853e9c0ab264e218d30038_icgraph.png" border="0" usemap="#class_zegar_a47485748c8853e9c0ab264e218d30038_icgraph" alt=""/></div>
 <map name="class_zegar_a47485748c8853e9c0ab264e218d30038_icgraph" id="class_zegar_a47485748c8853e9c0ab264e218d30038_icgraph">
-<area shape="rect" id="node2" href="class_zegar.html#ac1abcc75e3b1f9ff6b170cd30b7a13ca" title="Zegar::event" alt="" coords="165,5,257,32"/>
+<area shape="rect"  title=" " alt="" coords="145,5,257,32"/>
+<area shape="rect"  href="class_zegar.html#ac1abcc75e3b1f9ff6b170cd30b7a13ca" title=" " alt="" coords="5,5,97,32"/>
 </map>
 </div>
 
@@ -264,12 +282,15 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="zegar_8cpp_source.html#l00046">46</a> pliku <a class="el" href="zegar_8cpp_source.html">zegar.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QDateTime CzasNaZegarze;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a> &lt; 0)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        NowyCzas = NowyCzas - uint(abs(<a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a>-1)*60*60); <span class="comment">//Dodaje lub odejmuje wartosc zwiazana ze strefa</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        NowyCzas = NowyCzas + uint((<a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a>-1)*60*60);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    CzasNaZegarze.setTime_t(NowyCzas);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Wyswietlacz</a>-&gt;display(CzasNaZegarze.toString(Qt::SystemLocaleLongDate));</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div><div class="ttc" id="class_zegar_html_a027fb0c34f628c13624439423b56d9a4"><div class="ttname"><a href="class_zegar.html#a027fb0c34f628c13624439423b56d9a4">Zegar::Wyswietlacz</a></div><div class="ttdeci">QLCDNumber * Wyswietlacz</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00037">zegar.h:37</a></div></div>
+<div class="ttc" id="class_zegar_html_ab22208e40f72ee45ec38b4a4f35e2fbb"><div class="ttname"><a href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Zegar::Strefa</a></div><div class="ttdeci">int Strefa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00033">zegar.h:33</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar_a7edd3a906b95f0d38c0b6111e7118a9e_icgraph.png" border="0" usemap="#class_zegar_a7edd3a906b95f0d38c0b6111e7118a9e_icgraph" alt=""/></div>
 <map name="class_zegar_a7edd3a906b95f0d38c0b6111e7118a9e_icgraph" id="class_zegar_a7edd3a906b95f0d38c0b6111e7118a9e_icgraph">
-<area shape="rect" id="node2" href="class_zegar.html#a4e8f3e32c9b4f1be197d1c54edea812a" title="Zegar::AktualizujDaneISS" alt="" coords="280,5,451,32"/>
+<area shape="rect"  title=" " alt="" coords="224,5,451,32"/>
+<area shape="rect"  href="class_zegar.html#a4e8f3e32c9b4f1be197d1c54edea812a" title=" " alt="" coords="5,5,176,32"/>
 </map>
 </div>
 
@@ -292,13 +313,16 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="zegar_8cpp_source.html#l00060">60</a> pliku <a class="el" href="zegar_8cpp_source.html">zegar.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span>(NowaStrefa &gt;= 14)</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a> = 14;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(NowaStrefa &lt;= -12)</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a> = -12;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a> = NowaStrefa;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_zegar.html#a56adaf0e8e24ceb4f49c6d77a0fcfc92">StrefaCzasowa</a>-&gt;setText(tr(<span class="stringliteral">&quot;&lt;center&gt;&lt;font color=white&gt;Strefa: UTC&quot;</span>) + QString::number(<a class="code" href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Strefa</a>)+<span class="stringliteral">&quot;&lt;/font&gt;&lt;/center&gt;&quot;</span>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div><div class="ttc" id="class_zegar_html_a56adaf0e8e24ceb4f49c6d77a0fcfc92"><div class="ttname"><a href="class_zegar.html#a56adaf0e8e24ceb4f49c6d77a0fcfc92">Zegar::StrefaCzasowa</a></div><div class="ttdeci">QLabel * StrefaCzasowa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00036">zegar.h:36</a></div></div>
+<div class="ttc" id="class_zegar_html_ab22208e40f72ee45ec38b4a4f35e2fbb"><div class="ttname"><a href="class_zegar.html#ab22208e40f72ee45ec38b4a4f35e2fbb">Zegar::Strefa</a></div><div class="ttdeci">int Strefa</div><div class="ttdef"><b>Definition:</b> <a href="zegar_8h_source.html#l00033">zegar.h:33</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_zegar_a6fa62122b30adc47f89f749f44fd9d45_icgraph.png" border="0" usemap="#class_zegar_a6fa62122b30adc47f89f749f44fd9d45_icgraph" alt=""/></div>
 <map name="class_zegar_a6fa62122b30adc47f89f749f44fd9d45_icgraph" id="class_zegar_a6fa62122b30adc47f89f749f44fd9d45_icgraph">
-<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="465,5,644,32"/>
-<area shape="rect" id="node3" href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title="MainWindow::ZmianaStrefy" alt="" coords="237,31,417,57"/>
+<area shape="rect"  title=" " alt="" coords="460,5,644,32"/>
+<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect"  href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title=" " alt="" coords="232,31,412,57"/>
 </map>
 </div>
 
@@ -437,7 +461,7 @@ Oto graf wywoływań tej funkcji:</div>
     <li class="navelem"><a class="el" href="class_zegar.html">Zegar</a></li>
     <li class="footer">Wygenerowano przez
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
 </div>
 </body>

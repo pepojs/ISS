@@ -1,4 +1,5 @@
 <map id="Zegar::ZmienStrefeCzasowa" name="Zegar::ZmienStrefeCzasowa">
-<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="465,5,644,32"/>
-<area shape="rect" id="node3" href="$class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title="MainWindow::ZmianaStrefy" alt="" coords="237,31,417,57"/>
+<area shape="rect" id="node1" title=" " alt="" coords="460,5,644,32"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title=" " alt="" coords="232,31,412,57"/>
 </map>

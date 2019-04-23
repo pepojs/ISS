@@ -1,8 +1,9 @@
 <map id="Shader::WczytajPlik" name="Shader::WczytajPlik">
-<area shape="rect" id="node2" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title="Shader::StworzShader" alt="" coords="195,64,347,91"/>
-<area shape="rect" id="node3" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title="Shader::WczytajShader" alt="" coords="395,64,555,91"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#a3b8544128d94a711457672bcbe5c8d17" title="Grafika3D::WczytajCzciake" alt="" coords="617,5,799,32"/>
-<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a70b86c5c7080fd546183715606df59fc" title="OpenGLWidget::UstawVertex\lShader" alt="" coords="611,57,805,98"/>
-<area shape="rect" id="node7" href="$class_open_g_l_widget.html#a9e0172fdb46748079e055962cf8cc761" title="OpenGLWidget::UstawFragment\lShader" alt="" coords="603,122,813,163"/>
-<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="OpenGLWidget::initializeGL" alt="" coords="861,97,1044,124"/>
+<area shape="rect" id="node1" title=" " alt="" coords="903,64,1044,91"/>
+<area shape="rect" id="node2" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title=" " alt="" coords="703,64,855,91"/>
+<area shape="rect" id="node3" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title=" " alt="" coords="495,64,655,91"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a3b8544128d94a711457672bcbe5c8d17" title=" " alt="" coords="250,5,433,32"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a70b86c5c7080fd546183715606df59fc" title="Metoda pozwala ustawić, który shader będzie używany jako Vertex Shader." alt="" coords="245,57,438,98"/>
+<area shape="rect" id="node7" href="$class_open_g_l_widget.html#a9e0172fdb46748079e055962cf8cc761" title="Metoda pozwala ustawić, który shader będzie używany jako Fragment Shader." alt="" coords="236,122,447,163"/>
+<area shape="rect" id="node6" href="$class_open_g_l_widget.html#a570df546f7206455c57addb624906576" title="Metoda inicjująca działanie OpenGL." alt="" coords="5,97,188,124"/>
 </map>

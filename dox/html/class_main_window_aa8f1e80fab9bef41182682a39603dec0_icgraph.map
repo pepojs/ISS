@@ -1,8 +1,9 @@
 <map id="MainWindow::noweDaneISS" name="MainWindow::noweDaneISS">
-<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="517,90,696,117"/>
-<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="239,40,469,66"/>
-<area shape="rect" id="node4" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title="MainWindow::PrzycisnietyCzas" alt="" coords="251,90,457,117"/>
-<area shape="rect" id="node5" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title="MainWindow::Przycisniety\lWspolrzedne" alt="" coords="266,142,442,183"/>
-<area shape="rect" id="node6" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title="MainWindow::Przycisniety\lWysokosc" alt="" coords="266,207,442,248"/>
-<area shape="rect" id="node7" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="287,273,421,300"/>
+<area shape="rect" id="node1" title=" " alt="" coords="511,120,696,146"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,90,184,117"/>
+<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,40,463,66"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a33245090cd200b4e7341b8c07e2c2513" title=" " alt="" coords="244,90,451,117"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a7779b0eb5b7b37065cfd9f0a68e48baa" title=" " alt="" coords="259,142,435,183"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a5cd81167057398859ec56b4038c4e91b" title=" " alt="" coords="259,207,435,248"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,273,415,300"/>
 </map>

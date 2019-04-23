@@ -1,4 +1,5 @@
 <map id="Zegar::AktualizujDaneISS" name="Zegar::AktualizujDaneISS">
-<area shape="rect" id="node2" href="$class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e" title="Zegar::UstawCzasUnixFormatUTC1" alt="" coords="227,5,453,32"/>
-<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane. " alt="" coords="224,56,456,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,176,57"/>
+<area shape="rect" id="node2" href="$class_zegar.html#a7edd3a906b95f0d38c0b6111e7118a9e" title=" " alt="" coords="227,5,453,32"/>
+<area shape="rect" id="node3" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane." alt="" coords="224,56,456,83"/>
 </map>

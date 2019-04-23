@@ -1,11 +1,12 @@
 <map id="Grafika3D::WczytajCzciake" name="Grafika3D::WczytajCzciake">
-<area shape="rect" id="node2" href="$class_grafika3_d.html#a02e49d7b227d8f572b4510147e76c6fe" title="Grafika3D::TworzObiektCzcionka" alt="" coords="236,5,449,32"/>
-<area shape="rect" id="node3" href="$class_shader.html#a41ca8bffd1e520da5f7b6e34c6421614" title="Shader::Init" alt="" coords="299,56,387,83"/>
-<area shape="rect" id="node4" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title="Shader::WczytajShader" alt="" coords="263,107,423,133"/>
-<area shape="rect" id="node9" href="$class_shader.html#ad73201f0342f9974bc0d585316ba3fe5" title="Shader::LinkowanieShader" alt="" coords="255,157,431,184"/>
-<area shape="rect" id="node5" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title="Shader::StworzShader" alt="" coords="527,56,679,83"/>
-<area shape="rect" id="node7" href="$class_shader.html#ae3baccef022cd10aafbed1730a0439a7" title="Shader::KompilujShader" alt="" coords="522,107,685,133"/>
-<area shape="rect" id="node6" href="$class_shader.html#aa2b21faafdbb363559a9176f311bf784" title="Shader::WczytajPlik" alt="" coords="791,56,932,83"/>
-<area shape="rect" id="node8" href="$class_shader.html#a441a4bcc5850b3a1856415b0738e85f0" title="Shader::WypiszBledyKompilacji" alt="" coords="757,107,965,133"/>
-<area shape="rect" id="node10" href="$class_shader.html#a557a526eb524e3a1b64f9f384a57bb8d" title="Shader::WypiszBledyLinkowania" alt="" coords="497,157,709,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,188,108"/>
+<area shape="rect" id="node2" href="$class_grafika3_d.html#a02e49d7b227d8f572b4510147e76c6fe" title=" " alt="" coords="236,5,449,32"/>
+<area shape="rect" id="node3" href="$class_shader.html#a41ca8bffd1e520da5f7b6e34c6421614" title=" " alt="" coords="299,56,387,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#acca546e88b128c9e96759c7b54747176" title=" " alt="" coords="263,107,423,133"/>
+<area shape="rect" id="node9" href="$class_shader.html#ad73201f0342f9974bc0d585316ba3fe5" title=" " alt="" coords="255,157,431,184"/>
+<area shape="rect" id="node5" href="$class_shader.html#a9052a66f16101fcaf64ec03c929e5aba" title=" " alt="" coords="527,56,679,83"/>
+<area shape="rect" id="node7" href="$class_shader.html#ae3baccef022cd10aafbed1730a0439a7" title=" " alt="" coords="522,107,685,133"/>
+<area shape="rect" id="node6" href="$class_shader.html#aa2b21faafdbb363559a9176f311bf784" title=" " alt="" coords="791,56,932,83"/>
+<area shape="rect" id="node8" href="$class_shader.html#a441a4bcc5850b3a1856415b0738e85f0" title=" " alt="" coords="757,107,965,133"/>
+<area shape="rect" id="node10" href="$class_shader.html#a557a526eb524e3a1b64f9f384a57bb8d" title=" " alt="" coords="497,157,709,184"/>
 </map>

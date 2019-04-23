@@ -1,7 +1,8 @@
 <map id="MainWindow::ZmianaStrefy" name="MainWindow::ZmianaStrefy">
-<area shape="rect" id="node2" href="$class_zegar.html#a6fa62122b30adc47f89f749f44fd9d45" title="Zegar::ZmienStrefeCzasowa" alt="" coords="241,5,425,32"/>
-<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="OpenGLWidget::UstawKamere\lNaStrefie" alt="" coords="233,57,433,98"/>
-<area shape="rect" id="node6" href="$class_wykres.html#afa5aa4492a3d8ecc70800cafce977604" title="Wykres::WyczyscWykres" alt="" coords="246,123,421,149"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title="Grafika3D::PrzekazIntaDo\lShedera" alt="" coords="481,57,653,98"/>
-<area shape="rect" id="node5" href="$class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title="Shader::PrzekazInt" alt="" coords="701,64,835,91"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,185,91"/>
+<area shape="rect" id="node2" href="$class_zegar.html#a6fa62122b30adc47f89f749f44fd9d45" title=" " alt="" coords="241,5,425,32"/>
+<area shape="rect" id="node3" href="$class_open_g_l_widget.html#a1bb05b1890183e98d5e4dd87b8d85b35" title="Pozwala ustawić kamerę na podaną strefę czasową." alt="" coords="233,57,433,98"/>
+<area shape="rect" id="node6" href="$class_wykres.html#afa5aa4492a3d8ecc70800cafce977604" title="Usuwa wszystkie punkty z wykresu." alt="" coords="246,123,421,149"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title=" " alt="" coords="481,57,653,98"/>
+<area shape="rect" id="node5" href="$class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title=" " alt="" coords="701,64,835,91"/>
 </map>

@@ -19,6 +19,7 @@
 #include <QEvent>
 #include <QMouseEvent>
 #include <QWheelEvent>
+#include <QResource>
 
 /*!
  * \brief Klasa pozwalająca wyświetlać model 3D Ziemi oraz inne elementy grafiki 3D.
@@ -34,8 +35,24 @@ public:
     OpenGLWidget(QWidget* Rodzic = nullptr);
     ~OpenGLWidget();
 
+    /*!
+     * \brief Metoda pozwala ustawić, który shader będzie używany jako Vertex Shader.
+     * \param[in] NazwaShadera - nazwa shadera.
+     * \return Zwraca 0 gdy wszystko się udało, -1 gdy wystąpił błąd.
+     */
     int8_t UstawVertexShader(QString NazwaShadera);
+
+    /*!
+     * \brief Metoda pozwala ustawić, który shader będzie używany jako Fragment Shader.
+     * \param[in] NazwaShadera - nazwa shadera.
+     * \return Zwraca 0 gdy wszystko się udało, -1 gdy wystąpił błąd.
+     */
     int8_t UstawFragmentShader(QString NazwaShadera);
+
+    /*!
+     * \brief Linkuje shadery sprawdzając czy wszystkie są poprawnie napisane.
+     * \return Zwraca 0 gdy wszystko się udało, -1 gdy wystąpił błąd.
+     */
     int8_t LinkujShader();
 
     /*!
@@ -51,8 +68,10 @@ public:
 
     /*!
      * \brief Tworzy pustą trajektorie, którą można później wypełnić.
+     * \param[in] IloscDanych - ilość danych, które mają się mieścić w trajektorii. Na przykład jeżeli trajektoria składa się z 5 punktów i każdy punkt ma 3 współrzędne to ilość danych wynosi 15.
+     * \param[in] IDObiektu - identyfikator, do którego zostanie przypisana dana trajektoria.
      */
-    void TworzTrajektorie();
+    void TworzTrajektorie(size_t IloscDanych, GLuint* IDObiektu);
 
     /*!
      * \brief Tworzy wskaźnik pozwalający wskazać, którego punktu trajektorii dotyczą obecnie wyświetlane dane.
@@ -81,6 +100,12 @@ public:
      * \param[in] Rysuj - jeżeli parametr przyjmnie wartość true obiekt zostanie narysowany, false spowoduje, że obiek nie będzie narysowany.
      */
     void RysowanieTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDTrajektoria, Rysuj);}
+
+    /*!
+     * \brief Metoda pozwala włączyć rysowanie końcowej części trajektorii stacji co spowoduje, że stanie się widoczna.
+     * \param[in] Rysuj - jeżeli parametr przyjmnie wartość true obiekt zostanie narysowany, false spowoduje, że obiek nie będzie narysowany.
+     */
+    void RysowanieKoncowkeTrajektorii(GLboolean Rysuj){Scena->RysujObiekt(IDTrajektoriaKoncowka, Rysuj);}
 
     /*!
      * \brief Metoda pozwala włączyć rysowanie siatki nad modelem Ziemi co spowoduje, że stanie się widoczna.
@@ -113,20 +138,50 @@ public:
     void PodswietlenieStrefy(int Podswietl){Scena->PrzekazIntaDoShedera("WlaczStrefe", Podswietl);}
 
 protected:
+
+    /*!
+     * \brief Metoda inicjująca działanie OpenGL.
+     */
     void initializeGL();
+
+    /*!
+     * \brief Metoda wywoływana podczas zmiany okna.
+     * \param[in] Szerokosc - nowa szerokość okna.
+     * \param[in] Wysokosc - nowa wysokość okna.
+     */
     void resizeGL(int Szerokosc, int Wysokosc);
+
+    /*!
+     * \brief Metoda pozwalająca rysować modele 3D.
+     */
     void paintGL();
+
+    /*!
+     * \brief Metoda obsługująca zdarzenia związane z obrotem modelu Ziemi.
+     * \param[in] Zdarzenie - wskaźnik na odbierane zdarzenia.
+     * \return Jeżeli zdarzenie zostanie rozpoznane zwraca true, inaczej zwraca false.
+     */
     bool event(QEvent* Zdarzenie);
 
 private slots:
+
+    /*!
+     * \brief Slot pozwalający aktualizować obecną pozycje wskaźnika stacji kosmicznej.
+     * \param NoweDane - dane zawierające aktualną pozycję stacji kosmicznej.
+     */
     void NoweDaneISS(ISS_Dane NoweDane);
-    void TrajektoriaNoweDane(ISS_Dane NoweDane);
+
+    /*!
+     * \brief Slot pozwalający uaktualniać dane w trajektorii stacji kosmicznej.
+     * \param[in] NoweDane - dane, które zostaną zamienione z najstarszymi danymi w trajektorii stacji.
+    */
+void TrajektoriaNoweDane(ISS_Dane NoweDane);
 
 
 private:
 
     /*!
-     * \brief Scena - wskaźnik na obiekt kalsy Grafika3D pozwalający na dokonywaniu operacji na grafice 3D, w tym dodawaniu nowych obiektów do sceny.
+     * \brief Wskaźnik na obiekt kalsy Grafika3D pozwalający na dokonywaniu operacji na grafice 3D, w tym dodawaniu nowych obiektów do sceny.
      */
     Grafika3D* Scena;
 
@@ -141,87 +196,92 @@ private:
     int WysokoscOkna;
 
     /*!
-     * \brief KameraOdObiektu - odległość kamery od środka modelu Ziemi.
+     * \brief Odległość kamery od środka modelu Ziemi.
      */
     GLfloat KameraOdObiektu;
 
     /*!
-     * \brief KameraX - wpółrzędna X położenia kamery w przestrzeni 3D.
+     * \brief Wpółrzędna X położenia kamery w przestrzeni 3D.
      */
     GLfloat KameraX;
 
     /*!
-     * \brief KameraY - wpółrzędna Y położenia kamery w przestrzeni 3D.
+     * \brief Wpółrzędna Y położenia kamery w przestrzeni 3D.
      */
     GLfloat KameraY;
 
     /*!
-     * \brief KameraZ - wpółrzędna Z położenia kamery w przestrzeni 3D.
+     * \brief Wpółrzędna Z położenia kamery w przestrzeni 3D.
      */
     GLfloat KameraZ;
 
     /*!
-     * \brief ObrotX - kąt o jaki obrócony jest model Ziemi względem osi Y.
+     * \brief Kąt o jaki obrócony jest model Ziemi względem osi Y.
      */
     GLfloat ObrotX;
 
     /*!
-     * \brief ObrotY - kąt o jaki obrócony jest model Ziemi względem osi X.
+     * \brief Kąt o jaki obrócony jest model Ziemi względem osi X.
      */
     GLfloat ObrotY;
 
     /*!
-     * \brief PosMyszyX - współrzędna X ostatniej zapamiętanej pozycji myszki po kliknięciu lewego przycisku myszki.
+     * \brief Współrzędna X ostatniej zapamiętanej pozycji myszki po kliknięciu lewego przycisku myszki.
      */
     int PosMyszyX;
 
     /*!
-     * \brief PosMyszyY - współrzędna Y ostatniej zapamiętanej pozycji myszki po kliknięciu lewego przycisku myszki.
+     * \brief Współrzędna Y ostatniej zapamiętanej pozycji myszki po kliknięciu lewego przycisku myszki.
      */
     int PosMyszyY;
 
     /*!
-     * \brief PromienKuli - Promień modelu Ziemi.
+     * \brief Promień modelu Ziemi.
      */
     GLfloat PromienKuli;
 
     /*!
-     * \brief KatSzer - szerokość geograficzna ostatniego punktu, nad którym znajdowała się stacja.
+     * \brief Szerokość geograficzna ostatniego punktu, nad którym znajdowała się stacja.
      */
     GLfloat KatSzer;
 
     /*!
-     * \brief KatDlug - długość geograficzna ostatniego punktu, nad którym znajdowała się stacja.
+     * \brief Długość geograficzna ostatniego punktu, nad którym znajdowała się stacja.
      */
     GLfloat KatDlug;
 
     /*!
-     * \brief IDTrajektoria - identyfikator trajektorii uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
+     * \brief Identyfikator trajektorii uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
      */
     GLuint IDTrajektoria;
 
     /*!
-     * \brief OffsetTrajektori - przesunięcie na pozycję pozwalającą zapisywać dane do ostatniej części trajektorii tak aby aktualizować jej początek.
+     * \brief Przesunięcie pozwalające zapisywać w odpowiedniej kolejności dane do końcowej części trajektorii stacji.
      */
     GLuint OffsetTrajektori;
 
     /*!
-     * \brief IDSiatki - identyfikator siatki uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
+     * \brief Identyfikator siatki uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
      */
     GLuint IDSiatki;
 
     /*!
-     * \brief IDWskTrajektorii - identyfikator wskaźnika trajektorii uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
+     * \brief Identyfikator wskaźnika trajektorii uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
      */
     GLuint IDWskTrajektorii;
 
     /*!
-     * \brief IDWskaznikStacji - identyfikator wskaźnika położenia stacji uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
+     * \brief Identyfikator wskaźnika położenia stacji uzyskany podczas dodawania obiektu do sceny. Jest potrzebny do modyfikacji obiektu.
      */
     GLuint IDWskaznikStacji;
 
     /*!
-     * \brief fSledzenieStacji - pole używane jako flaga, ustawione powoduje śledznie pozycji stacji przez kamere.
+     * \brief Identyfikator końcowej części trajektorii stacji.
+     */
+    GLuint IDTrajektoriaKoncowka;
+
+    /*!
+     * \brief Pole używane jako flaga, ustawione powoduje śledznie pozycji stacji przez kamere.
      */
     GLuint fSledzenieStacji;
 

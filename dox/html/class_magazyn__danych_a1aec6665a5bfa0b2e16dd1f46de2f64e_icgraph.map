@@ -1,6 +1,7 @@
 <map id="Magazyn_danych::ZwrocIloscDanych" name="Magazyn_danych::ZwrocIloscDanych">
-<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow" alt="" coords="800,5,979,32"/>
-<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title="MainWindow::PobierzNoweDaneISS" alt="" coords="521,31,752,57"/>
-<area shape="rect" id="node4" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title="MainWindow::event" alt="" coords="293,81,427,108"/>
-<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="OpenGLWidget::WypelniTrajektorie" alt="" coords="247,132,473,159"/>
+<area shape="rect" id="node1" title="Zwraca rozmiar wektora z danymi." alt="" coords="785,49,979,90"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,31,463,57"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="557,81,691,108"/>
+<area shape="rect" id="node5" href="$class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="Pozwala wypełnić wcześniej stworzoną trajektorie danymi." alt="" coords="511,132,737,159"/>
 </map>

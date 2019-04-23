@@ -1,5 +1,6 @@
 <map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
-<area shape="rect" id="node2" href="$class_lokalizator.html" title="Lokalizator" alt="" coords="127,5,212,32"/>
-<area shape="rect" id="node3" href="$class_wykres.html" title="Wykres" alt="" coords="136,56,203,83"/>
-<area shape="rect" id="node4" href="$class_zegar.html" title="Zegar" alt="" coords="142,107,197,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,79,83"/>
+<area shape="rect" id="node2" href="$class_lokalizator.html" title=" " alt="" coords="127,5,212,32"/>
+<area shape="rect" id="node3" href="$class_wykres.html" title="Pozwala tworzyć wykresu wartości zależnej od czasu." alt="" coords="136,56,203,83"/>
+<area shape="rect" id="node4" href="$class_zegar.html" title=" " alt="" coords="142,107,197,133"/>
 </map>
