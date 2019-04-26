@@ -280,8 +280,8 @@ void OpenGLWidget::TworzZiemie(GLfloat Promien)
 {
     GLuint IDKuli;
     GLuint IDTekstury;
-    //QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
-    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
+    QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "Ziemia3000x1500.png";
+    //QString PlikZMapa = QCoreApplication::applicationDirPath() + "/" + "TeksturaZiemi2.jpg";
 
     IDTekstury = Scena->GenerujTeksture2D(PlikZMapa.toStdString().c_str(), GL_REPEAT, GL_LINEAR); //GL_CLAMP_TO_BORDER
 

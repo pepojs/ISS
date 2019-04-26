@@ -76,6 +76,29 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
         licznik_pom = licznik;
         licznik_prob = 0;
 
+        if((CzasDanych + 10*Czestotliwosc) > QDateTime::currentSecsSinceEpoch())
+        {
+            cout<<"Aktualny czas: "<<QDateTime::currentSecsSinceEpoch()<<endl;
+            NoweDane = Html->PobierzDaneOISS();
+            if((NoweDane.ZwrocCzasPrzelotu_UTS() != 0 && CzasDanych + 10*Czestotliwosc > NoweDane.ZwrocCzasPrzelotu_UTS()) || (NoweDane.ZwrocCzasPrzelotu_UTS() == 0 ) )
+            {
+                while(licznik < (MagazynDanych.size()-10))
+                {
+                    for(size_t j = 0; j < 10; j++)
+                    {
+                        MagazynDanych[licznik] = TabPom[0];
+                        cout<<"Mag: "<<MagazynDanych[licznik].ZwrocCzasPrzelotu_UTS()<<endl;
+                        licznik += 1;
+                    }
+                }
+
+            }
+
+            cout<<"CzasDanych "<<CzasDanych<<", przekroczyl aktualny czas!!!"<<endl;
+            CzasDanych -= 10*Czestotliwosc;
+            break;
+        }
+
         do
         {
             licznik = licznik_pom;
@@ -102,6 +125,7 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
         }
 
         CzasDanych += 10*Czestotliwosc;
+
         cout<<"Pobrano "<<licznik<<" danych"<<endl;
     }
 
@@ -115,7 +139,12 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
     {
         wykryto0 = 0;
         licznik = licznik_pom;
-        Html->PobierzDaneOISS(&TabPom[0], roznica, CzasDanych, Czestotliwosc);
+        cout<<"licznik "<<licznik<<endl;
+        if(MagazynDanych[licznik-1].ZwrocCzasPrzelotu_UTS() != 0)
+            Html->PobierzDaneOISS(&TabPom[0], roznica, MagazynDanych[licznik-1].ZwrocCzasPrzelotu_UTS(), Czestotliwosc);
+        else
+            Html->PobierzDaneOISS(&TabPom[0], roznica, CzasDanych, Czestotliwosc);
+
         for(size_t j = 0; j < roznica; j++)
         {
             if(TabPom[j].ZwrocCzasPrzelotu_UTS() == 0)

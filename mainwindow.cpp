@@ -89,9 +89,9 @@ MainWindow::MainWindow(QWidget *parent) :
     long int IleDanych = MagazynDanychStacji->WypelniDanymiZPliku(Html, 24*60*59);//+3*60
     cout<<"Ile danych: "<<IleDanych<<endl;
     if(IleDanych >= 0)
-        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60);//+3*60
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, IleDanych, 24*60*60+3*60);//+3*60
     else
-        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, 0, 24*60*60);//+3*60
+        MagazynDanychStacji->WypelniDanymiZSieci(Html, 60, 0, 24*60*60+3*60);//+3*60
 
     MagazynDanychStacji->ZapiszDane(60);
 
@@ -241,8 +241,8 @@ void MainWindow::PobierzNoweDaneISS()
             pom = MagazynDanychStacji->ZwrocGlowe()-1;
         }
 
-        cout<<"Roz czas : "<<(DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())<<endl;
-        cout<<"MD: "<<MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()<<", DS: "<<DaneStacji.ZwrocCzasPrzelotu_UTS()<<endl;
+        //cout<<"Roz czas : "<<(DaneStacji.ZwrocCzasPrzelotu_UTS() - MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS())<<endl;
+        //cout<<"MD: "<<MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS()<<", DS: "<<DaneStacji.ZwrocCzasPrzelotu_UTS()<<endl;
 
         if(MagazynDanychStacji->ZwrocDane(pom).ZwrocCzasPrzelotu_UTS() != 0)
         {
@@ -470,7 +470,7 @@ bool MainWindow::event(QEvent* Zdarzenie)
                     WykresPredkosci->WyczyscWykres();
                     WykresWysokosci->WyczyscWykres();
 
-                    cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
+                    //cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
 
                     if(MagazynOdczytywaneDane != 0)
                     {
@@ -577,7 +577,7 @@ bool MainWindow::event(QEvent* Zdarzenie)
                     WykresWysokosci->WyczyscWykres();
 
 
-                    cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
+                    //cout<<"Glowa: "<<MagazynDanychStacji->ZwrocGlowe()<<endl;
 
                     if(MagazynOdczytywaneDane != 0)
                     {

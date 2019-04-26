@@ -16,6 +16,7 @@ var class_main_window =
     [ "CzasPrzelotuISS", "class_main_window.html#a998215f12de550404186e0c2fee3df1d", null ],
     [ "DaneStacji", "class_main_window.html#ac440918080c33a580586712c390889b7", null ],
     [ "DaneStrony", "class_main_window.html#a94414da919c67836c08352a61a97aa74", null ],
+    [ "fPierwszeDane", "class_main_window.html#a8e378d64503720cd24141b0905f060bf", null ],
     [ "Html", "class_main_window.html#a59939808e13953f537829e81320cc0f0", null ],
     [ "Licznik", "class_main_window.html#a266e5ae746700caf3df6cad8599a8ae5", null ],
     [ "MagazynDanychStacji", "class_main_window.html#adefb5b2f1f424eac51996154ed99f32a", null ],

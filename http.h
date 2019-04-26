@@ -25,6 +25,9 @@
 //Zla kolejnosc pobierania danych, wysyla w odpowiedniej kolejnosci, ale odbiera
 //w rozne, brak uzupelniania danych kiedy gdzies w srodku pojawia sie zera
 
+//pakiet units latex
+//Powtorzyc krotkie opisy tak aby byly pod spodem, poprawic w dokumentacji ogolnej na samym dole powtorzenia, przejzec ja
+//i poprawic, dodac na wykresach kreske tak aby bylo widac ze w tej godzinie jest ta wartosc
 /*!
  * \brief Komunikacja ze stroną internetową
  *
@@ -52,7 +55,7 @@ public:
      * \brief Zwraca zawartość strony w postaci QString.
      * \return Zawartość pobranej strony.
      */
-    QString ZwrocZawartoscStrony();
+    QString ZwrocZawartoscStrony() const;
 
     /*!
      * \brief Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej.

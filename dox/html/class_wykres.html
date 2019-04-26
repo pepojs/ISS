@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ISS: Dokumentacja klasy Wykres</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.15 -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -83,8 +83,8 @@ Diagram dziedziczenia dla Wykres</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres__inherit__graph.png" border="0" usemap="#_wykres_inherit__map" alt="Inheritance graph"/></div>
 <map name="_wykres_inherit__map" id="_wykres_inherit__map">
-<area shape="rect"  title="Pozwala tworzyÄ wykresu wartoÅci zaleÅ¼nej od czasu." alt="" coords="9,80,75,107"/>
-<area shape="rect"  title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node1" title="Pozwala tworzyć wykresu wartości zależnej od czasu." alt="" coords="9,80,75,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,79,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <div class="dynheader">
@@ -92,8 +92,8 @@ Diagram współpracy dla Wykres:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres__coll__graph.png" border="0" usemap="#_wykres_coll__map" alt="Collaboration graph"/></div>
 <map name="_wykres_coll__map" id="_wykres_coll__map">
-<area shape="rect"  title="Pozwala tworzyÄ wykresu wartoÅci zaleÅ¼nej od czasu." alt="" coords="9,80,75,107"/>
-<area shape="rect"  title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node1" title="Pozwala tworzyć wykresu wartości zależnej od czasu." alt="" coords="9,80,75,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,79,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
@@ -197,7 +197,7 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:a5aac3ea396fd217c8a21922813dfe48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>Klasa pozwala na tworzenie wykresów, konfiguracje jego wyglądu, zakresu wyświetlanych danych oraz dodawania nowych punktów. <a class="el" href="class_wykres.html" title="Pozwala tworzyć wykresu wartości zależnej od czasu.">Wykres</a> ma postać linii łączących podane punkty ze sobą. </p>
+<div class="textblock"><p>Klasa pozwala na tworzenie wykresów, konfiguracje jego wyglądu, zakresu wyświetlanych danych oraz dodawania nowych punktów. <a class="el" href="class_wykres.html" title="Pozwala tworzyć wykresu wartości zależnej od czasu. ">Wykres</a> ma postać linii łączących podane punkty ze sobą. </p>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8h_source.html#l00033">33</a> pliku <a class="el" href="wykres_8h_source.html">wykres.h</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
@@ -225,11 +225,11 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00011">11</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    :QWidget (Rodzic)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a> = <span class="keyword">new</span> QLineSeries;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a> = <span class="keyword">new</span> QChart;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;addSeries(<a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;legend()-&gt;hide();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//Ustawienie koloru wykresu</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QPen KolorWykres(QRgb(0xff0000));</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    KolorWykres.setWidth(5);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;setPen(KolorWykres);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QFont CzcionkaWykres;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    CzcionkaWykres.setPixelSize(18);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitleFont(CzcionkaWykres);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QBrush KolorTla(QRgb(0x0000ff));</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setBackgroundBrush(KolorTla);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setPlotAreaBackgroundVisible(<span class="keyword">false</span>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a> = <span class="keyword">new</span> QDateTimeAxis;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a> = <span class="keyword">new</span> QValueAxis;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QFont CzcionkaOsi;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    CzcionkaOsi.setPixelSize(12);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setLabelsFont(CzcionkaOsi);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLabelsFont(CzcionkaOsi);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QPen KolorOsie(QRgb(0xff0000));</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    KolorOsie.setWidth(2);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setLinePen(KolorOsie);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLinePen(KolorOsie);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setGridLineVisible(<span class="keyword">false</span>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setGridLineVisible(<span class="keyword">false</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setRange(0,30);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setTickCount(5);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setTickCount(3);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setFormat(<span class="stringliteral">&quot;hh:mm:ss&quot;</span>);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setTitleText(<span class="stringliteral">&quot;Dane&quot;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;addAxis(<a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>, Qt::AlignBottom);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;addAxis(<a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>, Qt::AlignLeft);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;attachAxis(<a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;attachAxis(<a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_wykres.html#aae2c20065f1d1d821cce7bd81d1c310b">WidokWykresu</a> = <span class="keyword">new</span> QChartView(<a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_wykres.html#aae2c20065f1d1d821cce7bd81d1c310b">WidokWykresu</a>-&gt;setRenderHint(QPainter::Antialiasing);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_wykres.html#a5aac3ea396fd217c8a21922813dfe48d">WarstwaGlowna</a> = <span class="keyword">new</span> QGridLayout;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_wykres.html#a5aac3ea396fd217c8a21922813dfe48d">WarstwaGlowna</a>-&gt;addWidget(<a class="code" href="class_wykres.html#aae2c20065f1d1d821cce7bd81d1c310b">WidokWykresu</a>, 0 ,0);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    setLayout(<a class="code" href="class_wykres.html#a5aac3ea396fd217c8a21922813dfe48d">WarstwaGlowna</a>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div><div class="ttc" id="class_wykres_html_a5d5f0178a28b9bca1680eb3968184b35"><div class="ttname"><a href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">Wykres::OsX</a></div><div class="ttdeci">QDateTimeAxis * OsX</div><div class="ttdoc">Wskaźnik na obiekt kalsy QDateTimeAxis pozwalający stworzyć oraz skonfigurować oś X jak oś pokazująca...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00201">wykres.h:201</a></div></div>
-<div class="ttc" id="class_wykres_html_aae2c20065f1d1d821cce7bd81d1c310b"><div class="ttname"><a href="class_wykres.html#aae2c20065f1d1d821cce7bd81d1c310b">Wykres::WidokWykresu</a></div><div class="ttdeci">QChartView * WidokWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChartView pozwalający na wyświetlenie wykresu.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00186">wykres.h:186</a></div></div>
-<div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
-<div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
-<div class="ttc" id="class_wykres_html_a5aac3ea396fd217c8a21922813dfe48d"><div class="ttname"><a href="class_wykres.html#a5aac3ea396fd217c8a21922813dfe48d">Wykres::WarstwaGlowna</a></div><div class="ttdeci">QGridLayout * WarstwaGlowna</div><div class="ttdoc">Wskaźnik na warstwę, na której znajduje się wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00211">wykres.h:211</a></div></div>
-<div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="ttc" id="class_wykres_html_aae2c20065f1d1d821cce7bd81d1c310b"><div class="ttname"><a href="class_wykres.html#aae2c20065f1d1d821cce7bd81d1c310b">Wykres::WidokWykresu</a></div><div class="ttdeci">QChartView * WidokWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChartView pozwalający na wyświetlenie wykresu. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00186">wykres.h:186</a></div></div>
+<div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
+<div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
+<div class="ttc" id="class_wykres_html_a5aac3ea396fd217c8a21922813dfe48d"><div class="ttname"><a href="class_wykres.html#a5aac3ea396fd217c8a21922813dfe48d">Wykres::WarstwaGlowna</a></div><div class="ttdeci">QGridLayout * WarstwaGlowna</div><div class="ttdoc">Wskaźnik na warstwę, na której znajduje się wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00211">wykres.h:211</a></div></div>
+<div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -268,16 +268,16 @@ Atrybuty prywatne</h2></td></tr>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00201">201</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    QDateTime Czas;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    Czas.setTime_t(X);</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;append(Czas.toMSecsSinceEpoch(), Y);</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    QDateTime Czas;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    Czas.setTime_t(X);</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;append(Czas.toMSecsSinceEpoch(), Y);</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a35993cff1702b5a3c9ed68c77a301e13_icgraph.png" border="0" usemap="#class_wykres_a35993cff1702b5a3c9ed68c77a301e13_icgraph" alt=""/></div>
 <map name="class_wykres_a35993cff1702b5a3c9ed68c77a301e13_icgraph" id="class_wykres_a35993cff1702b5a3c9ed68c77a301e13_icgraph">
-<area shape="rect"  title="Dodaje nowy punkt do wykresu." alt="" coords="511,31,717,57"/>
-<area shape="rect"  href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
-<area shape="rect"  href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Dodaje nowy punkt do wykresu." alt="" coords="511,31,717,57"/>
+<area shape="rect" id="node2" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
+<area shape="rect" id="node4" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
+<area shape="rect" id="node3" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -315,7 +315,7 @@ Oto graf wywoływań tej funkcji:</div>
 <dl class="section return"><dt>Zwraca</dt><dd>Jeżeli zdarzenie zostanie rozpoznane zwraca true, inaczej zwraca false. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00074">74</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QMouseEvent *Mysz;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">switch</span>(Zdarzenie-&gt;type())</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">case</span> QEvent::MouseButtonPress:</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            Mysz = static_cast&lt;QMouseEvent* &gt;(Zdarzenie);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span>(Mysz-&gt;button() == Qt::LeftButton)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                emit <a class="code" href="class_wykres.html#ace82fc336cdc3fd7cb9df480e49e3ef4">Kliknieto</a>();</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">default</span>:</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> QWidget::event(Zdarzenie);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div><div class="ttc" id="class_wykres_html_ace82fc336cdc3fd7cb9df480e49e3ef4"><div class="ttname"><a href="class_wykres.html#ace82fc336cdc3fd7cb9df480e49e3ef4">Wykres::Kliknieto</a></div><div class="ttdeci">void Kliknieto()</div><div class="ttdoc">Sygnał emitowany po naciśnięciu myszką na wykres.</div></div>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QMouseEvent *Mysz;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">switch</span>(Zdarzenie-&gt;type())</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">case</span> QEvent::MouseButtonPress:</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            Mysz = <span class="keyword">static_cast&lt;</span>QMouseEvent* <span class="keyword">&gt;</span>(Zdarzenie);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span>(Mysz-&gt;button() == Qt::LeftButton)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                emit <a class="code" href="class_wykres.html#ace82fc336cdc3fd7cb9df480e49e3ef4">Kliknieto</a>();</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">default</span>:</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> QWidget::event(Zdarzenie);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div><div class="ttc" id="class_wykres_html_ace82fc336cdc3fd7cb9df480e49e3ef4"><div class="ttname"><a href="class_wykres.html#ace82fc336cdc3fd7cb9df480e49e3ef4">Wykres::Kliknieto</a></div><div class="ttdeci">void Kliknieto()</div><div class="ttdoc">Sygnał emitowany po naciśnięciu myszką na wykres. </div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -346,8 +346,8 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_ace82fc336cdc3fd7cb9df480e49e3ef4_icgraph.png" border="0" usemap="#class_wykres_ace82fc336cdc3fd7cb9df480e49e3ef4_icgraph" alt=""/></div>
 <map name="class_wykres_ace82fc336cdc3fd7cb9df480e49e3ef4_icgraph" id="class_wykres_ace82fc336cdc3fd7cb9df480e49e3ef4_icgraph">
-<area shape="rect"  title="SygnaÅ emitowany po naciÅniÄciu myszkÄ na wykres." alt="" coords="159,5,284,32"/>
-<area shape="rect"  href="class_wykres.html#a050f1ca4319eb47d30f6a7beddfacfa3" title="Metoda obsÅugujÄca zdarzenia zwiÄzane z kliknieciem myszkÄ na wykres." alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node1" title="Sygnał emitowany po naciśnięciu myszką na wykres." alt="" coords="159,5,284,32"/>
+<area shape="rect" id="node2" href="class_wykres.html#a050f1ca4319eb47d30f6a7beddfacfa3" title="Metoda obsługująca zdarzenia związane z kliknieciem myszką na wykres." alt="" coords="5,5,111,32"/>
 </map>
 </div>
 
@@ -376,7 +376,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00110">110</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitle(NowyTytul);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitle(NowyTytul);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -420,10 +420,10 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_acac0bff14f57041b6850548de13d9156_icgraph.png" border="0" usemap="#class_wykres_acac0bff14f57041b6850548de13d9156_icgraph" alt=""/></div>
 <map name="class_wykres_acac0bff14f57041b6850548de13d9156_icgraph" id="class_wykres_acac0bff14f57041b6850548de13d9156_icgraph">
-<area shape="rect"  title="Ustawienie minimalnej oraz maksymalnej wartoÅci osi X." alt="" coords="511,31,688,57"/>
-<area shape="rect"  href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
-<area shape="rect"  href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Ustawienie minimalnej oraz maksymalnej wartości osi X." alt="" coords="511,31,688,57"/>
+<area shape="rect" id="node2" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
+<area shape="rect" id="node4" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
+<area shape="rect" id="node3" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -463,16 +463,16 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00136">136</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setRange(Min,Max);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setRange(Min,Max);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_ac5c6903fd7fea901b1244f29b20e7463_icgraph.png" border="0" usemap="#class_wykres_ac5c6903fd7fea901b1244f29b20e7463_icgraph" alt=""/></div>
 <map name="class_wykres_ac5c6903fd7fea901b1244f29b20e7463_icgraph" id="class_wykres_ac5c6903fd7fea901b1244f29b20e7463_icgraph">
-<area shape="rect"  title="Ustawienie minimalnej oraz maksymalnej wartoÅci osi Y." alt="" coords="511,31,689,57"/>
-<area shape="rect"  href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
-<area shape="rect"  href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Ustawienie minimalnej oraz maksymalnej wartości osi Y." alt="" coords="511,31,689,57"/>
+<area shape="rect" id="node2" href="class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,5,463,32"/>
+<area shape="rect" id="node4" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="280,56,415,83"/>
+<area shape="rect" id="node3" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -502,7 +502,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00213">213</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">OsX</a>-&gt;setGridLineVisible(Wlacz);</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setGridLineVisible(Wlacz);</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div><div class="ttc" id="class_wykres_html_a5d5f0178a28b9bca1680eb3968184b35"><div class="ttname"><a href="class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35">Wykres::OsX</a></div><div class="ttdeci">QDateTimeAxis * OsX</div><div class="ttdoc">Wskaźnik na obiekt kalsy QDateTimeAxis pozwalający stworzyć oraz skonfigurować oś X jak oś pokazująca...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00201">wykres.h:201</a></div></div>
-<div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -522,16 +522,16 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00208">208</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;clear();</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
+<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;clear();</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_afa5aa4492a3d8ecc70800cafce977604_icgraph.png" border="0" usemap="#class_wykres_afa5aa4492a3d8ecc70800cafce977604_icgraph" alt=""/></div>
 <map name="class_wykres_afa5aa4492a3d8ecc70800cafce977604_icgraph" id="class_wykres_afa5aa4492a3d8ecc70800cafce977604_icgraph">
-<area shape="rect"  title="Usuwa wszystkie punkty z wykresu." alt="" coords="460,31,635,57"/>
-<area shape="rect"  href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title=" " alt="" coords="232,5,412,32"/>
-<area shape="rect"  href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="255,56,389,83"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Usuwa wszystkie punkty z wykresu." alt="" coords="460,31,635,57"/>
+<area shape="rect" id="node2" href="class_main_window.html#ab71f2118fc1aef6b925c2213b8775c58" title=" " alt="" coords="232,5,412,32"/>
+<area shape="rect" id="node4" href="class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="255,56,389,83"/>
+<area shape="rect" id="node3" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -587,7 +587,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00172">172</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    QPen GruboscOsi;</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    GruboscOsi.setWidth(NowyRozmiar);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLinePen(GruboscOsi);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    QPen GruboscOsi;</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    GruboscOsi.setWidth(NowyRozmiar);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLinePen(GruboscOsi);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -641,14 +641,14 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00146">146</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setTickCount(NowaIlosc);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setTickCount(NowaIlosc);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a54f5ffc03406b89a172f54e0e25b3e7c_icgraph.png" border="0" usemap="#class_wykres_a54f5ffc03406b89a172f54e0e25b3e7c_icgraph" alt=""/></div>
 <map name="class_wykres_a54f5ffc03406b89a172f54e0e25b3e7c_icgraph" id="class_wykres_a54f5ffc03406b89a172f54e0e25b3e7c_icgraph">
-<area shape="rect"  title="Ustawia liczbÄ punktÃ³w na podziaÅce osi Y." alt="" coords="232,5,455,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Ustawia liczbę punktów na podziałce osi Y." alt="" coords="232,5,455,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -683,8 +683,8 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a06cb92ba143c3881c62687596191a9ef_icgraph.png" border="0" usemap="#class_wykres_a06cb92ba143c3881c62687596191a9ef_icgraph" alt=""/></div>
 <map name="class_wykres_a06cb92ba143c3881c62687596191a9ef_icgraph" id="class_wykres_a06cb92ba143c3881c62687596191a9ef_icgraph">
-<area shape="rect"  title="Zmienia kolor osi X." alt="" coords="232,5,399,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia kolor osi X." alt="" coords="232,5,399,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -713,14 +713,14 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00185">185</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLinePenColor(NowyKolor);</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLabelsColor(NowyKolor);</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLinePenColor(NowyKolor);</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLabelsColor(NowyKolor);</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a5185fd47efb86a1955254fd70815d03d_icgraph.png" border="0" usemap="#class_wykres_a5185fd47efb86a1955254fd70815d03d_icgraph" alt=""/></div>
 <map name="class_wykres_a5185fd47efb86a1955254fd70815d03d_icgraph" id="class_wykres_a5185fd47efb86a1955254fd70815d03d_icgraph">
-<area shape="rect"  title="Zmienia kolor osi X." alt="" coords="232,5,401,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia kolor osi X." alt="" coords="232,5,401,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -749,14 +749,14 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00104">104</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    QBrush KolorTla(NowyKolor);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setBackgroundBrush(KolorTla);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    QBrush KolorTla(NowyKolor);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setBackgroundBrush(KolorTla);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_ac28a21951948e595cd013374bba19801_icgraph.png" border="0" usemap="#class_wykres_ac28a21951948e595cd013374bba19801_icgraph" alt=""/></div>
 <map name="class_wykres_ac28a21951948e595cd013374bba19801_icgraph" id="class_wykres_ac28a21951948e595cd013374bba19801_icgraph">
-<area shape="rect"  title="Zmienia kolor tÅa wykresu." alt="" coords="232,5,389,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia kolor tła wykresu." alt="" coords="232,5,389,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -785,7 +785,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00115">115</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    QBrush KolorTytulu(NowyKolor);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitleBrush(KolorTytulu);</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    QBrush KolorTytulu(NowyKolor);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitleBrush(KolorTytulu);</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -818,8 +818,8 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_ae6aa9a42dac5db9c99a8a3ebe4503a62_icgraph.png" border="0" usemap="#class_wykres_ae6aa9a42dac5db9c99a8a3ebe4503a62_icgraph" alt=""/></div>
 <map name="class_wykres_ae6aa9a42dac5db9c99a8a3ebe4503a62_icgraph" id="class_wykres_ae6aa9a42dac5db9c99a8a3ebe4503a62_icgraph">
-<area shape="rect"  title="Zmienia podpis osi X." alt="" coords="232,5,409,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia podpis osi X." alt="" coords="232,5,409,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -848,14 +848,14 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00196">196</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setTitleText(NowyPodpis);</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setTitleText(NowyPodpis);</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a12802bc14b95408c7605367db6476f9b_icgraph.png" border="0" usemap="#class_wykres_a12802bc14b95408c7605367db6476f9b_icgraph" alt=""/></div>
 <map name="class_wykres_a12802bc14b95408c7605367db6476f9b_icgraph" id="class_wykres_a12802bc14b95408c7605367db6476f9b_icgraph">
-<area shape="rect"  title="Zmienia podpis osi Y." alt="" coords="232,5,411,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia podpis osi Y." alt="" coords="232,5,411,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -911,7 +911,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00158">158</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    QFont CzcionkaOsi;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    CzcionkaOsi.setPixelSize(NowyRozmiar);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLabelsFont(CzcionkaOsi);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
+<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    QFont CzcionkaOsi;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    CzcionkaOsi.setPixelSize(NowyRozmiar);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">OsY</a>-&gt;setLabelsFont(CzcionkaOsi);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div><div class="ttc" id="class_wykres_html_a6675414734c0331319ab99527c3a3f0e"><div class="ttname"><a href="class_wykres.html#a6675414734c0331319ab99527c3a3f0e">Wykres::OsY</a></div><div class="ttdeci">QValueAxis * OsY</div><div class="ttdoc">Wskaźnik na obiekt kalsy QValueAxis pozwalający stworzyć oraz skonfigurować oś Y. ...</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00206">wykres.h:206</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -938,7 +938,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00121">121</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    QFont CzcionkaTytulu;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    CzcionkaTytulu.setPixelSize(NowyRozmiar);</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitleFont(CzcionkaTytulu);</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    QFont CzcionkaTytulu;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    CzcionkaTytulu.setPixelSize(NowyRozmiar);</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">PoleWykresu</a>-&gt;setTitleFont(CzcionkaTytulu);</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div><div class="ttc" id="class_wykres_html_a1a6bfde4a9706012e8da2c99d306c3e3"><div class="ttname"><a href="class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3">Wykres::PoleWykresu</a></div><div class="ttdeci">QChart * PoleWykresu</div><div class="ttdoc">Wskaźnik na obiekt klasy QChart pozwalający tworzyć wykres. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00191">wykres.h:191</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -976,14 +976,14 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="wykres_8cpp_source.html#l00097">97</a> pliku <a class="el" href="wykres_8cpp_source.html">wykres.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    QPen KolorWykresu(NowyKolor);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    KolorWykresu.setWidth(NowyRozmiar);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;setPen(KolorWykresu);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych.</div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    QPen KolorWykresu(NowyKolor);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    KolorWykresu.setWidth(NowyRozmiar);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">LiniaWykresu</a>-&gt;setPen(KolorWykresu);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div><div class="ttc" id="class_wykres_html_a248b43fdac3c8a38f99205ff49c8339e"><div class="ttname"><a href="class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e">Wykres::LiniaWykresu</a></div><div class="ttdeci">QLineSeries * LiniaWykresu</div><div class="ttdoc">Wskaxnik na obiekt klasy QLineSeries pozwalający tworzyć liniową serie danych. </div><div class="ttdef"><b>Definition:</b> <a href="wykres_8h_source.html#l00196">wykres.h:196</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wykres_a5613ce71a32acd010f95f2a923bc5614_icgraph.png" border="0" usemap="#class_wykres_a5613ce71a32acd010f95f2a923bc5614_icgraph" alt=""/></div>
 <map name="class_wykres_a5613ce71a32acd010f95f2a923bc5614_icgraph" id="class_wykres_a5613ce71a32acd010f95f2a923bc5614_icgraph">
-<area shape="rect"  title="Zmienia kolor oraz gruboÅÄ rysowanej linii wykresu." alt="" coords="232,5,387,32"/>
-<area shape="rect"  href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" title="Zmienia kolor oraz grubość rysowanej linii wykresu." alt="" coords="232,5,387,32"/>
+<area shape="rect" id="node2" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,184,32"/>
 </map>
 </div>
 
@@ -1146,7 +1146,7 @@ Oto graf wywoływań tej funkcji:</div>
     <li class="navelem"><a class="el" href="class_wykres.html">Wykres</a></li>
     <li class="footer">Wygenerowano przez
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>
 </div>
 </body>

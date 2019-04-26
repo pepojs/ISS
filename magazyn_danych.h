@@ -84,21 +84,21 @@ public:
      * \brief Zwraca rozmiar wektora z danymi.
      * \return Rozmiar wektora.
      */
-    size_t ZwrocIloscDanych(){return MagazynDanych.size();}
+    size_t ZwrocIloscDanych() const {return MagazynDanych.size();}
 
     /*!
      * \brief Zwraca dane z wektora znajdujące się na podanej pozycji.
      * \param[in] Ktore - pozacja w wektorze, na której znajdują się interesujące nas dane.
      * \return Wybrane dane na temat stacji.
      */
-    ISS_Dane ZwrocDane(size_t Ktore){return MagazynDanych[Ktore];}
+    ISS_Dane ZwrocDane(size_t Ktore) const {return MagazynDanych[Ktore];}
 
     /*!
      * \brief Zwraca pozycję głowy.
      * Głowa to miejsce gdzie zostaną zapisane kolejne dane, które zostaną przekazane do wektora.
      * \return Wartość Głowy.
      */
-    uint32_t ZwrocGlowe(){return Glowa;}
+    uint32_t ZwrocGlowe() const {return Glowa;}
 
     /*!
      * \brief Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa.

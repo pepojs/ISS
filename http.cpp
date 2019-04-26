@@ -28,7 +28,7 @@ void Http::PobierzStrone(const QUrl &Url)
 
 }
 
-QString Http::ZwrocZawartoscStrony()
+QString Http::ZwrocZawartoscStrony() const
 {
     return htmlStrony;
 }
