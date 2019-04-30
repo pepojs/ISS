@@ -31,11 +31,15 @@ class Magazyn_danych
 {
     /*!
      * \brief Wektor pozwalający przechowywać dane na temat stacji z różnych chwil czasu.
+	 *
+	 * Wektor pozwalający przechowywać dane na temat stacji z różnych chwil czasu.
      */
     vector<ISS_Dane> MagazynDanych;
 
     /*!
      * \brief Wskazuje, który element zostanie następny podmieniony przy dodaniu nowych danych.
+	 *
+	 * Wskazuje, który element zostanie następny podmieniony przy dodaniu nowych danych.
      */
     uint32_t Glowa;
 
@@ -43,22 +47,32 @@ public:
 
     /*!
      * \brief Zmienia rozmiar wektora na 5400 elementów oraz ustawia głowę na 0.
+	 *
+	 * Zmienia rozmiar wektora na 5400 elementów oraz ustawia głowę na 0.
      */
     Magazyn_danych();
 
     /*!
      * \brief Zmienia rozmiar wektora na podaną ilość elementów oraz ustawia głowę na 0.
+	 *
+	 * Zmienia rozmiar wektora na podaną ilość elementów oraz ustawia głowę na 0.
+	 *
      * \param[in] IloscDanych - ilość elementów jaką chcemy przechowywać w wektorze.
      */
     Magazyn_danych(size_t IloscDanych);
 
     /*!
      * \brief Zapisuje dane z ustawioną częstotliwością na 60 sekund.
+	 *
+	 * Zapisuje dane z ustawioną częstotliwością na 60 sekund.
      */
     ~Magazyn_danych();
 
     /*!
      * \brief Wypełnia brakującą część wektora danych, danymi pobranymi z sieci.
+	 *
+	 * Wypełnia brakującą część wektora danych, danymi pobranymi z sieci.
+	 *
      * \param[in] Html - wskaźnik na klasę Http potrzebny do pobrania danych.
      * \param[in] Czestotliwosc - odstęp czasu pomiedzy kolejnymi pobieranymi danami, wyrażony w sekundach.
      * \param[in] IloscDanychWypelnionych - ilość danych znajdujących sie już w wektorze z danymi.
@@ -67,27 +81,39 @@ public:
     void WypelniDanymiZSieci(Http* Html, uint32_t Czestotliwosc, uint32_t IloscDanychWypelnionych, uint32_t CzasDoTylu_S);
 
     /*!
-     * \brief Metoda pozwala zapisać obecny stan wektora z danymi do pliku o nazwie DaneStacji.txt
+     * \brief Metoda pozwala zapisać obecny stan wektora z danymi do pliku o nazwie DaneStacji.txt.
+	 *
+	 *Metoda pozwala zapisać obecny stan wektora z danymi do pliku o nazwie DaneStacji.txt
+	 *
      * \param[in] Czestotliwosc - odstęp czasu pomiedzy kolejnymi pobieranymi danami, wyrażony w sekundach.
      */
     void ZapiszDane(uint32_t Czestotliwosc);
 
     /*!
-     * \brief WypelniDanymiZPliku
+     * \brief Metoda pozwala wypełnić wektor danych, danymi zapisanymi w pliku.
+	 *
+	 * Metoda pozwala wypełnić wektor danych, danymi zapisanymi w pliku.
+	 *
      * \param[in] Html - wskaźnik na klasę Http potrzebny do pobrania danych.
      * \param[in] CzasDoTylu_S - czas w sekundach jaki zostanie odjęty od obecnego czasu. Od ich różnicy zacznie się wypełnianie wektora.
-     * \return Zwraca ilość wczytanych rekordów danych. Jeżeli zwróci -1 to znaczy, że pliku nie udało się otorzyć do odczytu.
+     * \return Ilość wczytanych rekordów danych. Jeżeli zwróci -1 to znaczy, że pliku nie udało się otorzyć do odczytu.
      */
     long int WypelniDanymiZPliku(Http* Html, uint32_t CzasDoTylu_S);
 
     /*!
      * \brief Zwraca rozmiar wektora z danymi.
+	 *
+	 * Zwraca rozmiar wektora z danymi.
+	 *
      * \return Rozmiar wektora.
      */
     size_t ZwrocIloscDanych() const {return MagazynDanych.size();}
 
     /*!
      * \brief Zwraca dane z wektora znajdujące się na podanej pozycji.
+	 *
+	 * Zwraca dane z wektora znajdujące się na podanej pozycji.
+	 *
      * \param[in] Ktore - pozacja w wektorze, na której znajdują się interesujące nas dane.
      * \return Wybrane dane na temat stacji.
      */
@@ -95,13 +121,19 @@ public:
 
     /*!
      * \brief Zwraca pozycję głowy.
+	 *
+	 * Zwraca pozycję głowy.
      * Głowa to miejsce gdzie zostaną zapisane kolejne dane, które zostaną przekazane do wektora.
-     * \return Wartość Głowy.
+     *
+	 * \return Wartość Głowy.
      */
     uint32_t ZwrocGlowe() const {return Glowa;}
 
     /*!
      * \brief Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa.
+	 *
+	 * Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa.
+	 *
      * \param[in] NoweDane - dane, które należy zapisać w wektorze.
      */
     void DodajNoweDane(ISS_Dane NoweDane);

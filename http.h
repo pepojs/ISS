@@ -47,29 +47,40 @@ public:
 
     /*!
      * \brief Pobiera zawartość strony internetowej.
+	 *
+	 * Pobiera zawartość strony internetowej.
+	 *
      * \param[in] Url - adres strony internetowej do pobrania.
      */
     void PobierzStrone(const QUrl &Url);
 
     /*!
      * \brief Zwraca zawartość strony w postaci QString.
+	 *
+	 * Zwraca zawartość strony w postaci QString.
+	 *
      * \return Zawartość pobranej strony.
      */
     QString ZwrocZawartoscStrony() const;
 
     /*!
      * \brief Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej.
+	 *
+	 * Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej.
+	 *
      * \return Aktualne dane na temat stacji kosmicznej.
      */
     ISS_Dane PobierzDaneOISS();
 
     /*!
      * \brief Pobiera dane o Międzynarodowej Stacji Kosmicznej.
-     * Metoda pozwala pobrać do 10 rekordów na temat pozycji stacji kosmicznej od podanego czasu poczatkowego
+     *
+	 * Metoda pozwala pobrać do 10 rekordów na temat pozycji stacji kosmicznej od podanego czasu poczatkowego
      *  co podaną częstotliwość. Dane zostaną zapisane do tablicy.
-     * \param[out] TablicaDanych - wskaźnik na tablice, do której mają być zapisane pobrane dane.
+	 *
+	 * \param[out] TablicaDanych - wskaźnik na tablice, do której mają być zapisane pobrane dane.
      * \param[in] IloscDanych - ilość danych do pobranie. (Maksymalnie 10)
-     * \param[in] PoczatekCzasu - wartość czas umieszczonego w danych stacji, od któreg rozpocznie się pobieranie danych, podany w formacie unixowym w sekundach.
+     * \param[in] PoczatekCzasu - wartość czas umieszczonego w danych stacji, od któreg rozpocznie się pobieranie danych, podany w formacie uniksowym w sekundach.
      * \param[in] Czestotliwoasc - odstęp czasu pomiedzy kolejnymi pobieranymi danami, wyrażony w sekundach.
      */
     void PobierzDaneOISS(ISS_Dane* TablicaDanych, int IloscDanych, uint PoczatekCzasu, uint Czestotliwoasc);
@@ -77,12 +88,18 @@ public:
 signals:
     /*!
      * \brief Sygnał wysyłany po pobraniu odpowiedzi ze strony internetowej.
+	 *
+	 * Sygnał wysyłany po pobraniu odpowiedzi ze strony internetowej.
+	 *
      */
     void pobrano();
 
 private slots:
     /*!
      * \brief Slot wywoływany po pobraniu strony aby zapisać ją do pola htmlStrony.
+	 *
+	 * Slot wywoływany po pobraniu strony aby zapisać ją do pola htmlStrony.
+	 *
      * \param[in] Odpowiedz - ze strony internetowej.
      */
     void PobranoStrone(QNetworkReply* Odpowiedz);
@@ -91,22 +108,34 @@ private:
 
     /*!
      * \brief Obiekt pozwalający na komunikacje ze stroną internetową.
+	 *
+	 * Obiekt pozwalający na komunikacje ze stroną internetową.
+	 *
      */
     QNetworkAccessManager http;
 
     /*!
      * \brief String przechowujący treść pobranej strony.
+	 *
+	 * String przechowujący treść pobranej strony.
+	 *
      */
     QString htmlStrony;
 
     /*!
      * \brief Metoda prywatna służąca do parserowania danych ze strony internetowej.
-     * \return Zwraca dane na temat stacji uzyskane ze strony internetowej.
+	 * 
+	 * Metoda prywatna służąca do parserowania danych ze strony internetowej.
+	 *
+     * \return Dane na temat stacji uzyskane ze strony internetowej.
      */
     ISS_Dane ParserDanychISS();
 
     /*!
      * \brief Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10)
+	 *
+	 * Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10)
+	 *
      * \param[out] TablicaDanych - tablica, w której zostaną zapisane uzyskane dane o stacji.
      * \param[in] IloscDanych - ilość danych do praserowania.
      */

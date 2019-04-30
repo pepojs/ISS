@@ -1,5 +1,5 @@
 <map id="Http::PobierzDaneOISS" name="Http::PobierzDaneOISS">
-<area shape="rect" id="node1" title="Pobiera dane o Międzynarodowej Stacji Kosmicznej. Metoda pozwala pobrać do 10 rekordów na temat pozyc..." alt="" coords="5,111,164,138"/>
+<area shape="rect" id="node1" title="Pobiera dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="5,111,164,138"/>
 <area shape="rect" id="node2" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej." alt="" coords="239,86,375,113"/>
 <area shape="rect" id="node3" href="$class_http.html#ab605a2a0dc9727bb1ee970d03fb8e6c6" title="Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10)" alt="" coords="212,137,403,163"/>
 <area shape="rect" id="node4" href="$class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne." alt="" coords="475,5,660,47"/>

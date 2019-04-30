@@ -1,4 +1,4 @@
 <map id="Http::PraserWieluDanychISS" name="Http::PraserWieluDanychISS">
 <area shape="rect" id="node1" title="Metoda prywatna służąca do parserowania większej ilości danych za jednym wywołaniem (do 10)" alt="" coords="212,5,403,32"/>
-<area shape="rect" id="node2" href="$class_http.html#a4c02cf3160c83692c70145922f5e8cd1" title="Pobiera dane o Międzynarodowej Stacji Kosmicznej. Metoda pozwala pobrać do 10 rekordów na temat pozyc..." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node2" href="$class_http.html#a4c02cf3160c83692c70145922f5e8cd1" title="Pobiera dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="5,5,164,32"/>
 </map>

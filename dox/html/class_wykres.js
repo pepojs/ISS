@@ -1,6 +1,7 @@
 var class_wykres =
 [
     [ "Wykres", "class_wykres.html#a8eea20295cb368384105b0343d20f086", null ],
+    [ "AktualnyPunktLinia", "class_wykres.html#a1e3b190aa332170e0d5713e1cbb3bcf4", null ],
     [ "DodajDaneDoWykresu", "class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13", null ],
     [ "event", "class_wykres.html#a050f1ca4319eb47d30f6a7beddfacfa3", null ],
     [ "Kliknieto", "class_wykres.html#ace82fc336cdc3fd7cb9df480e49e3ef4", null ],
@@ -24,6 +25,7 @@ var class_wykres =
     [ "ZmienRozmiarTytulu", "class_wykres.html#a31257188f9853514a2c2150edccb3a21", null ],
     [ "ZmienWykres", "class_wykres.html#a5613ce71a32acd010f95f2a923bc5614", null ],
     [ "LiniaWykresu", "class_wykres.html#a248b43fdac3c8a38f99205ff49c8339e", null ],
+    [ "ObecnyPunkt", "class_wykres.html#a62ff830018c121b0fe16da40c14f2e5d", null ],
     [ "OsX", "class_wykres.html#a5d5f0178a28b9bca1680eb3968184b35", null ],
     [ "OsY", "class_wykres.html#a6675414734c0331319ab99527c3a3f0e", null ],
     [ "PoleWykresu", "class_wykres.html#a1a6bfde4a9706012e8da2c99d306c3e3", null ],

@@ -65,75 +65,119 @@ class ISS_Dane
      * Dane przechowywane są w stopniach.
      */
     double DlugoscGeo;
-
+	
+	/*!
+	 * \brief Przeciążenie operatora odczytu ze strumienia.
+	 *
+	 * Przeciążenie operatora odczytu ze strumienia.
+	 */
     friend std::istream & operator >> (std::istream& We, ISS_Dane& D);
+	
+	/*!
+	 * \brief Przeciążenie operatora zapisu do strumienia.
+	 *
+	 * Przeciążenie operatora zapisu do strumienia.
+	 */
     friend std::ostream & operator << (std::ostream& Wy, ISS_Dane& D);
 
 public:
 
     /*!
-     * \brief Inicjalizuje wszystkie pola z wartoscia równą 0
+     * \brief Inicjalizuje wszystkie pola z wartoscia równą 0.
+	 *
+	 * Inicjalizuje wszystkie pola z wartoscia równą 0.
+	 *
      */
     ISS_Dane():SzerokoscGeo(0), DlugoscGeo(0),Predkosc(0), Wysokosc(0), CzasPrzelotu(0)
     {;}
 
 
     /*!
-     * \brief Wartość szerokości geograficznej w stopniach
+     * \brief Wartość szerokości geograficznej w stopniach.
+	 *
+	 * Wartość szerokości geograficznej w stopniach.
+	 *
      * \return Zwraca wartość szerokości geograficznej w stopniach.
      */
     double ZwrocSzerokoscGeo_Stopnie() const {return SzerokoscGeo;}
 
     /*!
      * \brief Ustawia nową wartość szerokości geograficzne.
+	 *
+	 * Ustawia nową wartość szerokości geograficzne.
+	 *
      * \param[in] NowaSzerokosc - wartość jaka ma zostać ustawiona dla pola SzerokoscGeo, wyrażona w stopniach.
      */
     void ZmienSzerokoscGeo_Stopnie(double NowaSzerokosc) {SzerokoscGeo = NowaSzerokosc;}
 
     /*!
-     * \brief Wartość dlugości geograficznej w stopniach
+     * \brief Wartość dlugości geograficznej w stopniach.
+	 *
+	 * Wartość dlugości geograficznej w stopniach.
+	 *
      * \return Zwraca wartość dlugości geograficznej w stopniach.
      */
     double ZwrocDlugoscGeo_Stopnie() const {return DlugoscGeo;}
 
     /*!
      * \brief Ustawia nową wartość długości geograficzne.
+	 *
+	 * Ustawia nową wartość długości geograficzne.
+	 *
      * \param[in] NowaDlugosc - wartość jaka ma zostać ustawiona dla pola DlugoscGeo, wyrażona w stopniach.
      */
     void ZmienDlugoscGeo_Stopnie(double NowaDlugosc) {DlugoscGeo = NowaDlugosc;}
 
     /*!
      * \brief Wartość czasu, dla których są zapisane dane.
-     * \return Zwraca wartość czasu, dla których są zapisane dane, wyrażone jako czas unixowy w sekundach.
+	 *
+	 * Wartość czasu, dla których są zapisane dane.
+	 *
+     * \return Zwraca wartość czasu, dla których są zapisane dane, wyrażone jako czas uniksowy w sekundach.
      */
     uint32_t ZwrocCzasPrzelotu_UTS() const {return CzasPrzelotu;}
 
     /*!
      * \brief Ustawia nową wartość czasu.
-     * \param[in] NowyCzas - wartość jaka ma zostać ustawiona dla pola CzasPrzelotu, wyrażone jako czas unixowy w sekundach.
+	 *
+	 * Ustawia nową wartość czasu.
+	 *
+     * \param[in] NowyCzas - wartość jaka ma zostać ustawiona dla pola CzasPrzelotu, wyrażone jako czas uniksowy w sekundach.
      */
     void ZmienCzasPrzelotu_UTS(uint32_t NowyCzas) {CzasPrzelotu = NowyCzas;}
 
     /*!
      * \brief Wartość prędkości.
+	 *
+	 * Wartość prędkości.
+	 *
      * \return Zwraca wartość prędkości stacji w kilometrach na godzinę.
      */
     double ZwrocPredkosc_kmH() const {return Predkosc;}
 
     /*!
      * \brief Ustawia nową wartość prędkości stacji kosmicznej.
+	 *
+	 * Ustawia nową wartość prędkości stacji kosmicznej.
+	 *
      * \param[in] NowaPredkosc - wartość jaka ma zostać ustawiona dla pola Predkosc, wyrażona w kilometrach na godzinę.
      */
     void ZmienPredkosc_kmH(double NowaPredkosc) {Predkosc = NowaPredkosc;}
 
     /*!
      * \brief Wartość wysokości na jakiej znajduje się stacja.
+	 *
+	 * Wartość wysokości na jakiej znajduje się stacja.
+	 *
      * \return Zwraca wartość wysokości na jakiej znajduje się stacja kosmiczna w kilometrach.
      */
     double ZwrocWysokosc_km() const {return Wysokosc;}
 
     /*!
      * \brief Ustawia nową wartość wysokości na jakiej znajduje się stacja.
+	 *
+	 * Ustawia nową wartość wysokości na jakiej znajduje się stacja.
+	 *
      * \param[in] NowaWysokosc - wartość jaka ma zostać ustawiona dla pola Wysokosc, wyrażona w kilometrach.
      */
     void ZmienWysokosc_km(double NowaWysokosc) {Wysokosc = NowaWysokosc;}

@@ -21,7 +21,7 @@ Magazyn_danych::Magazyn_danych(size_t IloscDanych)
 
 Magazyn_danych::~Magazyn_danych()
 {
-    ZapiszDane(60);
+    //ZapiszDane(60);
 }
 
 void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uint32_t IloscDanychWypelnionych, uint32_t CzasDoTylu_S)
@@ -68,7 +68,6 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
         return;
     }
 
-    cout<<"Licznik "<<licznik<<endl;
     licznik = 0;
 
     for(licznik = IloscDanychWypelnionych; licznik < (MagazynDanych.size()-10);)
@@ -86,7 +85,7 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
                 {
                     for(size_t j = 0; j < 10; j++)
                     {
-                        MagazynDanych[licznik] = TabPom[0];
+                        MagazynDanych[licznik] = TabPom[9];
                         cout<<"Mag: "<<MagazynDanych[licznik].ZwrocCzasPrzelotu_UTS()<<endl;
                         licznik += 1;
                     }
@@ -107,7 +106,6 @@ void Magazyn_danych::WypelniDanymiZSieci(Http *Html, uint32_t Czestotliwosc, uin
             Html->PobierzDaneOISS(&TabPom[0], 10, CzasDanych, Czestotliwosc);
             licznik_prob += 1;
 
-            licznik_prob += 1;
 
         }while((TabPom[0].ZwrocCzasPrzelotu_UTS() == 0 || TabPom[0].ZwrocCzasPrzelotu_UTS() != CzasDanych) && licznik_prob < 60);
 

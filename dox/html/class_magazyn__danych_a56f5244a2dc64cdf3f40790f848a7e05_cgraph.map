@@ -1,5 +1,5 @@
 <map id="Magazyn_danych::WypelniDanymiZPliku" name="Magazyn_danych::WypelniDanymiZPliku">
-<area shape="rect" id="node1" title="WypelniDanymiZPliku." alt="" coords="5,129,228,171"/>
+<area shape="rect" id="node1" title="Metoda pozwala wypełnić wektor danych, danymi zapisanymi w pliku." alt="" coords="5,129,228,171"/>
 <area shape="rect" id="node2" href="$class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="313,111,471,138"/>
 <area shape="rect" id="node10" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane." alt="" coords="276,162,508,189"/>
 <area shape="rect" id="node3" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej." alt="" coords="567,86,703,113"/>

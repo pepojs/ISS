@@ -1,8 +1,9 @@
 <map id="OpenGLWidget::RysowanieKoncowkeTrajektorii" name="OpenGLWidget::RysowanieKoncowkeTrajektorii">
-<area shape="rect" id="node2" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title="Grafika3D::RysujObiekt" alt="" coords="296,56,455,83"/>
-<area shape="rect" id="node3" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title="Grafika3D::Rysuj" alt="" coords="503,56,623,83"/>
-<area shape="rect" id="node4" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title="Shader::PrzekazMacierz4x4" alt="" coords="889,5,1076,32"/>
-<area shape="rect" id="node5" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title="Shader::ZwrocProgramID" alt="" coords="899,107,1066,133"/>
-<area shape="rect" id="node6" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title="Grafika3D::RenderujTekst" alt="" coords="671,56,841,83"/>
-<area shape="rect" id="node7" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title="Shader::Uzyjprogramu" alt="" coords="907,56,1058,83"/>
+<area shape="rect" id="node1" title="Metoda pozwala włączyć rysowanie końcowej części trajektorii stacji co spowoduje, że stanie się widoc..." alt="" coords="5,49,248,90"/>
+<area shape="rect" id="node2" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title=" " alt="" coords="296,56,455,83"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title=" " alt="" coords="503,56,623,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title=" " alt="" coords="889,5,1076,32"/>
+<area shape="rect" id="node5" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title=" " alt="" coords="899,107,1066,133"/>
+<area shape="rect" id="node6" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title=" " alt="" coords="671,56,841,83"/>
+<area shape="rect" id="node7" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title=" " alt="" coords="907,56,1058,83"/>
 </map>

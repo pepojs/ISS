@@ -1,16 +1,17 @@
 <map id="MainWindow::PrzycisnietyWysokosc" name="MainWindow::PrzycisnietyWysokosc">
-<area shape="rect" id="node1" title=" " alt="" coords="5,123,181,164"/>
-<area shape="rect" id="node2" href="$class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="Metoda pozwala włączyć rysowanie trajektorii stacji co spowoduje, że stanie się widoczna." alt="" coords="229,71,468,98"/>
-<area shape="rect" id="node9" href="$class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="Metoda pozwala włączyć rysowanie punktu śledzącego pozycje stacji co spowoduje, że stanie się widoczn..." alt="" coords="237,123,460,164"/>
-<area shape="rect" id="node10" href="$class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="Metoda pozwala włączyć rysowanie siatki nad modelem Ziemi co spowoduje, że stanie się widoczna." alt="" coords="241,189,456,215"/>
-<area shape="rect" id="node11" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="Metoda pozwala włączyć rysowanie wskaźnika trajektorii co spowoduje, że stanie się widoczny." alt="" coords="244,5,453,47"/>
-<area shape="rect" id="node12" href="$class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="Metoda pozwalająca włączyć lub wyłączyc podświetlanie strefy czasowej." alt="" coords="249,240,448,281"/>
-<area shape="rect" id="node3" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title=" " alt="" coords="523,101,681,127"/>
-<area shape="rect" id="node4" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title=" " alt="" coords="743,101,863,127"/>
-<area shape="rect" id="node5" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title=" " alt="" coords="1136,50,1323,77"/>
-<area shape="rect" id="node6" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title=" " alt="" coords="1146,151,1313,178"/>
-<area shape="rect" id="node7" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title=" " alt="" coords="917,101,1088,127"/>
-<area shape="rect" id="node8" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title=" " alt="" coords="1154,101,1305,127"/>
-<area shape="rect" id="node13" href="$class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title=" " alt="" coords="516,240,688,281"/>
-<area shape="rect" id="node14" href="$class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title=" " alt="" coords="736,247,869,274"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,156,181,197"/>
+<area shape="rect" id="node2" href="$class_open_g_l_widget.html#ae90398e9ee5ecfb55f342f7c4b8ac600" title="Metoda pozwala włączyć rysowanie trajektorii stacji co spowoduje, że stanie się widoczna." alt="" coords="231,71,470,98"/>
+<area shape="rect" id="node9" href="$class_open_g_l_widget.html#aa885d1eb05593f924efa07f1ecc2fbcd" title="Metoda pozwala włączyć rysowanie końcowej części trajektorii stacji co spowoduje, że stanie się widoc..." alt="" coords="229,123,472,164"/>
+<area shape="rect" id="node10" href="$class_open_g_l_widget.html#aa4ba9a422160130fc836a367e3264a63" title="Metoda pozwala włączyć rysowanie punktu śledzącego pozycje stacji co spowoduje, że stanie się widoczn..." alt="" coords="239,188,462,229"/>
+<area shape="rect" id="node11" href="$class_open_g_l_widget.html#aed657f247a293bccd63153b1daaac0d2" title="Metoda pozwala włączyć rysowanie siatki nad modelem Ziemi co spowoduje, że stanie się widoczna." alt="" coords="243,254,458,281"/>
+<area shape="rect" id="node12" href="$class_open_g_l_widget.html#a82c1a0b11d2e7e9a98c0decd539e8fee" title="Metoda pozwala włączyć rysowanie wskaźnika trajektorii co spowoduje, że stanie się widoczny." alt="" coords="246,5,455,47"/>
+<area shape="rect" id="node13" href="$class_open_g_l_widget.html#ad7b50a4c7b94b59b3f5b1273b22a38fe" title="Metoda pozwalająca włączyć lub wyłączyc podświetlanie strefy czasowej." alt="" coords="251,305,450,347"/>
+<area shape="rect" id="node3" href="$class_grafika3_d.html#ab32135803ff5c9424c220f33626eda8c" title=" " alt="" coords="527,130,685,157"/>
+<area shape="rect" id="node4" href="$class_grafika3_d.html#a133e1372d54e68111fe27fc70be93d27" title=" " alt="" coords="747,130,867,157"/>
+<area shape="rect" id="node5" href="$class_shader.html#ab086e4d3c1f67e5f535351784845936d" title=" " alt="" coords="1140,79,1327,106"/>
+<area shape="rect" id="node6" href="$class_shader.html#a955ae4ae45d164b4d62ca5f4f7e3420d" title=" " alt="" coords="1150,181,1317,207"/>
+<area shape="rect" id="node7" href="$class_grafika3_d.html#a929f0869003c0903b88cdd83ec8dc3ba" title=" " alt="" coords="921,130,1092,157"/>
+<area shape="rect" id="node8" href="$class_shader.html#a9f7c4cf9cdd7f123616105986558782d" title=" " alt="" coords="1158,130,1309,157"/>
+<area shape="rect" id="node14" href="$class_grafika3_d.html#a3710e0e77b172f10a3750b98c6e45abe" title=" " alt="" coords="520,305,692,347"/>
+<area shape="rect" id="node15" href="$class_shader.html#a61f798f937cf78627fe1bb491d0b407a" title=" " alt="" coords="740,313,873,339"/>
 </map>

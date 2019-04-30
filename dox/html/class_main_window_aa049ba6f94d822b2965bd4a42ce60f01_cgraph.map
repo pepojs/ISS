@@ -1,25 +1,25 @@
 <map id="MainWindow::PobierzNoweDaneISS" name="MainWindow::PobierzNoweDaneISS">
-<area shape="rect" id="node1" title=" " alt="" coords="5,415,236,442"/>
-<area shape="rect" id="node2" href="$class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="318,137,477,163"/>
-<area shape="rect" id="node10" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja." alt="" coords="570,187,779,214"/>
-<area shape="rect" id="node11" href="$class_i_s_s___dane.html#a2e4092318facf84c9cb3851d0a2a659d" title="Wartość prędkości." alt="" coords="569,238,780,265"/>
-<area shape="rect" id="node12" href="$class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Ustawienie minimalnej oraz maksymalnej wartości osi Y." alt="" coords="308,390,487,417"/>
-<area shape="rect" id="node13" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane." alt="" coords="559,421,791,447"/>
-<area shape="rect" id="node14" href="$class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Ustawienie minimalnej oraz maksymalnej wartości osi X." alt="" coords="309,441,486,467"/>
-<area shape="rect" id="node15" href="$class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Dodaje nowy punkt do wykresu." alt="" coords="294,491,501,518"/>
-<area shape="rect" id="node16" href="$class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="Pozwala wypełnić wcześniej stworzoną trajektorie danymi." alt="" coords="284,593,511,619"/>
-<area shape="rect" id="node17" href="$class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Zwraca rozmiar wektora z danymi." alt="" coords="578,520,771,561"/>
-<area shape="rect" id="node18" href="$class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Zwraca dane z wektora znajdujące się na podanej pozycji." alt="" coords="577,651,773,678"/>
-<area shape="rect" id="node20" href="$class_magazyn__danych.html#a37d57cc6daa63ef09eee38a7ec2a2279" title="Zwraca pozycję głowy. Głowa to miejsce gdzie zostaną zapisane kolejne dane, które zostaną przekazane ..." alt="" coords="296,694,499,721"/>
-<area shape="rect" id="node21" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="284,289,511,315"/>
-<area shape="rect" id="node3" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej." alt="" coords="607,86,743,113"/>
-<area shape="rect" id="node4" href="$class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Metoda prywatna służąca do parserowania danych ze strony internetowej." alt="" coords="596,137,753,163"/>
-<area shape="rect" id="node5" href="$class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne." alt="" coords="863,5,1048,47"/>
-<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne." alt="" coords="858,71,1053,112"/>
-<area shape="rect" id="node7" href="$class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja." alt="" coords="850,137,1061,163"/>
-<area shape="rect" id="node8" href="$class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej." alt="" coords="849,187,1061,214"/>
-<area shape="rect" id="node9" href="$class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu." alt="" coords="839,238,1072,265"/>
-<area shape="rect" id="node19" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title=" " alt="" coords="589,585,760,627"/>
-<area shape="rect" id="node22" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach." alt="" coords="578,289,771,331"/>
-<area shape="rect" id="node23" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach." alt="" coords="583,355,767,396"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,369,236,396"/>
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a582b6fe494803e2c1d78697c1bb3eb01" title="Zwraca dane z wektora znajdujące się na podanej pozycji." alt="" coords="577,9,773,36"/>
+<area shape="rect" id="node3" href="$class_http.html#ac2e692c3b462cd0b7fb52f155e3b3bee" title="Pobiera aktualne dane o Międzynarodowej Stacji Kosmicznej." alt="" coords="318,243,477,269"/>
+<area shape="rect" id="node11" href="$class_i_s_s___dane.html#a99db94084d7a3a7c71145f6a11c919b0" title="Wartość wysokości na jakiej znajduje się stacja." alt="" coords="570,293,779,320"/>
+<area shape="rect" id="node12" href="$class_i_s_s___dane.html#a2e4092318facf84c9cb3851d0a2a659d" title="Wartość prędkości." alt="" coords="569,344,780,371"/>
+<area shape="rect" id="node13" href="$class_wykres.html#ac5c6903fd7fea901b1244f29b20e7463" title="Ustawienie minimalnej oraz maksymalnej wartości osi Y." alt="" coords="308,496,487,523"/>
+<area shape="rect" id="node14" href="$class_i_s_s___dane.html#a97fb0d95ead3e793c071f8e995f834ee" title="Wartość czasu, dla których są zapisane dane." alt="" coords="559,527,791,553"/>
+<area shape="rect" id="node15" href="$class_wykres.html#acac0bff14f57041b6850548de13d9156" title="Ustawienie minimalnej oraz maksymalnej wartości osi X." alt="" coords="309,547,486,573"/>
+<area shape="rect" id="node16" href="$class_wykres.html#a35993cff1702b5a3c9ed68c77a301e13" title="Dodaje nowy punkt do wykresu." alt="" coords="294,597,501,624"/>
+<area shape="rect" id="node17" href="$class_open_g_l_widget.html#a3a53ef4b1550a7c6dbac4f9a61ac8678" title="Pozwala wypełnić wcześniej stworzoną trajektorie danymi." alt="" coords="284,75,511,101"/>
+<area shape="rect" id="node18" href="$class_magazyn__danych.html#a3d312dc0cd0ab915537d0569021a1a78" title="Zwraca rozmiar wektora z danymi." alt="" coords="578,126,771,167"/>
+<area shape="rect" id="node20" href="$class_magazyn__danych.html#a321ece391dcf41d7de4b167c5ff0632a" title="Zwraca pozycję głowy." alt="" coords="296,648,499,675"/>
+<area shape="rect" id="node21" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="284,395,511,421"/>
+<area shape="rect" id="node4" href="$class_http.html#ae2052e773d9f2fa89e4aeabbfe7e0d24" title="Pobiera zawartość strony internetowej." alt="" coords="607,192,743,219"/>
+<area shape="rect" id="node5" href="$class_http.html#ac1688e9389b49183883091a7b86f87bd" title="Metoda prywatna służąca do parserowania danych ze strony internetowej." alt="" coords="596,243,753,269"/>
+<area shape="rect" id="node6" href="$class_i_s_s___dane.html#a97cfae00a6e5b50ad05623d40d55feaf" title="Ustawia nową wartość szerokości geograficzne." alt="" coords="863,111,1048,153"/>
+<area shape="rect" id="node7" href="$class_i_s_s___dane.html#a3022b69d800a2c741f15a383a64f3bf8" title="Ustawia nową wartość długości geograficzne." alt="" coords="858,177,1053,218"/>
+<area shape="rect" id="node8" href="$class_i_s_s___dane.html#a10adc79f7b83f43cfa347fb353b813d6" title="Ustawia nową wartość wysokości na jakiej znajduje się stacja." alt="" coords="850,243,1061,269"/>
+<area shape="rect" id="node9" href="$class_i_s_s___dane.html#ac098b07f865faf8c62f3e48fba09100e" title="Ustawia nową wartość prędkości stacji kosmicznej." alt="" coords="849,293,1061,320"/>
+<area shape="rect" id="node10" href="$class_i_s_s___dane.html#ab57c4f73c19f1103c18093d13b5d8ff0" title="Ustawia nową wartość czasu." alt="" coords="839,344,1072,371"/>
+<area shape="rect" id="node19" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title=" " alt="" coords="589,61,760,102"/>
+<area shape="rect" id="node22" href="$class_i_s_s___dane.html#a13f5c0d7d6a1948c7485fd22c9d5f44f" title="Wartość dlugości geograficznej w stopniach." alt="" coords="578,395,771,437"/>
+<area shape="rect" id="node23" href="$class_i_s_s___dane.html#a12a51565cb63a29d9c32d281b8ff5d48" title="Wartość szerokości geograficznej w stopniach." alt="" coords="583,461,767,502"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="ISS_Dane::ZwrocCzasPrzelotu_UTS" name="ISS_Dane::ZwrocCzasPrzelotu_UTS">
-<area shape="rect" id="node1" title="Wartość czasu, dla których są zapisane dane." alt="" coords="785,173,1017,199"/>
+<area shape="rect" id="node1" title="Wartość czasu, dla których są zapisane dane." alt="" coords="785,189,1017,215"/>
 <area shape="rect" id="node2" href="$class_magazyn__danych.html#a0192dbd499f035fb61434b339078fb07" title="Wypełnia brakującą część wektora danych, danymi pobranymi z sieci." alt="" coords="236,5,459,47"/>
-<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,101,184,127"/>
-<area shape="rect" id="node4" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="WypelniDanymiZPliku." alt="" coords="236,123,459,164"/>
-<area shape="rect" id="node5" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="511,173,737,199"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,71,184,98"/>
+<area shape="rect" id="node4" href="$class_magazyn__danych.html#a56f5244a2dc64cdf3f40790f848a7e05" title="Metoda pozwala wypełnić wektor danych, danymi zapisanymi w pliku." alt="" coords="513,123,735,164"/>
+<area shape="rect" id="node5" href="$class_magazyn__danych.html#a0421011ac254ea093412b222aa46059f" title="Pozwala zamienić obecne dane nowymi w miejscu, na który wskazuje głowa." alt="" coords="511,189,737,215"/>
 <area shape="rect" id="node6" href="$class_main_window.html#aa049ba6f94d822b2965bd4a42ce60f01" title=" " alt="" coords="232,189,463,215"/>
-<area shape="rect" id="node7" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="557,274,691,301"/>
-<area shape="rect" id="node8" href="$class_zegar.html#a4e8f3e32c9b4f1be197d1c54edea812a" title=" " alt="" coords="539,325,709,351"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a44e3beb4c1b5434626c7da06ae4a511f" title=" " alt="" coords="557,290,691,317"/>
+<area shape="rect" id="node8" href="$class_zegar.html#a4e8f3e32c9b4f1be197d1c54edea812a" title=" " alt="" coords="539,341,709,367"/>
 </map>

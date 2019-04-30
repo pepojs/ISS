@@ -12,9 +12,12 @@ Wykres::Wykres(QWidget* Rodzic)
     :QWidget (Rodzic)
 {
     LiniaWykresu = new QLineSeries;
+    ObecnyPunkt = new QLineSeries;
 
     PoleWykresu = new QChart;
     PoleWykresu->addSeries(LiniaWykresu);
+    PoleWykresu->addSeries(ObecnyPunkt);
+
     PoleWykresu->legend()->hide();
 
     //Ustawienie koloru wykresu
@@ -22,6 +25,7 @@ Wykres::Wykres(QWidget* Rodzic)
     KolorWykres.setWidth(5);
 
     LiniaWykresu->setPen(KolorWykres);
+    ObecnyPunkt->setPen(QPen(QRgb(0xff0000)));
 
     QFont CzcionkaWykres;
     CzcionkaWykres.setPixelSize(18);
@@ -61,13 +65,16 @@ Wykres::Wykres(QWidget* Rodzic)
     LiniaWykresu->attachAxis(OsX);
     LiniaWykresu->attachAxis(OsY);
 
+    ObecnyPunkt->attachAxis(OsX);
+    ObecnyPunkt->attachAxis(OsY);
+
     WidokWykresu = new QChartView(PoleWykresu);
     WidokWykresu->setRenderHint(QPainter::Antialiasing);
+
 
     WarstwaGlowna = new QGridLayout;
     WarstwaGlowna->addWidget(WidokWykresu, 0 ,0);
     setLayout(WarstwaGlowna);
-
 
 }
 
@@ -216,3 +223,11 @@ void Wykres::WidokSiatki(bool Wlacz)
     OsY->setGridLineVisible(Wlacz);
 }
 
+void Wykres::AktualnyPunktLinia(uint X)
+{
+    QDateTime Czas;
+    Czas.setTime_t(X);
+    ObecnyPunkt->clear();
+    ObecnyPunkt->append(Czas.toMSecsSinceEpoch(), OsY->min());
+    ObecnyPunkt->append(Czas.toMSecsSinceEpoch(), OsY->max());
+}

@@ -1,6 +1,6 @@
 <map id="OpenGLWidget::WypelniTrajektorie" name="OpenGLWidget::WypelniTrajektorie">
 <area shape="rect" id="node1" title="Pozwala wypełnić wcześniej stworzoną trajektorie danymi." alt="" coords="5,71,232,98"/>
-<area shape="rect" id="node2" href="$class_magazyn__danych.html#a1aec6665a5bfa0b2e16dd1f46de2f64e" title="Zwraca rozmiar wektora z danymi." alt="" coords="281,5,475,47"/>
-<area shape="rect" id="node3" href="$class_magazyn__danych.html#a009c8ac93f63da3c4cb1880efe261ea0" title="Zwraca dane z wektora znajdujące się na podanej pozycji." alt="" coords="280,71,476,98"/>
+<area shape="rect" id="node2" href="$class_magazyn__danych.html#a3d312dc0cd0ab915537d0569021a1a78" title="Zwraca rozmiar wektora z danymi." alt="" coords="281,5,475,47"/>
+<area shape="rect" id="node3" href="$class_magazyn__danych.html#a582b6fe494803e2c1d78697c1bb3eb01" title="Zwraca dane z wektora znajdujące się na podanej pozycji." alt="" coords="280,71,476,98"/>
 <area shape="rect" id="node4" href="$class_grafika3_d.html#aab4c1697772865b2eea0226aa27f1258" title=" " alt="" coords="293,123,463,164"/>
 </map>
